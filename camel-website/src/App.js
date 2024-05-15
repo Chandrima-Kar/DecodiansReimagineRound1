@@ -1,9 +1,23 @@
-import './App.css';
+import React from "react";
+// components
+
+import Nav from "./components/Nav";
+import Banner from "./components/Banner";
+
+import "./App.css";
+
+// #153448
+// #3C5B6F
+// #948979
+// #DFD0B8
 
 function App() {
   return (
-    <div className="App">
-      <div><h1 className="bg-black text-7xl text-white font-extrabold">Pratik Biswas</h1></div>
+    <div className="bg-no-repeat bg-cover overflow-hidden">
+      <Nav />
+      {/* <Header /> */}
+      <Banner />
+      <Banner />
     </div>
   );
 }
