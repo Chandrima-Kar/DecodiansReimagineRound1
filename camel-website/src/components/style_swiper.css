@@ -1,0 +1,45 @@
+#app {
+  height: 100%
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 320px;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, auto);
+  top: var(--swiper-pagination-top, 31.5rem);
+  left: 0;
+  width: 100%;
+}
+
+:root {
+  --swiper-theme-color: #ffffff;
+}
+
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color, #BB86FC);
+}
+
+.card:hover {
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
