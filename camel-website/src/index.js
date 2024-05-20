@@ -12,7 +12,21 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
 
-        <Route path="/paints" element={<App />} />
+        {/* header links */}
+        <Route path="/camel" element={<App />} />
+        <Route path="/camlin" element={<App />} />
+        <Route path="/store" element={<App />} />
+        <Route path="/log-in" element={<App />} />
+        <Route path="/sign-up" element={<App />} />
+
+        {/* banner and navbar links */}
+        <Route path="/paints" element={<App />}>
+          <Route path="oil-pastels" element={null} />
+          <Route path="colour-pencils" element={null} />
+          <Route path="remidix-tempera-colours" element={<App />} />
+          <Route path="crayons" element={<App />} />
+          {/* Add more nested routes here */}
+        </Route>
         <Route path="/drawing-materials" element={<App />} />
         <Route path="/mediums" element={<App />} />
         <Route path="/canvases" element={<App />} />

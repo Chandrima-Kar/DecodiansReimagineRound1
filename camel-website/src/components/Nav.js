@@ -89,15 +89,18 @@ const Nav = () => {
       {showPopup && (
         <div
           ref={popupRef}
-          className="fixed z-50  bg-background2 font-semibold rounded-xl shadow-lg bottom-[4rem] right-3 md:right-28 xl:bottom-28 xl:right-24"
+          className="fixed z-50  bg-background2 xl:font-semibold rounded-md max-xl:rounded-br-none xl:rounded-tr-none shadow-lg bottom-[4.9rem] xl:bottom-8 right-7 md:right-44  xl:right-[3.8rem]"
         >
-          <div className="flex flex-col gap-2">
+          <div className="flex  gap-2 text-[12px]">
+            {/* triangle */}
+            <div className="border-solid border-t-background2 xl:border-b-background2 border-t-[12px] xl:border-b-[12px] border-l-transparent border-l-[12px] border-b-0 xl:border-t-0 absolute top-[2.6rem] xl:-top-3 right-0 "></div>
+            {/* links */}
             {navData1.map((link, index) => (
               <div
                 key={index}
-                className="w-full p-2 hover:bg-accent hover:rounded-xl text-center"
+                className="p-1 hover:bg-accent font-semibold text-primary-text hover:text-background hover:rounded-md text-center"
               >
-                <Link to={link.path} className="block w-full py-2">
+                <Link to={link.path} className="block  py-2">
                   {link.name}
                 </Link>
               </div>

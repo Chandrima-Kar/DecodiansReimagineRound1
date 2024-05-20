@@ -1,17 +1,21 @@
 import React from "react";
+// import { Outlet } from "react-router-dom";
+
+import ParticlesComponent from "./components/ParticlesComponent";
+
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
-
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-background">
+      <ParticlesComponent />
       <Nav />
       <Header />
       <Banner />
-      <Banner />
+      {/* <Outlet /> */}
     </div>
   );
 }
