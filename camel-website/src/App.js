@@ -6,7 +6,9 @@ import ParticlesComponent from "./components/ParticlesComponent";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
+import Second from "./components/Second";
 import "./App.css";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Nav />
       <Header />
       <Banner />
+      <Second/>
       {/* <Outlet /> */}
     </div>
   );
