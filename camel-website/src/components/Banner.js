@@ -151,9 +151,9 @@ const Banner = () => {
   };
 
   return (
-    <section className="relative  py-16 flex items-center overflow-hidden">
+    <section className="relative z-2 w-full  my-auto pt-16  flex items-center justify-center">
       <div
-        className="container mx-auto flex flex-col lg:flex-row items-center justify-center relative py-0 pb-7 sm:py-7 
+        className="container mx-auto sm:mx-[6.5rem] flex flex-col lg:flex-row items-center justify-center relative py-0 xl:pb-7 sm:py-7 
       
       lg:gap-x-36 xl:gap-x-48 
       md:gap-y-20 lg:gap-y-0  
@@ -163,26 +163,26 @@ const Banner = () => {
         {/* circular icons */}
         <div className="flex flex-row text-center ">
           <div
-            className="relative left-1/2 flex  aspect-square border border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100  
+            className="relative left-1/2 flex  aspect-square border-[3px] border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100  
           
-          w-[20rem]  md:w-[35rem] lg:max-xl:w-[25rem]"
+            w-[20rem]  md:w-[35rem] lg:max-xl:w-[25rem]"
           >
             <div
-              className="flex  aspect-square m-auto border border-accent rounded-full  
+              className="flex  aspect-square m-auto border-[3px] border-accent rounded-full  
             
-            w-[13rem]  md:w-[20rem] lg:max-xl:w-[15rem]"
+              w-[13rem]  md:w-[20rem] lg:max-xl:w-[15rem]"
             >
               <div
-                className="aspect-square m-auto p-[0.1rem]  rounded-full    
-                w-[4rem] md:w-[6rem] 
+                className="aspect-square m-auto p-[0.2rem] hover:p-[0.4rem]   rounded-full    
+                w-[4rem] md:w-[6rem]  cursor-pointer
                   
                   bg-conic-gradient"
               >
-                <div className="flex items-center justify-center w-full h-full bg-black rounded-full">
+                <div className="flex items-center justify-center w-full h-full bg-background   rounded-full">
                   <img
                     src={camel_img}
                     alt="camel_image "
-                    className=" w-[35px] h-[35px] md:w-[54px] md:h-[54px]"
+                    className=" w-[35px] h-[35px] md:w-[54px] md:h-[54px]  "
                   />
                 </div>
               </div>
@@ -228,9 +228,9 @@ const Banner = () => {
                       </div>
 
                       <div
-                        className={`absolute  bg-background2 border border-accent rounded-b-md text-center   duration-500 transform 
+                        className={`absolute  bg-background2 border border-accent  text-center   duration-500 transform 
                         w-[8rem] md:w-[10rem]
-                        -top-2 right-[1.95rem] md:-top-1 md:right-[2.4rem]
+                        -top-[0.3rem] right-[1.55rem] md:-top-[0.1rem] md:right-[1.95rem]
                         ${
                           showDropdown
                             ? "opacity-100 scale-100"
@@ -238,46 +238,51 @@ const Banner = () => {
                         }`}
                         style={{ transform: `rotate(-${index * 36}deg)` }}
                       >
-                        <div className="flex flex-col ">
-                          {dropDownContent.map((content, index) => (
-                            <Link
-                              key={index}
-                              to={content.path}
-                              className="w-full h-full bg-background2 hover:bg-background text-primary-text hover:text-accent hover:rounded-md py-1 
+                        {dropDownContent.map((content, index) => (
+                          <Link
+                            key={index}
+                            to={content.path}
+                            className="w-full h-full  
                               text-[12px]    md:text-[1rem]"
-                            >
+                          >
+                            <div className="flex flex-col bg-background font-semibold hover:bg-accent text-primary-text hover:text-background ">
                               {content.title}
-                            </Link>
-                          ))}
-                        </div>
+                            </div>
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      to={app.path}
-                      className="flex flex-row items-center justify-center"
-                    >
+                    <div>
                       <div
-                        className="relative gap-x-1 -top-[1.6rem] flex items-center justify-center  font-semibold bg-background hover:bg-accent border-2 border-accent rounded-xl text-accent hover:text-background transition-all duration-500 
-                        
-                        w-[8rem]  md:w-[10rem] 
-                        h-[1.8rem] md:h-[2.2rem]
-                        text-[11px]    md:text-[1rem]"
+                        className="relative -top-[1.6rem]  "
                         style={{ transform: `rotate(-${index * 36}deg)` }}
                       >
-                        <div>{app.title}</div>
-                        <div>{app.icon}</div>
+                        <Link
+                          to={app.path}
+                          className="flex flex-row items-center justify-center"
+                        >
+                          <div
+                            className=" gap-x-1 flex items-center justify-center  font-semibold bg-background hover:bg-accent border-2 border-accent rounded-xl text-accent hover:text-background transition-all duration-500 
+                        
+                            w-[8rem]  md:w-[10rem] 
+                            h-[1.8rem] md:h-[2.2rem]
+                            text-[11px]    md:text-[1rem]"
+                          >
+                            <div>{app.title}</div>
+                            <div>{app.icon}</div>
+                          </div>
+                        </Link>
                       </div>
-                    </Link>
+                    </div>
                   )}
                 </li>
               ))}
             </ul>
           </div>
         </div>
-
         {/* Cards */}
-        <div>
+        {/* <div>
           <Swiper
             effect={"cards"}
             grabCursor={true}
@@ -336,7 +341,7 @@ const Banner = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -7,8 +7,8 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Second from "./components/Second";
+import FullSlider from "./components/FullSlider";
 import "./App.css";
-
 
 function App() {
   return (
@@ -17,17 +17,11 @@ function App() {
       <Nav />
       <Header />
       <Banner />
-      <Second/>
+      <Second />
+      <FullSlider />
       {/* <Outlet /> */}
     </div>
   );
 }
 
 export default App;
-
-// background: "#121212",
-// background2: "#bb86fc4f",
-// "primary-text": "#f0f0f0",
-//  "secondary-text": "#cecece",
-//  accent: "#BB86FC",
-//  highlight: "#03DAC6",
