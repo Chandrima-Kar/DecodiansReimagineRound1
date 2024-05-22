@@ -20,6 +20,7 @@ root.render(
         <Route path="/sign-up" element={<App />} />
 
         {/* banner and navbar links */}
+        <Route path="/global-search" element={<App />} />
         <Route path="/paints" element={<App />}>
           <Route path="oil-pastels" element={null} />
           <Route path="colour-pencils" element={null} />

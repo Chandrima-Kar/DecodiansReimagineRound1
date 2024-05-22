@@ -6,8 +6,12 @@ import ParticlesComponent from "./components/ParticlesComponent";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
-import Second from "./components/Second";
+
 import FullSlider from "./components/FullSlider";
+import Second from "./components/Second";
+import TransparentPhotoColors from "./components/TransparentPhotoColors";
+import KidsCards from "./components/KidsCards";
+import ExploreArtistsGallery from "./components/ExploreArtistsGallery";
 import "./App.css";
 
 function App() {
@@ -17,8 +21,12 @@ function App() {
       <Nav />
       <Header />
       <Banner />
-      <Second />
       <FullSlider />
+      <Second />
+      <TransparentPhotoColors />
+      <KidsCards />
+      <ExploreArtistsGallery />
+
       {/* <Outlet /> */}
     </div>
   );

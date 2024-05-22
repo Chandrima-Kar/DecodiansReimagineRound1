@@ -32,11 +32,11 @@
 }
 
 :root {
-  --swiper-theme-color: #ffffff;
+  --swiper-theme-color: #E0E0E0;
 }
 
 .swiper-pagination-bullet {
-  background: var(--swiper-pagination-bullet-inactive-color, #BB86FC);
+  background: var(--swiper-pagination-bullet-inactive-color, #e1251a);
 }
 
 .card:hover {
@@ -58,7 +58,7 @@
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .swiper {
     width: 270px;
     height: 370px;
@@ -72,7 +72,7 @@
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .swiper {
     width: 320px;
     height: 500px;

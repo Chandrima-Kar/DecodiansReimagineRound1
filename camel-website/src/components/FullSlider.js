@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import Section from "./Section";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import slide2 from "../assets/01/slidetwo.jpg";
@@ -53,99 +54,114 @@ const FullSlider = () => {
       button2: "hidden",
     },
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, slides.length]);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, slides.length]);
 
-  const goToSlide = (slideIndex) => {
+  const goToSlide = useCallback((slideIndex) => {
     setCurrentIndex(slideIndex);
-  };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [nextSlide]); // Dependency array ensures interval is reset on slide change
 
   return (
-    <section className="relative   flex items-center overflow-hidden">
-      <div
-        className="md:max-w-[1400px] md:h-[680px]  h-[500px] w-full  
+    <Section
+      className=""
+      crosses
+      crossesOffset="lg:translate-y-[5.25rem]"
+      customPaddings
+      id="fullSlider"
+    >
+      <section className="relative pt-20   flex items-center justify-center overflow-hidden">
+        <div
+          className="md:max-w-[1400px] md:h-[680px]  h-[500px] w-full  
       
-      pb-24 xl:pb-16  relative group container mx-4 sm:mx-[6.5rem]"
-      >
-        {/* Main Contents */}
-        <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className={`w-full h-full rounded-2xl ${slides[currentIndex].bg}  bg-no-repeat bg-cover duration-500`}
-        ></div>
-
-        <div
-          className={` lg:w-[57%] 2xl:w-[35%] absolute   ${[
-            slides[currentIndex].top_d,
-          ]} left-2 md:left-10 `}
+      pb-24 xl:pb-8  relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
         >
-          <h1
-            className={`${slides[currentIndex].header_color}  font-extrabold text-3xl md:text-5xl`}
-          >
-            {slides[currentIndex].header}
-          </h1>
-          <p className={`${slides[currentIndex].p_class}`}>
-            Washable Colour Markers{" "}
-          </p>
-        </div>
-        <div className="absolute top-[67%] md:top-[78%] left-2 md:left-10 flex gap-x-3">
-          <Button
-            text={slides[currentIndex].button1_text}
-            className={`${slides[currentIndex].button1} text-[12px] md:text-[20px]`}
-          />
-          <Button
-            text={"Meet Artists"}
-            className={`${slides[currentIndex].button2} text-[12px] md:text-[20px]`}
-          />
-        </div>
+          {/* Main Contents */}
+          <div
+            style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+            className={`w-full h-full rounded-2xl ${slides[currentIndex].bg}  bg-no-repeat bg-cover duration-500`}
+          ></div>
 
-        {/* Arrows */}
-        {/* Left Arrow */}
-        <div
-          className="hidden group-hover:block absolute top-[40%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
+          <div
+            className={` lg:w-[57%] 2xl:w-[35%] absolute   ${[
+              slides[currentIndex].top_d,
+            ]} left-2 md:left-10 `}
+          >
+            <h1
+              className={`${slides[currentIndex].header_color} duration-500  font-extrabold text-3xl md:text-5xl`}
+            >
+              {slides[currentIndex].header}
+            </h1>
+            <p className={`${slides[currentIndex].p_class} duration-500`}>
+              Washable Colour Markers{" "}
+            </p>
+          </div>
+          <div className="absolute top-[67%] md:top-[78%] left-2 md:left-10 flex gap-x-3 duration-500">
+            <Button
+              text={slides[currentIndex].button1_text}
+              className={`${slides[currentIndex].button1} text-[12px] md:text-[20px]`}
+            />
+            <Button
+              text={"Meet Artists"}
+              className={`${slides[currentIndex].button2} text-[12px] md:text-[20px]`}
+            />
+          </div>
+
+          {/* Arrows */}
+          {/* Left Arrow */}
+          <div
+            className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
         
         left-2 sm:left-5"
-        >
-          <BsChevronCompactLeft onClick={prevSlide} size={25} />
-        </div>
-        {/* Right Arrow */}
-        <div
-          className="hidden group-hover:block absolute top-[40%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
+          >
+            <BsChevronCompactLeft onClick={prevSlide} size={25} />
+          </div>
+          {/* Right Arrow */}
+          <div
+            className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
         
         right-2 sm:right-5"
-        >
-          <BsChevronCompactRight onClick={nextSlide} size={25} />
-        </div>
+          >
+            <BsChevronCompactRight onClick={nextSlide} size={25} />
+          </div>
 
-        {/* dots */}
-        <div className="flex top-4 justify-center py-2">
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className={`text-2xl cursor-pointer ${
-                currentIndex === slideIndex
-                  ? "text-accent"
-                  : "text-primary-text"
-              }`}
-            >
-              <RxDotFilled />
-            </div>
-          ))}
+          {/* dots */}
+          <div className="flex top-4 justify-center mt-4 ">
+            {slides.map((slide, slideIndex) => (
+              <div
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+                className={`text-2xl cursor-pointer ${
+                  currentIndex === slideIndex
+                    ? "text-accent"
+                    : "text-primary-text"
+                }`}
+              >
+                <RxDotFilled />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Section>
   );
 };
 

@@ -60,7 +60,7 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
+      <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[1%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
         <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-8 px-4 md:px-40 xl:px-0 h-[30px] bg-background2 xl:h-max py-8 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full">
           {navData.map((link, index) => (
             <div
@@ -89,11 +89,18 @@ const Nav = () => {
       {showPopup && (
         <div
           ref={popupRef}
-          className="fixed z-50  bg-highlight xl:font-semibold rounded-md max-xl:rounded-br-none xl:rounded-tr-none shadow-lg bottom-[4.9rem] xl:bottom-8 right-7 md:right-44  xl:right-[3.8rem] transition-all duration-300"
+          className="fixed z-50  bg-background2 xl:font-semibold rounded-md max-xl:rounded-br-none  shadow-lg bottom-[4.9rem] xl:bottom-28 right-7 md:right-44  xl:right-[5.5rem] transition-all duration-300"
         >
           <div className="flex  gap-2 text-[12px] ">
             {/* triangle */}
-            <div className="border-solid border-t-highlight xl:border-b-highlight border-t-[12px] xl:border-b-[12px] border-l-transparent border-l-[12px] border-b-0 xl:border-t-0 absolute top-[2.6rem] xl:-top-3 right-0 "></div>
+            <div
+              className="border-solid border-t-background2 xl:border-b-background2 border-t-[12px] border-l-transparent border-l-[12px] border-b-0  absolute top-[2.6rem]  right-0 
+            
+            xl:top-[1.1rem]
+            xl:border-l-background2 xl:border-l-8 xl:border-y-transparent xl:border-r-0 xl:-right-2
+            xl:border-t-[6px] xl:border-b-[6px] xl:border-b-transparent
+            "
+            ></div>
             {/* links */}
             {navData1.map((link, index) => (
               <div

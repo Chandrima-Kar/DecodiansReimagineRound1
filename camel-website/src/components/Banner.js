@@ -1,19 +1,5 @@
 import React, { useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-import "swiper/css/pagination";
-// import "swiper/css/navigation";
-
-import "./style_swiper.css";
-
-// import required modules
-import { EffectCards, Pagination, Navigation, Keyboard } from "swiper/modules";
-
-//
 // import { TypeAnimation } from "react-type-animation";
 // import { motion } from "framer-motion";
 // import { fadeIn } from "../variants";
@@ -21,10 +7,6 @@ import { Link } from "react-router-dom";
 
 // images
 import camel_img from "../assets/00/camel.png";
-import card1_img from "../assets/00/card1.jpeg";
-import card2_img from "../assets/00/card2.jpeg";
-import card3_img from "../assets/00/card3.jpg";
-import card4_img from "../assets/00/card4.jpeg";
 
 // icons
 
@@ -34,11 +16,12 @@ import {
   IoMdColorPalette,
   IoIosArrowDropdown,
   IoIosArrowDropup,
+  IoIosSearch,
 } from "react-icons/io";
 import { FaPaintBrush } from "react-icons/fa";
 import { IoBagHandle } from "react-icons/io5";
 import { TbMoodKid, TbActivity } from "react-icons/tb";
-import { RiCommandLine, RiExternalLinkLine } from "react-icons/ri";
+import { RiCommandLine } from "react-icons/ri";
 
 export const circularLink = [
   {
@@ -119,29 +102,6 @@ export const dropDownContent = [
   },
 ];
 
-export const cardContent = [
-  {
-    card_image: card1_img,
-    item: "Oil Pastels",
-    path: "/paints/oil-pastels",
-  },
-  {
-    card_image: card2_img,
-    item: "Colour Pencils",
-    path: "/paints/colour-pencils",
-  },
-  {
-    card_image: card3_img,
-    item: "Redimix Tempera Colours",
-    path: "/paints/remidix-tempera-colours",
-  },
-  {
-    card_image: card4_img,
-    item: "Crayons",
-    path: "/paints/crayons",
-  },
-];
-
 const Banner = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -151,9 +111,9 @@ const Banner = () => {
   };
 
   return (
-    <section className="relative z-2 w-full  my-auto pt-16  flex items-center justify-center">
+    <section className="relative z-2 w-full  my-auto pt-16 md:pt-28  flex items-center justify-center">
       <div
-        className="container mx-auto sm:mx-[6.5rem] flex flex-col lg:flex-row items-center justify-center relative py-0 xl:pb-7 sm:py-7 
+        className="container mx-auto sm:mx-[6.5rem] flex flex-col lg:flex-row items-center justify-center relative  
       
       lg:gap-x-36 xl:gap-x-48 
       md:gap-y-20 lg:gap-y-0  
@@ -162,29 +122,29 @@ const Banner = () => {
       >
         {/* circular icons */}
         <div className="flex flex-row text-center ">
-          <div
-            className="relative left-1/2 flex  aspect-square border-[3px] border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100  
-          
-            w-[20rem]  md:w-[35rem] lg:max-xl:w-[25rem]"
-          >
-            <div
-              className="flex  aspect-square m-auto border-[3px] border-accent rounded-full  
-            
-              w-[13rem]  md:w-[20rem] lg:max-xl:w-[15rem]"
-            >
-              <div
-                className="aspect-square m-auto p-[0.2rem] hover:p-[0.4rem]   rounded-full    
-                w-[4rem] md:w-[6rem]  cursor-pointer
-                  
-                  bg-conic-gradient"
-              >
-                <div className="flex items-center justify-center w-full h-full bg-background   rounded-full">
-                  <img
-                    src={camel_img}
-                    alt="camel_image "
-                    className=" w-[35px] h-[35px] md:w-[54px] md:h-[54px]  "
-                  />
-                </div>
+          <div className="relative left-1/2 flex aspect-square border-[3px] border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100 w-[20rem] sm:w-[35rem] lg:max-xl:w-[25rem] ">
+            <div className="flex aspect-square m-auto border-[3px] border-accent rounded-full w-[13rem] sm:w-[20rem] lg:max-xl:w-[15rem]">
+              {/* Center of the circle */}
+
+              <div className="aspect-square z-50 m-auto p-[0.3rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer bg-conic-gradient">
+                <Link
+                  to="/global-search"
+                  className="flex items-center justify-center w-full h-full bg-background rounded-full"
+                >
+                  <div className="relative flex items-center justify-center text-[3rem] md:text-7xl text-primary-text">
+                    <IoIosSearch />
+                    <img
+                      src={camel_img}
+                      alt="camel_image"
+                      className="absolute 
+                      w-[17px] h-[17px] 
+                      md:w-[25px] md:h-[25px] 
+                      
+                      top-[0.7rem] left-[0.75rem] 
+                      md:top-[1.20rem] md:left-[1.20rem]"
+                    />
+                  </div>
+                </Link>
               </div>
             </div>
 
@@ -230,7 +190,7 @@ const Banner = () => {
                       <div
                         className={`absolute  bg-background2 border border-accent  text-center   duration-500 transform 
                         w-[8rem] md:w-[10rem]
-                        -top-[0.3rem] right-[1.55rem] md:-top-[0.1rem] md:right-[1.95rem]
+                        -top-[0.5rem] right-[2.05rem] md:-top-[0.3rem] md:right-[2.4755rem]
                         ${
                           showDropdown
                             ? "opacity-100 scale-100"
@@ -245,7 +205,7 @@ const Banner = () => {
                             className="w-full h-full  
                               text-[12px]    md:text-[1rem]"
                           >
-                            <div className="flex flex-col bg-background font-semibold hover:bg-accent text-primary-text hover:text-background ">
+                            <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 hover:bg-accent text-primary-text hover:text-background ">
                               {content.title}
                             </div>
                           </Link>
@@ -281,67 +241,6 @@ const Banner = () => {
             </ul>
           </div>
         </div>
-        {/* Cards */}
-        {/* <div>
-          <Swiper
-            effect={"cards"}
-            grabCursor={true}
-            modules={[EffectCards, Pagination, Navigation, Keyboard]}
-            className="mySwiper"
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            keyboard={{ enabled: true }}
-            speed={500}
-          >
-            {cardContent.map((content, i) => (
-              <SwiperSlide>
-                <div
-                  key={i}
-                  style={{ backgroundImage: `url(${content.card_image})` }}
-                  className="w-[100%] h-[100%] bg-cover bg-center bg-no-repeat relative flex items-center"
-                >
-                  <div className="absolute inset-0 bg-black/50 opacity-50 rounded-[20px]"></div>
-
-                  <div
-                    className=" inset-0 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100 h-full  card
-                  
-                  gap-y-5 sm:gap-y-8 lg:max-xl:gap-y-3 "
-                  >
-                    <div className="flex justify-center items-start p-3 ">
-                      <img
-                        src={content.card_image}
-                        alt="ED_Project"
-                        className="rounded-[20px] w-[50%] sm:w-7/12 "
-                      />
-                    </div>
-                    <div className="px-5 flex flex-col items-center justify-center">
-                      <h1 className="leading-none text-[30px] sm:text-[42px] lg:max-xl:text-[34px]  text-primary-text">
-                        A colourful
-                      </h1>
-                      <h1 className="leading-none text-[30px] sm:text-[42px] lg:max-xl:text-[34px] text-primary-text">
-                        mini-universe
-                      </h1>
-                      <p className=" text-[16px] sm:text-[21px] lg:max-xl:text-[17px] text-secondary-text">
-                        Art supplies for kids{" "}
-                      </p>
-                    </div>
-                    <Link
-                      to={content.path || "#"}
-                      className="flex flex-row items-center justify-center cursor-pointer rounded-md border border-background font-semibold px-4 duration-500 transition-transform hover:scale-105  text-background bg-background2 hover:bg-accent hover:text-background
-                      text-[1rem] sm:text-xl lg:max-xl:text-[1rem]"
-                    >
-                      <span className="mr-1">{content.item}</span>
-                      <RiExternalLinkLine />
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div> */}
       </div>
     </section>
   );
