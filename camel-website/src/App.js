@@ -13,6 +13,8 @@ import TransparentPhotoColors from "./components/TransparentPhotoColors";
 import KidsCards from "./components/KidsCards";
 import ExploreArtistsGallery from "./components/ExploreArtistsGallery";
 import "./App.css";
+import Third from "./components/Third";
+import Fifth from "./components/Fifth";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
       <Second />
       <TransparentPhotoColors />
       <KidsCards />
+      <Third/>
+      <Fifth/>
       <ExploreArtistsGallery />
 
       {/* <Outlet /> */}

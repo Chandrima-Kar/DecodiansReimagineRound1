@@ -67,3 +67,278 @@
 .draw-animation {
   animation: draw 2s forwards;
 }
+
+
+
+
+/* ------------------------------------------------Media queries for fifth component------------------------------------ */
+
+@media (min-width: 320px)  and (max-width:640px){
+  #main-container {
+    width: 100vw; 
+    margin-left: 0; 
+    margin-right: 0; 
+    padding-left: 0; 
+    padding-right: 0;
+    flex-direction: column;
+    justify-content: center; 
+  }
+
+  #card{
+      width:80%;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 1.75rem;
+  }
+
+  #heading2{
+      font-size:1.35rem;
+  }
+
+  #main-text{
+    font-size:1.4rem;
+    padding-bottom: 1.35rem;
+  }
+
+  #button{
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* ------------------------------------------------Media queries for fifth component ends here------------------------------------ */
+
+
+/* ------------------------------------------------Media queries for third component------------------------------------ */
+
+@media (min-width: 810px)  and (max-width:929px){
+ #main-container{
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  #img{
+    width:14rem;
+    height: 14rem;
+  }
+}
+
+@media (min-width: 930px)  and (max-width:1023px){
+  #outside{
+    width:8rem;
+    height:8rem;
+  }
+  #inside{
+    width:8rem;
+    height:8rem;
+  }
+
+   #img{
+     width:15rem;
+     height: 15rem;
+   }
+  }
+
+  @media (min-width:320px) and (max-width:767px){
+    #main-container2{
+      display:flex;
+      flex-direction:column;
+    }
+
+    #heading2{
+      padding-left: 5%;
+    }
+
+    #date{
+      font-size: 1rem;
+    }
+
+    #profile{
+      display:flex;
+      flex-direction:row;
+      margin:auto;
+      gap:1rem;
+    }
+
+    #details{
+      padding: right 0.5%;;
+    }
+
+    #outside{
+      width: 4.5em;
+      height:4.5rem;
+    }
+    #inside{
+      width: 4.5em;
+      height:4.5rem;
+      padding:.5rem;
+    }
+
+    
+    #details #name{
+      font-size: 1rem;
+    }
+    #details #feature{
+      font-size: .7rem;
+    }
+
+    #button-div #button{
+      height:1.5rem;
+      font-size: .5rem;
+    }
+
+    #img{
+      width:6rem;
+      height: 6rem;
+    }
+  }
+
+  @media (min-width:360px)and (max-width:767px){
+
+    #profile{
+      gap: 0.75rem;
+    }
+
+    #outside{
+      width: 6rem;
+      height:6rem;
+    }
+    #inside{
+      width: 6rem;
+      height:6rem;
+    }
+
+    #details{
+      padding-right: 2rem;
+    }
+
+    #button-div #button{
+      height:1.75rem;
+      font-size:.75rem;
+    }
+
+    #img{
+      width:7.5rem;
+      height: 7.5rem;
+    }
+  }
+
+  @media (min-width:409px)and (max-width:767px){
+
+    #profile{
+      gap: 0.75rem;
+    }
+
+    #details{
+      padding-right:2.5rem;
+    }
+    #img{
+      margin: .5rem;
+    }
+  }
+
+  @media (min-width:450px)and (max-width:767px){
+
+    #profile{
+      gap: 0.75rem;
+    }
+
+    #details{
+      padding-right:2.5rem;
+    }
+    #img{
+      margin: .5rem;
+      width:8.25rem;
+      height:8.25rem;
+    }
+  }
+
+  @media (min-width:500px)and (max-width:767px){
+
+    #profile{
+      gap: 1.5rem;
+    }
+
+    
+    #outside{
+      width: 7rem;
+      height:7rem;
+    }
+    #inside{
+      width: 7rem;
+      height:7rem;
+      padding:.75rem;
+    }
+    #details{
+      padding-right:4rem;
+    }
+    #img{
+      margin: .75rem;
+      width:9.5rem;
+      height:9.5rem;
+    }
+  }
+
+  @media (min-width:575px)and (max-width:767px){
+
+    #profile{
+      gap: 1.5rem;
+    } 
+    #outside{
+      width: 9rem;
+      height:9rem;
+    }
+    #inside{
+      width: 9rem;
+      height:9rem;
+      padding:.85rem;
+    }
+
+    #details #name{
+      font-size: 1.75rem;
+    }
+    #details #feature{
+      font-size: 1.25rem;
+    }
+    #details{
+      padding-right:3rem;
+      
+    }
+
+    
+    #button-div #button{
+      height:2rem;
+      font-size: 1rem;
+      padding: .5rem;
+    }
+    #img{
+      margin: 1rem;
+      width:11rem;
+      height:11rem;
+    }
+  }
+
+  @media (min-width:670px)and (max-width:767px){
+
+    #profile{
+      gap: 2rem;
+    }
+    #details{
+      padding-right:5rem;  
+    }
+    #button-div #button{
+      height:2rem;
+      font-size: 1rem;
+      padding: .5rem;
+    }
+    #img{
+      margin:1.25rem;
+      width:13rem;
+      height:13rem;
+    }
+  }
+
+
+  /* ------------------------------------------------Media queries for third component ends here------------------------------------ */
