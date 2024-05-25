@@ -36,8 +36,6 @@ function App() {
       <Writeup />
       <Wonderland />
       <KidsCards />
-      <Third />
-      <Fifth />
       <ExploreArtistsGallery />
 
       <Quotation />
