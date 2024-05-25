@@ -1,4 +1,4 @@
-import SectionSvg from "../assets/svg/SectionSvg";
+import SectionSvg from "./SectionSvg";
 
 const Section = ({
   className,
@@ -19,14 +19,6 @@ const Section = ({
 
       {crosses && (
         <>
-          {/* <div
-            className={`hidden absolute top-0 left-7.5 right-7.5 h-[0.1rem] bg-accent ${
-              crossesOffset ? crossesOffset : ""
-            } pointer-events-none lg:block xl:left-12 xl:right-12 md:left-10 md:right-10 sm:left-12 sm:right-12`}
-          >
-            <SectionSvg crossesOffset={crossesOffset} />
-          </div> */}
-
           {/* Left icon */}
           <div
             className={`hidden absolute top-0 left-7.5 right-7.5  bg-accent ${

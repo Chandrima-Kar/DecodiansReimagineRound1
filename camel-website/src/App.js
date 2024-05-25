@@ -6,26 +6,41 @@ import ParticlesComponent from "./components/ParticlesComponent";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
-
 import FullSlider from "./components/FullSlider";
-import Second from "./components/Second";
+import Poster from "./components/Poster";
+import FeaturedArtist from "./components/FeaturedArtist";
 import TransparentPhotoColors from "./components/TransparentPhotoColors";
+import Writeup from "./components/Writeup";
+import Wonderland from "./components/Wonderland";
 import KidsCards from "./components/KidsCards";
 import ExploreArtistsGallery from "./components/ExploreArtistsGallery";
-import "./App.css";
+import Quotation from "./components/Quotation";
+import ExtraContents from "./components/ExtraContents";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
+import "./App.css";
 function App() {
   return (
     <div className=" bg-background">
       <ParticlesComponent />
+
       <Nav />
       <Header />
       <Banner />
       <FullSlider />
-      <Second />
+      <Poster />
+      <FeaturedArtist />
       <TransparentPhotoColors />
+      <Writeup />
+      <Wonderland />
       <KidsCards />
       <ExploreArtistsGallery />
+
+      <Quotation />
+      <ExtraContents />
+      <FAQ />
+      <Footer />
 
       {/* <Outlet /> */}
     </div>

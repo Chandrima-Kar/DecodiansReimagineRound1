@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// It will be used in animation purpose
+
 // import { TypeAnimation } from "react-type-animation";
 // import { motion } from "framer-motion";
 // import { fadeIn } from "../variants";
@@ -16,13 +18,14 @@ import {
   IoMdColorPalette,
   IoIosArrowDropdown,
   IoIosArrowDropup,
-  IoIosSearch,
 } from "react-icons/io";
 import { FaPaintBrush } from "react-icons/fa";
 import { IoBagHandle } from "react-icons/io5";
 import { TbMoodKid, TbActivity } from "react-icons/tb";
 import { RiCommandLine } from "react-icons/ri";
+import { CiSearch } from "react-icons/ci";
 
+// different paths of different pages
 export const circularLink = [
   {
     id: "0",
@@ -87,6 +90,7 @@ export const circularLink = [
   },
 ];
 
+// drop-down for community button
 export const dropDownContent = [
   {
     title: "Artist Gallery",
@@ -115,8 +119,8 @@ const Banner = () => {
       <div
         className="container mx-auto sm:mx-[6.5rem] flex flex-col lg:flex-row items-center justify-center relative  
       
-      lg:gap-x-36 xl:gap-x-48 
-      md:gap-y-20 lg:gap-y-0  
+        lg:gap-x-36 xl:gap-x-48 
+        md:gap-y-20 lg:gap-y-0  
       
       "
       >
@@ -126,13 +130,13 @@ const Banner = () => {
             <div className="flex aspect-square m-auto border-[3px] border-accent rounded-full w-[13rem] sm:w-[20rem] lg:max-xl:w-[15rem]">
               {/* Center of the circle */}
 
-              <div className="aspect-square z-50 m-auto p-[0.3rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer bg-conic-gradient">
+              <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer bg-conic-gradient">
                 <Link
                   to="/global-search"
                   className="flex items-center justify-center w-full h-full bg-background rounded-full"
                 >
                   <div className="relative flex items-center justify-center text-[3rem] md:text-7xl text-primary-text">
-                    <IoIosSearch />
+                    <CiSearch />
                     <img
                       src={camel_img}
                       alt="camel_image"

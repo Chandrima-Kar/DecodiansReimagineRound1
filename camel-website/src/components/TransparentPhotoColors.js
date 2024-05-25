@@ -1,6 +1,11 @@
 import React, { useRef, useEffect } from "react";
-import Section from "./Section";
+import Section from "./sub-components/Section";
+import MyButton from "./sub-components/MyButton";
+
+// images
 import hand_img from "../assets/04/hand.png";
+
+// icons
 import { RiExternalLinkLine } from "react-icons/ri";
 
 const TransparentPhotoColors = () => {
@@ -150,8 +155,8 @@ const TransparentPhotoColors = () => {
               
               px-2
               md:px-5 md:py-5 lg:p-7  
-               rounded-tr-md 
-              bg-accent text-background border-accent hover:bg-background hover:text-accent"
+              rounded-tr-[0.45rem] 
+              bg-accent text-background border-accent "
           >
             <div className="flex-col flex text-center gap-y-2">
               <h1 className="text-xl md:text-[3rem] lg:text-[4rem]">12</h1>
@@ -160,19 +165,15 @@ const TransparentPhotoColors = () => {
           </div>
 
           {/* button */}
-          <div
-            className="flex flex-row items-center justify-center cursor-pointer rounded-md border font-semibold  duration-500 transition-transform hover:scale-105 
-              
-              px-1 md:px-4 md:py-1 lg:p-4
-              absolute sm:bottom-4 sm:right-4 
-              bottom-[15.5rem] max-sm:left-4 
-              text-[1rem] sm:text-xl md:text-[1.5rem] xl:text-[2rem] 
-                      
-              bg-accent text-background border-accent hover:bg-background hover:text-accent"
-          >
-            <span className="mr-1">Shop</span>
-            <RiExternalLinkLine />
-          </div>
+          <MyButton
+            text="Shop"
+            className="px-1 md:px-4 md:py-1 lg:p-4
+          absolute sm:bottom-4 sm:right-4 
+          bottom-[15.5rem] max-sm:left-4 
+          text-[1rem] sm:text-xl md:text-[1.5rem] xl:text-[2rem]"
+            buttonNameClassName="mr-1"
+            icon={<RiExternalLinkLine />}
+          />
         </div>
       </section>
     </Section>

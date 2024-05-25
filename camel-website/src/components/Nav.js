@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
 // import icons
 import { MdOutlineFormatColorFill, MdDraw } from "react-icons/md";
 import { BiLogoMediumOld, BiCool } from "react-icons/bi";
@@ -9,6 +10,7 @@ import { IoBagHandle } from "react-icons/io5";
 import { TbMoodKid, TbActivity } from "react-icons/tb";
 import { RiCommandLine } from "react-icons/ri";
 
+// data for the nav bar
 export const navData = [
   { name: "Paints", path: "/paints", icon: <MdOutlineFormatColorFill /> },
   {
@@ -84,37 +86,40 @@ const Nav = () => {
               </Link>
             </div>
           ))}
+          {showPopup && (
+            <div
+              ref={popupRef}
+              className="fixed z-50  bg-background2 xl:font-semibold rounded-md max-xl:rounded-br-none  shadow-lg 
+              
+              w-[16rem]
+              bottom-[4.9rem] xl:bottom-[0.9rem] right-7 md:right-44  xl:right-[4.8rem] transition-all duration-300"
+            >
+              <div className="flex  gap-2 text-[12px] ">
+                {/* triangle */}
+                <div
+                  className="border-solid border-t-background2 xl:border-b-background2 border-t-[12px] border-l-transparent border-l-[12px] border-b-0  absolute   right-0 
+            
+                  top-[3.75rem] xl:top-[1.2rem]
+                xl:border-l-background2 xl:border-l-8 xl:border-y-transparent xl:border-r-0 xl:-right-2
+                  xl:border-t-[6px] xl:border-b-[6px] xl:border-b-transparent
+            "
+                ></div>
+                {/* links */}
+                {navData1.map((link, index) => (
+                  <div
+                    key={index}
+                    className="p-1 hover:bg-accent font-semibold text-primary-text hover:text-background hover:rounded-md text-center"
+                  >
+                    <Link to={link.path} className="block  py-2">
+                      {link.name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </nav>
-      {showPopup && (
-        <div
-          ref={popupRef}
-          className="fixed z-50  bg-background2 xl:font-semibold rounded-md max-xl:rounded-br-none  shadow-lg bottom-[4.9rem] xl:bottom-28 right-7 md:right-44  xl:right-[5.5rem] transition-all duration-300"
-        >
-          <div className="flex  gap-2 text-[12px] ">
-            {/* triangle */}
-            <div
-              className="border-solid border-t-background2 xl:border-b-background2 border-t-[12px] border-l-transparent border-l-[12px] border-b-0  absolute top-[2.6rem]  right-0 
-            
-            xl:top-[1.1rem]
-            xl:border-l-background2 xl:border-l-8 xl:border-y-transparent xl:border-r-0 xl:-right-2
-            xl:border-t-[6px] xl:border-b-[6px] xl:border-b-transparent
-            "
-            ></div>
-            {/* links */}
-            {navData1.map((link, index) => (
-              <div
-                key={index}
-                className="p-1 hover:bg-accent font-semibold text-primary-text hover:text-background hover:rounded-md text-center"
-              >
-                <Link to={link.path} className="block  py-2">
-                  {link.name}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

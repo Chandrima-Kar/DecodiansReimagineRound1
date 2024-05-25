@@ -1,12 +1,12 @@
 import React from "react";
-import Section from "./Section";
+import Section from "./sub-components/Section";
+import MyButton from "./sub-components/MyButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-// import "swiper/css/navigation";
 
 import "./style_swiper.css";
 
@@ -14,13 +14,16 @@ import "./style_swiper.css";
 import { EffectCards, Pagination, Navigation, Keyboard } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-import card1_img from "../assets/00/card1.jpeg";
-import card2_img from "../assets/00/card2.jpeg";
-import card3_img from "../assets/00/card3.jpg";
-import card4_img from "../assets/00/card4.jpeg";
+// images
+import card1_img from "../assets/07/card1.jpeg";
+import card2_img from "../assets/07/card2.jpeg";
+import card3_img from "../assets/07/card3.jpg";
+import card4_img from "../assets/07/card4.jpeg";
 
+// icons
 import { RiExternalLinkLine } from "react-icons/ri";
 
+// card's data
 export const cardContent = [
   {
     card_image: card1_img,
@@ -107,26 +110,19 @@ const KidsCards = () => {
                             className="rounded-[20px] w-[70%] sm:w-[80%] "
                           />
                         </div>
-                        {/* <div className="px-5 flex flex-col items-center justify-center">
-                          <h1 className="leading-none text-[30px] sm:text-[42px] lg:max-xl:text-[34px]  text-primary-text">
-                            A colourful
-                          </h1>
-                          <h1 className="leading-none text-[30px] sm:text-[42px] lg:max-xl:text-[34px] text-primary-text">
-                            mini-universe
-                          </h1>
-                          <p className=" text-[16px] sm:text-[21px] lg:max-xl:text-[17px] text-secondary-text">
-                            Art supplies for kids{" "}
-                          </p>
-                        </div> */}
+
                         <Link
                           to={content.path || "#"}
-                          className="flex flex-row items-center justify-center cursor-pointer rounded-md border font-semibold px-4 duration-500 transition-transform hover:scale-105 
+                          className="flex flex-row items-center justify-center
                           text-[1rem] sm:text-xl md:text-[1rem] xl:text-[1.3rem]
-                      
-                        bg-accent text-background border-accent hover:bg-background hover:text-accent"
+                      "
                         >
-                          <span className="mr-1">{content.item}</span>
-                          <RiExternalLinkLine />
+                          <MyButton
+                            text={content.item}
+                            className="text-[1rem] sm:text-xl md:text-[1rem] xl:text-[1.3rem] px-2"
+                            buttonNameClassName="mr-1"
+                            icon={<RiExternalLinkLine />}
+                          />
                         </Link>
                       </div>
                     </div>

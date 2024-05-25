@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Section from "./Section";
+import Section from "./sub-components/Section";
+import MyButton from "./sub-components/MyButton";
+
+// icons
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+
+// images
 import slide2 from "../assets/01/slidetwo.jpg";
 import slide3 from "../assets/01/slidethree.webp";
 import slide4 from "../assets/01/make_your_mark_banner.webp";
 import slide5 from "../assets/01/wonderland-banner.webp";
+
 const FullSlider = () => {
+  // contents of the slides
   const slides = [
     {
       url: slide2,
@@ -54,6 +61,7 @@ const FullSlider = () => {
       button2: "hidden",
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = useCallback(() => {
@@ -92,7 +100,7 @@ const FullSlider = () => {
         <div
           className="md:max-w-[1400px] md:h-[680px]  h-[500px] w-full  
       
-      pb-24 xl:pb-8  relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
+          pb-24 xl:pb-8  relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
         >
           {/* Main Contents */}
           <div
@@ -115,13 +123,14 @@ const FullSlider = () => {
             </p>
           </div>
           <div className="absolute top-[67%] md:top-[78%] left-2 md:left-10 flex gap-x-3 duration-500">
-            <Button
+            <MyButton
               text={slides[currentIndex].button1_text}
-              className={`${slides[currentIndex].button1} text-[12px] md:text-[20px]`}
+              className={`${slides[currentIndex].button1} text-[12px] md:text-[20px] px-5 py-1`}
             />
-            <Button
+
+            <MyButton
               text={"Meet Artists"}
-              className={`${slides[currentIndex].button2} text-[12px] md:text-[20px]`}
+              className={`${slides[currentIndex].button2} text-[12px] md:text-[20px] px-5 py-1`}
             />
           </div>
 
@@ -130,7 +139,7 @@ const FullSlider = () => {
           <div
             className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
         
-        left-2 sm:left-5"
+            left-2 sm:left-5"
           >
             <BsChevronCompactLeft onClick={prevSlide} size={25} />
           </div>
@@ -138,7 +147,7 @@ const FullSlider = () => {
           <div
             className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
         
-        right-2 sm:right-5"
+            right-2 sm:right-5"
           >
             <BsChevronCompactRight onClick={nextSlide} size={25} />
           </div>
@@ -165,15 +174,15 @@ const FullSlider = () => {
   );
 };
 
-function Button(props) {
-  return (
-    <button
-      className={`cursor-pointer rounded-md border font-semibold duration-500 transition-transform hover:scale-105 flex justify-center items-center bg-accent text-background border-accent hover:bg-background hover:text-accent px-5 py-1
-       ${props.className}`}
-    >
-      {props.text}
-    </button>
-  );
-}
+// function Button(props) {
+//   return (
+//     <button
+//       className={`cursor-pointer rounded-md border font-semibold duration-500 transition-transform hover:scale-105 flex justify-center items-center bg-accent text-background border-accent hover:bg-background hover:text-accent px-5 py-1
+//        ${props.className}`}
+//     >
+//       {props.text}
+//     </button>
+//   );
+// }
 
 export default FullSlider;

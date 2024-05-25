@@ -11,11 +11,12 @@ function Button(props) {
     </button>
   );
 }
+
 const Header = () => {
   return (
     <div>
       <section id="home" className="  flex items-center">
-        <div className="bg-background border-b-2 border border-accent w-full fixed pt-6 pb-2 mt-8 z-50 px-1 sm:px-3 lg:px-7">
+        <div className="bg-background border-b-2  border-accent w-full fixed pt-6 pb-2 mt-8 z-50 px-1 sm:px-3 lg:px-7">
           <div className="flex flex-col items-center justify-center w-full text-[#f0f0f0]">
             <div className="flex flex-row justify-between items-center w-full gap-x-14 md:gap-x-[5.5rem] xl:gap-x-60 mx-auto">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-x-1 text-[1rem] sm:text-3xl font-bold">
@@ -27,7 +28,7 @@ const Header = () => {
                   <img
                     src={camel_img}
                     alt="camel_image"
-                    className="w-[16px] h-[16px] sm:w-[35px] sm:h-[35px] bg-transparent"
+                    className="w-[16px] h-[16px] sm:w-[25px] sm:h-[25px] bg-transparent"
                   />
                 </Link>
                 <div className="w-1 h-6 mx-1 hidden sm:flex bg-custom-gradient"></div>
@@ -42,7 +43,7 @@ const Header = () => {
                   to="/store"
                   className="relative group cursor-pointer py-1"
                 >
-                  <div className="text-[11px] md:text-[14px] font-semibold         transition-transform duration-500 group-hover:scale-110 text-primary-text">
+                  <div className="text-[11px] md:text-[14px] font-semibold   transition-transform duration-500 group-hover:scale-110 text-primary-text">
                     Find a store
                   </div>
                   <div className="absolute -left-1 -right-1 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
