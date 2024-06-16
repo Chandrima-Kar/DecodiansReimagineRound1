@@ -15,27 +15,26 @@ import MyButton from "./sub-components/MyButton";
 import { IoIosArrowForward } from "react-icons/io";
 
 const MovingImages = [
-  { src: img1, className: "animation1 absolute h-auto w-[150px] rounded-full" },
+  { src: img1, className: "animation1 absolute h-auto w-[150px] rounded-lg" },
   { src: img2, className: "animation2 absolute h-auto w-[250px] rounded-xl" },
   {
     src: img3,
-    className: "animation3 absolute h-auto w-[130px] rounded-t-full",
+    className: "animation3 absolute h-auto w-[150px] rounded-lg",
   },
   {
     src: img4,
-    className:
-      "animation4 absolute h-auto w-[150px] rounded-tr-2xl rounded-bl-2xl",
+    className: "animation4 absolute h-auto w-[150px] rounded-lg",
   },
-  { src: img5, className: "animation5 absolute h-auto w-[80px] rounded" },
+  { src: img5, className: "animation5 absolute h-auto w-[150px] rounded" },
   {
     src: img6,
-    className: "animation6 absolute h-auto w-[120px] rounded-r-full",
+    className: "animation6 absolute h-auto w-[150px] rounded-full",
   },
-  { src: img7, className: "animation7 absolute h-auto w-[100px] rounded-full" },
+  { src: img7, className: "animation7 absolute h-auto w-[150px] rounded-full" },
   { src: img8, className: "animation8 absolute h-auto w-[250px] rounded-xl" },
   {
     src: img9,
-    className: "triangle animation9 absolute h-auto w-[100px] rounded-lg",
+    className: " animation9 absolute h-auto w-[150px] rounded-full",
   },
 ];
 
@@ -70,7 +69,7 @@ const ExploreArtistsGallery = () => {
               />
             ))}
           </div>
-          <div className="relative p-5 border border-black rounded-3xl bg-background2 z-10 flex flex-col items-center gap-y-5">
+          <div className="relative p-5 border border-black rounded-3xl bg-background z-10 flex flex-col items-center gap-y-5">
             <div className="text-5xl font-extrabold font-sans text-center">
               Get inspired by
               <br /> popular artists

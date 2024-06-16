@@ -11,8 +11,43 @@
   animation-play-state: paused !important;
 }
 
-
 .animation1 {
+  animation: move1 25s linear infinite;
+}
+
+.animation2 {
+  animation: move2 40s linear infinite;
+}
+
+.animation3 {
+  animation: move3 25s linear infinite;
+}
+
+.animation4 {
+  animation: move4 25s linear infinite;
+}
+
+.animation5 {
+  animation: move5 25s linear infinite;
+}
+
+.animation6 {
+  animation: move6 25s linear infinite;
+}
+
+.animation7 {
+  animation: move7 25s linear infinite;
+}
+
+.animation8 {
+  animation: move8 40s linear infinite;
+}
+
+.animation9 {
+  animation: move9 25s linear infinite;
+}
+
+/* .animation1 {
   animation: move1 38s linear infinite;
 }
 
@@ -46,9 +81,255 @@
 
 .animation9 {
   animation: move9 42s linear infinite;
-}
+} */
 
 @keyframes move1 {
+  0% {
+    top: 0%;
+    left: 10%;
+  }
+
+  25% {
+    top: 0%;
+    left: 80%;
+  }
+
+  50% {
+    top: 70%;
+    left: 80%;
+  }
+
+  75% {
+    top: 70%;
+    left: 10%;
+  }
+
+  100% {
+    top: 0%;
+    left: 10%;
+  }
+}
+
+/* big */
+@keyframes move2 {
+  0% {
+    top: 30%;
+    left: 50%;
+  }
+
+  25% {
+    top: 30%;
+    left: 70%;
+  }
+
+  50% {
+    top: 30%;
+    left: 50%;
+  }
+
+  75% {
+    top: 30%;
+    left: 10%;
+  }
+
+  100% {
+    top: 30%;
+    left: 50%;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    top: 0%;
+    left: 80%;
+  }
+
+  25% {
+    top: 70%;
+    left: 80%;
+  }
+
+  50% {
+    top: 70%;
+    left: 10%;
+  }
+
+  75% {
+    top: 0%;
+    left: 10%;
+  }
+
+  100% {
+    top: 0%;
+    left: 80%;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    top: 70%;
+    left: 80%;
+  }
+
+  25% {
+    top: 70%;
+    left: 10%;
+  }
+
+  50% {
+    top: 0%;
+    left: 10%;
+  }
+
+  75% {
+    top: 0%;
+    left: 80%;
+  }
+
+  100% {
+    top: 70%;
+    left: 80%;
+  }
+}
+
+@keyframes move5 {
+  0% {
+    top: 70%;
+    left: 10%;
+  }
+
+  25% {
+    top: 0%;
+    left: 10%;
+  }
+
+  50% {
+    top: 0%;
+    left: 80%;
+  }
+
+  75% {
+    top: 70%;
+    left: 80%;
+  }
+
+  100% {
+    top: 70%;
+    left: 10%;
+  }
+}
+
+@keyframes move6 {
+  0% {
+    top: 0%;
+    left: 20%;
+  }
+
+  25% {
+    top: 0%;
+    left: 70%;
+  }
+
+  50% {
+    top: 70%;
+    left: 70%;
+  }
+
+  75% {
+    top: 70%;
+    left: 20%;
+  }
+
+  100% {
+    top: 0%;
+    left: 20%;
+  }
+}
+
+@keyframes move7 {
+  0% {
+    top: 0%;
+    left: 70%;
+  }
+
+  25% {
+    top: 70%;
+    left: 70%;
+  }
+
+  50% {
+    top: 70%;
+    left: 20%;
+  }
+
+  75% {
+    top: 0%;
+    left: 20%;
+  }
+
+  100% {
+    top: 0%;
+    left: 70%;
+  }
+}
+
+/* big */
+@keyframes move8 {
+  0% {
+    top: 30%;
+    left: 50%;
+  }
+
+  25% {
+    top: 30%;
+    left: 10%;
+  }
+
+  50% {
+    top: 30%;
+    left: 50%;
+  }
+
+  75% {
+    top: 30%;
+    left: 70%;
+  }
+
+  100% {
+    top: 30%;
+    left: 50%;
+  }
+}
+
+@keyframes move9 {
+  0% {
+    top: 70%;
+    left: 70%;
+  }
+
+  25% {
+    top: 70%;
+    left: 20%;
+  }
+
+  50% {
+    top: 0%;
+    left: 20%;
+  }
+
+  75% {
+    top: 0%;
+    left: 70%;
+  }
+
+  100% {
+    top: 70%;
+    left: 70%;
+  }
+}
+
+
+/* @keyframes move1 {
   0% {
     top: 0%;
     left: 10%;
@@ -149,7 +430,6 @@
     top: 70%;
     left: 10%;
   }
-
   100% {
     top: 0%;
     left: 80%;
@@ -280,4 +560,4 @@
     top: 10%;
     left: 10%;
   }
-}
+} */

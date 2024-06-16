@@ -25,24 +25,21 @@ function App() {
   return (
     <div className=" bg-background">
       <ParticlesComponent />
-
       <Nav />
       <Header />
-      <Banner />
+      <Banner /> {/* issue in small screen */}
       <FullSlider />
       <Poster />
       <FeaturedArtist />
       <TransparentPhotoColors />
       <Writeup />
       <Wonderland />
-      <KidsCards />
+      <KidsCards /> {/* issue in small screen */}
       <ExploreArtistsGallery />
-
       <Quotation />
-      <ExtraContents />
+      {/* <ExtraContents /> */}
       <FAQ />
       <Footer />
-
       {/* <Outlet /> */}
     </div>
   );

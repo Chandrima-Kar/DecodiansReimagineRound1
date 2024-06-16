@@ -16,8 +16,13 @@ const Header = () => {
   return (
     <div>
       <section id="home" className="  flex items-center">
-        <div className="bg-background border-b-2  border-accent w-full fixed pt-6 pb-2 mt-8 z-50 px-1 sm:px-3 lg:px-7">
-          <div className="flex flex-col items-center justify-center w-full text-[#f0f0f0]">
+        <div
+          className="bg-background2 border-b-2  border-accent w-full fixed pt-6 pb-2 mt-8 z-50 
+          
+          px-1 sm:px-3 md:px-6
+          2xl:px-28"
+        >
+          <div className="flex flex-col items-center justify-center w-full ">
             <div className="flex flex-row justify-between items-center w-full gap-x-14 md:gap-x-[5.5rem] xl:gap-x-60 mx-auto">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-x-1 text-[1rem] sm:text-3xl font-bold">
                 <Link

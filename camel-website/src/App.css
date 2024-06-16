@@ -41,7 +41,7 @@
 /* scrollbar edit */
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 0.5px;
 }
 
 ::-webkit-scrollbar-track {
