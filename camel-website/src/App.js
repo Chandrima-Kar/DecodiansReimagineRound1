@@ -20,11 +20,13 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 import "./App.css";
+import GoToTop from "./components/GoToTop";
 
 function App() {
   return (
     <div className=" bg-background">
       <ParticlesComponent />
+      <GoToTop/>
       <Nav />
       <Header />
       <Banner /> {/* issue in small screen */}
