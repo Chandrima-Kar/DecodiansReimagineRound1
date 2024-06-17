@@ -3,6 +3,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showFooterButton, setShowFooterButton] = useState(false);
 
   const goToBtn = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -18,6 +19,13 @@ const GoToTop = () => {
     } else {
       setIsVisible(false);
     }
+
+    // Check if footer is visible
+    const footer = document.getElementById("footer");
+    if (footer) {
+      const footerTop = footer.getBoundingClientRect().top;
+      setShowFooterButton(footerTop <= window.innerHeight);
+    }
   };
 
   useEffect(() => {
@@ -26,10 +34,12 @@ const GoToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-10 left-5 z-50 flex justify-start items-center md:bottom-5 md:right-5">
+    <div className="sticky bottom-5 ml-5 z-50 flex justify-start items-center ">
       {isVisible && (
         <div
-          className="text-xl w-12 h-12 text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer animate-gototop"
+          className={`text-xl w-12 h-12 text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer  
+          
+          ${showFooterButton ? "absolute -top-5 left-0" : ""}`}
           onClick={goToBtn}
         >
           <FaArrowUp />

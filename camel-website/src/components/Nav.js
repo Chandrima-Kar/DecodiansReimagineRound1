@@ -60,6 +60,24 @@ const Nav = () => {
     };
   }, [showPopup]);
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    setIsVisible(scrollY > 700); // Threshold value to invisible while scrolling
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <div>
       <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[1%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">

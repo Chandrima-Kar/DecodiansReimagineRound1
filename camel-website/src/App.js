@@ -21,12 +21,12 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 import GoToTop from "./components/GoToTop";
+import ThemeSettings from "./components/ThemeSettings";
 
 function App() {
   return (
     <div className=" bg-background">
       <ParticlesComponent />
-      <GoToTop />
       <Nav />
       <Header />
       <Banner /> {/* issue in small screen */}
@@ -41,6 +41,8 @@ function App() {
       <Quotation />
       {/* <ExtraContents /> */}
       <FAQ />
+      <GoToTop />
+      <ThemeSettings />
       <Footer />
       {/* <Outlet /> */}
     </div>

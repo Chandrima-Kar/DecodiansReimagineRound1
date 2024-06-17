@@ -78,7 +78,7 @@ const FAQ = () => {
     // >
     <section
       id="faq"
-      className="relative z-2 w-full pt-20 my-auto flex flex-col items-center justify-center"
+      className="relative z-2 w-full py-20 my-auto flex flex-col items-center justify-center"
     >
       <div className="container mx-auto flex flex-col items-center justify-between">
         <div

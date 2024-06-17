@@ -582,7 +582,7 @@ const Footer = () => {
   return (
     <section id="footer" className="flex items-center">
       <div
-        className="bg-[#fff3e4] border-t-0 border-accent w-full py-5 mt-20 z-2 
+        className="bg-[#fff3e4] border-t-0 border-accent w-full py-5 z-2
           px-4
           md:px-6
           2xl:px-28"
