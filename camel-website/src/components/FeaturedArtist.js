@@ -58,7 +58,7 @@ const FeaturedArtist = () => {
               <h1 className="font-bold font-serif text-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
                 Featured Artist
               </h1>
-              <h3 className="text-secondary-text font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
+              <h3 className="text-accent font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
                 {artistDetail.monthYear}
               </h3>
             </div>
@@ -91,7 +91,7 @@ const FeaturedArtist = () => {
                       </h1>
                     </div>
                     <div>
-                      <p className="text-xl text-secondary-text font-semibold font-mono">
+                      <p className="text-xl text-accent font-semibold font-mono">
                         {artistDetail.profile.role}
                       </p>
                     </div>

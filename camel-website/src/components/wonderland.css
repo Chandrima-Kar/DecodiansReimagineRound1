@@ -1,43 +1,42 @@
 .container {
-    position: relative;
-  }
-  
-  .animation22 {
-    animation: move22 10s linear infinite;
-  }
-  
-  @keyframes move22 {
-    0% {
-      top: 10%;
-      left: 5%;
-      z-index: 1;
-    }
-  
-    25% {
-      top: 10%;
-      left: 47%;
-      z-index: 1;
-    }
-  
-    50% {
-      top: 10%;
-      left: 90%;
-      z-index: 1;
-    }
-  
-    75% {
-      top: 10%;
-      left: 47%;
-      z-index: -1;
-    }
-  
-    100% {
-      top: 10%;
-      left: 8%;
-      z-index: -1;
-    }
+  position: relative;
+}
+
+.animation22 {
+  animation: move22 15s linear infinite;
+}
+
+@keyframes move22 {
+  0% {
+    top: 10%;
+    left: 7%;
+    z-index: 1;
   }
 
+  25% {
+    top: 10%;
+    left: 46.5%;
+    z-index: 1;
+  }
+
+  50% {
+    top: 10%;
+    left: 86%;
+    z-index: 1;
+  }
+
+  75% {
+    top: 10%;
+    left: 46.5%;
+    z-index: -1;
+  }
+
+  100% {
+    top: 10%;
+    left: 7%;
+    z-index: -1;
+  }
+}
 
 #wonderland-title {
   font-family: 'LexendZetta-Light', sans-serif;
