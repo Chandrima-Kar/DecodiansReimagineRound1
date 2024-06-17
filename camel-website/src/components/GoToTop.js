@@ -9,7 +9,7 @@ const GoToTop = () => {
   };
 
   const listenToScroll = () => {
-    let heightToHidden =1600;
+    let heightToHidden = 1600;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -29,7 +29,7 @@ const GoToTop = () => {
     <div className="fixed bottom-10 left-5 z-50 flex justify-start items-center md:bottom-5 md:right-5">
       {isVisible && (
         <div
-          className="text-xl w-12 h-12 text-white bg-secondary-text shadow-lg rounded-full flex justify-center items-center cursor-pointer animate-gototop"
+          className="text-xl w-12 h-12 text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer animate-gototop"
           onClick={goToBtn}
         >
           <FaArrowUp />

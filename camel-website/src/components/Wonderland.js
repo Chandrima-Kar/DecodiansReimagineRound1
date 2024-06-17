@@ -42,18 +42,21 @@ const WonderLand = () => {
       id="wonderland"
     >
       <section className="relative z-2 w-full pt-20 my-auto flex items-center justify-center">
-        <div className="flex flex-col items-center md:max-w-[1400px] w-full pb-0 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem] ">
+        <div className="flex flex-col items-center md:max-w-[1400px] w-full pb-0 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem] gap-y-3 ">
           <WonderlandTitle />
-          <div className="flex flex-row justify-center gap-x-10 text-xl">
+          <div className="flex flex-row w-full items-center justify-evenly">
             <div className="flex flex-col justify-end text-left">
-              <span className="block text-4xl font-semibold">where</span>
-              <span className="block text-4xl font-semibold">creativity thrives</span>
+              <span className="block text-[2.5rem] font-semibold">
+                where creativity thrives
+              </span>
             </div>
-            <div className="ml-5 mt-10 text-2xl flex items-center">
-              <span>Art supplies for hobbyists</span>
+            <div className="flex flex-col justify-end text-right items-center">
+              <span className="text-2xl text-secondary-text font-semibold">
+                Art supplies for hobbyists
+              </span>
             </div>
           </div>
-          <div className="flex container w-full items-center mt-10 sm:mx-[6.5rem] md:mx-5 lg:mx-0 justify-center gap-x-10  xl:gap-x-12 xl:justify-center">
+          <div className="flex container w-full items-center sm:mx-[6.5rem] md:mx-5 lg:mx-0 justify-center gap-x-10  xl:gap-x-12 xl:justify-center">
             {posterData.map((item, index) => (
               <div
                 key={index}

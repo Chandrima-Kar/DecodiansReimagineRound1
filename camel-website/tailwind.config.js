@@ -6,20 +6,11 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      keyframes: {
-        gototop: {
-          '0%': { transform: 'translateY(-0.5rem)' },
-          '100%': { transform: 'translateY(1rem)' },
-        },
-      },
-      animation: {
-        gototop: 'gototop 0.8s linear infinite alternate-reverse',
-      },
       colors: {
         background: " #FFFAF4",
-        background2: "#fff7ed",
+        background2: "#fff3e4",
         "primary-text": "#121212",
-        "secondary-text": "#e1251a",
+        "secondary-text": "#645c5c",
         accent: "#e1251a",
         highlight: "#f43a3a77",
 

@@ -15,7 +15,7 @@ import Wonderland from "./components/Wonderland";
 import KidsCards from "./components/KidsCards";
 import ExploreArtistsGallery from "./components/ExploreArtistsGallery";
 import Quotation from "./components/Quotation";
-import ExtraContents from "./components/ExtraContents";
+// import ExtraContents from "./components/ExtraContents";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className=" bg-background">
       <ParticlesComponent />
-      <GoToTop/>
+      <GoToTop />
       <Nav />
       <Header />
       <Banner /> {/* issue in small screen */}

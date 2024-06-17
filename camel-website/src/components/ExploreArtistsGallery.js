@@ -69,7 +69,7 @@ const ExploreArtistsGallery = () => {
               />
             ))}
           </div>
-          <div className="relative p-5 border border-black rounded-3xl bg-background z-10 flex flex-col items-center gap-y-5">
+          <div className="relative p-5 border border-accent rounded-3xl bg-background2 z-10 flex flex-col items-center gap-y-5">
             <div className="text-5xl font-extrabold font-sans text-center">
               Get inspired by
               <br /> popular artists
