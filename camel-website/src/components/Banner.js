@@ -52,9 +52,9 @@ const Banner = () => {
           <div className="relative left-1/2 flex aspect-square border-[3px] border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100 w-[20rem] sm:w-[35rem] lg:max-xl:w-[25rem]">
             <div className="flex aspect-square m-auto border-[3px] border-accent rounded-full w-[13rem] sm:w-[20rem] lg:max-xl:w-[15rem]">
               {/* Center of the circle */}
-              <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer bg-conic-gradient">
+              <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer bg-conic-gradient-green">
                 <Link to="/global-search" className="flex items-center justify-center w-full h-full bg-background rounded-full">
-                  <div className="relative flex items-center justify-center text-[3rem] md:text-7xl text-primary-text">
+                  <div className="relative flex items-center justify-center text-[3rem] md:text-7xl bg-accent2">
                     <CiSearch />
                     <img
                       src={camel_img}

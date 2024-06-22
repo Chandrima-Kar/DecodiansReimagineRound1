@@ -613,7 +613,7 @@ const Footer = () => {
                       className="relative cursor-pointer mx-4 my-2 flex flex-row items-center justify-center"
                     >
                       <div
-                        className={`flex items-center justify-between font-semibold hover:bg-accent border-2 border-accent rounded-lg gap-x-1 hover:text-background px-1 transition-all duration-300
+                        className={`flex items-center justify-between font-semibold hover-accent2 border-2 border-accent rounded-lg gap-x-1 hover:text-background px-1 transition-all duration-300
                       w-[8rem] md:w-[13rem]
                       h-[1.8rem] md:h-[2.2rem]
                       text-[12px] md:text-[1rem]
@@ -653,7 +653,7 @@ const Footer = () => {
                               to={item.path}
                               className="w-full h-full text-[12px] leading-normal md:text-[1rem]"
                             >
-                              <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 hover:bg-accent text-primary-text hover:text-background">
+                              <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 hover-accent2 text-primary-text hover:text-background">
                                 {item.name}
                               </div>
                             </Link>

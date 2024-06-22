@@ -75,10 +75,15 @@ module.exports = {
       },
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        "conic-gradient":
-          "conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77,#e1251a , #121212)",
-        "custom-gradient":
-          "linear-gradient(to right, #e1251a, #f43a3a77, #121212)",
+        "conic-gradient-default": "conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77, #e1251a, #121212)",
+        "conic-gradient-white": "conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77, #e1251a, #121212)",
+        "conic-gradient-pink": "conic-gradient(from 225deg, #FF5C8E, #f8c6d3, #121212, #f8c6d3, #FF5C8E, #121212)",
+        "conic-gradient-blue": "conic-gradient(from 225deg, #1A97F5, #d6eaf7, #121212, #d6eaf7, #1A97F5, #121212)",
+        "conic-gradient-orange": "conic-gradient(from 225deg, #FB9678, #fcd3c0, #121212, #fcd3c0, #FB9678, #121212)",
+        "conic-gradient-purple": "conic-gradient(from 225deg, #7352FF, #d3caf6, #121212, #d3caf6, #7352FF, #121212)",
+        "conic-gradient-green": "conic-gradient(from 225deg, #03C9D7, #abedf1, #121212, #abedf1, #03C9D7, #121212)",
+        "conic-gradient-indigo": "conic-gradient(from 225deg, #1E4DB7, #d1dcf0, #121212, #d1dcf0, #1E4DB7, #121212)",
+        "custom-gradient": "linear-gradient(to right, #e1251a, #f43a3a77, #121212)",
       },
     },
   },
