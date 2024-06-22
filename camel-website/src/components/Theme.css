@@ -1,0 +1,143 @@
+:root {
+  --accent-color: #e1251a; /* Default accent color */
+  --highlight-color: #f43a3a77; /* Default highlight color */
+  --bg-color: #fff; /* Default background color */
+  --text-color: #000; /* Default text color */
+  --background2: #fff3e4; /* Light background for sidebar */
+
+  /* Hover colors */
+  --hover-accent: #f43a3a; /* Accent color for hover */
+}
+
+.light-mode {
+  --bg-color: #fff;
+  --text-color: #000;
+  --background2: #fff3e4; /* Light background for sidebar */
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --background2: #0ff; /* Dark background for sidebar */
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+  color: #fff; /* Text color */
+}
+
+.border-accent {
+  border-color: var(--accent-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.hover-accent {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hover-accent:hover {
+  background-color: #fff; /* Background color on hover */
+  color: var(--accent-color); /* Text color on hover */
+}
+
+.hover-accent2 {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hover-accent2:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.colour-options {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right;
+  padding: 20px 0;
+
+  div {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Use border-radius to create circles */
+    margin: 2px 10px;
+    border: 1px solid #fff;
+    display: inline-block;
+    opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.mode-options {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+
+  .mode-option {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    display: inline-block;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+/* Theme classes */
+.theme-white {
+  --accent-color: #e1251a;
+  --highlight-color: #f43a3a77;
+}
+
+.theme-pink {
+  --accent-color: #FF5C8E;
+  --highlight-color: #FF88A8;
+}
+
+.theme-blue {
+  --accent-color: #1A97F5;
+  --highlight-color: #3FAFF8;
+}
+
+.theme-orange {
+  --accent-color: #FB9678;
+  --highlight-color: #FCB08D;
+}
+
+.theme-purple {
+  --accent-color: #7352FF;
+  --highlight-color: #9577FF;
+}
+
+.theme-green {
+  --accent-color: #03C9D7;
+  --highlight-color: #2FD7DF;
+}
+
+.theme-indigo {
+  --accent-color: #1E4DB7;
+  --highlight-color: #406DC4;
+}

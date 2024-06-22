@@ -1,4 +1,5 @@
 import SectionSvg from "./SectionSvg";
+import '../../components/Theme.css'
 
 const Section = ({
   className,

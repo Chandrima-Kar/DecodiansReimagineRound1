@@ -1,8 +1,5 @@
-import React from "react";
-// import { Outlet } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
 import ParticlesComponent from "./components/ParticlesComponent";
-
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -15,17 +12,22 @@ import Wonderland from "./components/Wonderland";
 import KidsCards from "./components/KidsCards";
 import ExploreArtistsGallery from "./components/ExploreArtistsGallery";
 import Quotation from "./components/Quotation";
-// import ExtraContents from "./components/ExtraContents";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
-
-import "./App.css";
 import GoToTop from "./components/GoToTop";
 import ThemeSettings from "./components/ThemeSettings";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem('theme-color');
+    if (currentThemeColor) {
+      document.documentElement.className = currentThemeColor; // Apply the theme class to the html element
+    }
+  }, []);
+
   return (
-    <div className=" bg-background">
+    <div className="content-box">
       <ParticlesComponent />
       <Nav />
       <Header />

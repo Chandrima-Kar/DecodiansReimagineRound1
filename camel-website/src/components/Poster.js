@@ -86,7 +86,7 @@ const Poster = () => {
               xl:min-h-[30rem]  "
               >
                 {hoveredIndex === index && (
-                  <h6 className="font-extrabold text-black text-3xl">
+                  <h6 className="font-extrabold text-primary-text text-3xl">
                     {item.title}
                   </h6>
                 )}
