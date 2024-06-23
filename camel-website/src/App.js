@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+// import { Outlet } from "react-router-dom";
+
 import ParticlesComponent from "./components/ParticlesComponent";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
@@ -20,28 +22,27 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    const currentThemeColor = localStorage.getItem('theme-color');
+    const currentThemeColor = localStorage.getItem("theme-color");
     if (currentThemeColor) {
       document.documentElement.className = currentThemeColor; // Apply the theme class to the html element
     }
   }, []);
 
   return (
-    <div className="content-box">
+    <div className="bg-[#FFFAF4]">
       <ParticlesComponent />
       <Nav />
       <Header />
-      <Banner /> {/* issue in small screen */}
+      <Banner />
       <FullSlider />
       <Poster />
       <FeaturedArtist />
       <TransparentPhotoColors />
       <Writeup />
       <Wonderland />
-      <KidsCards /> {/* issue in small screen */}
+      <KidsCards />
       <ExploreArtistsGallery />
       <Quotation />
-      {/* <ExtraContents /> */}
       <FAQ />
       <GoToTop />
       <ThemeSettings />

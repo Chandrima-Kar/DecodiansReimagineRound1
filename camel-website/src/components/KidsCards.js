@@ -52,12 +52,12 @@ const KidsCards = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem]  md:translate-y-[5.25rem]"
       customPaddings
       id="kidsCards"
     >
-      <section className="relative z-2 w-full pt-20  my-auto   flex items-center justify-center">
-        <div className="container sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem] flex flex-col justify-center items-center  ">
+      <section className="relative z-2 w-full pt-0 md:pt-20   my-auto   flex items-center justify-center">
+        <div className="container sm:mx-[6.5rem] md:mx-5 pb-8 lg:mx-[6.5rem] flex flex-col justify-center items-center  ">
           {/* Body */}
           <div className="flex flex-col items-center justify-between md:flex-row gap-y-5 lg:gap-y-0 md:gap-x-10 lg:gap-x-40">
             <div className=" text-center md:text-left  xl:w-[35rem] flex items-center justify-start ">

@@ -37,30 +37,38 @@ const WonderLand = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem]  md:translate-y-[5.25rem]"
       customPaddings
       id="wonderland"
     >
-      <section className="relative z-2 w-full pt-20 my-auto flex items-center justify-center">
-        <div className="flex flex-col items-center md:max-w-[1400px] w-full pb-0 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem] gap-y-3 ">
+      <section className="relative z-2 w-full pt-0 md:pt-20 my-auto flex items-center justify-center">
+        <div className="flex flex-col items-center md:max-w-[1400px] w-full pb-0 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem] md:gap-y-8">
           <WonderlandTitle />
-          <div className="flex flex-row w-full items-center justify-evenly">
+          <div className="flex flex-col w-full items-center justify-evenly gap-y-0 lg:gap-y-2">
             <div className="flex flex-col justify-end text-left">
-              <span className="block text-[2.5rem] font-semibold">
+              <span className="font-semibold block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl ">
                 where creativity thrives
               </span>
             </div>
-            <div className="flex flex-col justify-end text-right items-center">
-              <span className="text-2xl text-secondary-text font-semibold">
+            <div className="flex flex-col justify-end text-right items-center ">
+              <span className="text-secondary-text font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl ">
                 Art supplies for hobbyists
               </span>
             </div>
           </div>
-          <div className="flex container w-full items-center sm:mx-[6.5rem] md:mx-5 lg:mx-0 justify-center gap-x-10  xl:gap-x-12 xl:justify-center">
+
+          <div className="flex flex-col md:flex-row container w-full items-center sm:mx-[6.5rem] md:mx-5 lg:mx-0 justify-center gap-x-10  xl:gap-x-12 gap-y-5 md:gap-y-0 xl:justify-center">
             {posterData.map((item, index) => (
               <div
                 key={index}
-                className={`block relative bg-no-repeat bg-[length:100%_100%] md:max-w-[35rem] h-[2rem] w-[20rem] sm:h-[25rem] sm:w-[21rem] md:w-[20rem] lg:w-[22rem] xl:h-[24rem] xl:w-[36rem] 2xl:w-[38rem]`}
+                className={`block relative bg-no-repeat bg-[length:100%_100%] md:max-w-[35rem] 
+                  
+                  w-[18rem] 
+                  sm:h-[25rem] sm:w-[21rem] 
+                  md:w-[20rem] 
+                  lg:w-[25rem] 
+                  xl:h-[24rem] xl:w-[30rem] 
+                  2xl:w-[38rem]`}
                 style={{
                   backgroundImage: `url(${item.backgroundUrl})`,
                 }}

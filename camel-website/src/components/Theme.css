@@ -1,12 +1,18 @@
 :root {
-  --accent-color: #e1251a; /* Default accent color */
-  --highlight-color: #f43a3a77; /* Default highlight color */
-  --bg-color: #FFFAF4; /* Default background color */
-  --text-color: #000; /* Default text color */
-  --background2: #fff3e4; /* Light background for sidebar */
+  --accent-color: #e1251a;
+  /* Default accent color */
+  --highlight-color: #f43a3a77;
+  /* Default highlight color */
+  --bg-color: #FFFAF4;
+  /* Default background color */
+  --text-color: #000;
+  /* Default text color */
+  --background2: #fff3e4;
+  /* Light background for sidebar */
 
   /* Hover colors */
-  --hover-accent: #f43a3a; /* Accent color for hover */
+  --hover-accent: #f43a3a;
+  /* Accent color for hover */
 
   /* Conic gradients */
   --conic-gradient: conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77, #e1251a, #121212);
@@ -15,32 +21,36 @@
 .light-mode {
   --bg-color: #FFFAF4;
   --text-color: #000;
-  --background2: #fff3e4; /* Light background for sidebar */
+  --background2: #fff3e4;
+  /* Light background for sidebar */
 }
 
 .dark-mode {
   --bg-color: #121212;
   --text-color: #e0e0e0;
-  --background2: #0ff; /* Dark background for sidebar */
+  --background2: #0ff;
+  /* Dark background for sidebar */
 }
 
 .bg-accent {
   background-color: var(--accent-color);
-  color: #FFFAF4; /* Text color */
+  color: #FFFAF4;
+  /* Text color */
 }
 
 
 /*for inner circle of banner*/
 .bg-accent2 {
-  color: var(--accent-color); /* Text color */
+  color: var(--accent-color);
+  /* Text color */
 }
 
 .bg-highlight {
   background-color: var(--highlight-color);
-  
+
 }
 
-.bg-conic-gradient{
+.bg-conic-gradient {
   color: var(--conic-gradient);
 }
 
@@ -61,8 +71,10 @@
 }
 
 .hover-accent:hover {
-  background-color: #fff3e4; /* Background color on hover */
-  color: var(--accent-color); /* Text color on hover */
+  background-color: #fff3e4;
+  /* Background color on hover */
+  color: var(--accent-color);
+  /* Text color on hover */
 }
 
 .hover-accent2 {
@@ -79,6 +91,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
 .colour-options {
   max-width: 800px;
   margin: 0 auto;
@@ -89,7 +102,8 @@ body {
     cursor: pointer;
     width: 25px;
     height: 25px;
-    border-radius: 50%; /* Use border-radius to create circles */
+    border-radius: 50%;
+    /* Use border-radius to create circles */
     margin: 2px 10px;
     border: 1px solid #FFFAF4;
     display: inline-block;
@@ -130,7 +144,7 @@ body {
 }
 
 /* Theme classes */
-.theme-white {
+.theme-red {
   --accent-color: #e1251a;
   --highlight-color: #f43a3a77;
 

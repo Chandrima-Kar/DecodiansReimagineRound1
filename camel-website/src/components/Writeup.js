@@ -29,11 +29,11 @@ const Writeup = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem]  md:translate-y-[5.25rem]"
       customPaddings
       id="writeUp"
     >
-      <section className="relative pt-20   flex items-center justify-center overflow-hidden">
+      <section className="relative pt-0 md:pt-20   flex items-center justify-center overflow-hidden">
         <div
           className="md:max-w-[1400px]  w-full  
       

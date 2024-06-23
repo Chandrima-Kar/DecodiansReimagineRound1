@@ -584,18 +584,18 @@ const Footer = () => {
       <div
         className="bg-[#fff3e4] border-t-0 border-accent w-full py-5 z-2
           px-4
-          md:px-6
+          md:px-6 
           2xl:px-28"
       >
-        <div className="flex flex-col items-center justify-center w-full gap-y-3">
+        <div className="flex flex-col items-center justify-center w-full gap-y-3 pb-14 xl:pb-0">
           {/* top */}
           {dropDownContent.map((content, contentIndex) => (
             <div
               key={contentIndex}
               className="flex flex-col items-center justify-center"
             >
-              <div className="flex items-center justify-center ">
-                <div className="flex items-center justify-center text-[1rem] sm:text-3xl font-bold gap-x-3">
+              <div className="flex items-center justify-center gap-x-1 ">
+                <div className="flex items-center justify-center text-[0.9rem] sm:text-3xl font-bold gap-x-3">
                   <Link
                     to={`/${content.heading.toLowerCase()}`}
                     className="flex flex-row items-center justify-center cursor-pointer"
@@ -610,13 +610,15 @@ const Footer = () => {
                     <div
                       key={index}
                       onClick={() => handleDropdownClick(contentIndex, index)}
-                      className="relative cursor-pointer mx-4 my-2 flex flex-row items-center justify-center"
+                      className="relative cursor-pointer my-2 flex flex-row items-center justify-center
+                      md:mx-1
+                      xl:mx-4 "
                     >
                       <div
                         className={`flex items-center justify-between font-semibold hover-accent2 border-2 border-accent rounded-lg gap-x-1 hover:text-background px-1 transition-all duration-300
-                      w-[8rem] md:w-[13rem]
-                      h-[1.8rem] md:h-[2.2rem]
-                      text-[12px] md:text-[1rem]
+                        w-[7.5rem] md:w-[8.8rem] lg:w-[10rem] xl:w-[13rem]
+                        h-[1.8rem] lg:h-[2rem] xl:h-[2.2rem]
+                        text-[12px] lg:text-[14px] xl:text-[1rem]
                       ${
                         activeDropdown[contentIndex] === index
                           ? "rounded-t-none bg-accent text-background"
@@ -635,8 +637,8 @@ const Footer = () => {
 
                       <div
                         className={`absolute text-center duration-300 transform
-                  w-[8rem] md:w-[13rem]
-                  bottom-[2.2rem] 
+                  w-[7.5rem] md:w-[8.8rem] lg:w-[10rem] xl:w-[13rem]
+                  bottom-[1.8rem]  xl:bottom-[2.2rem] 
                     ${
                       activeDropdown[contentIndex] === index
                         ? "opacity-100 scale-100"
@@ -667,20 +669,20 @@ const Footer = () => {
           ))}
 
           {/* middle */}
-          <div className="flex items-start justify-evenly self-stretch">
+          <div className="flex items-start justify-evenly gap-x-5  self-stretch">
             {commonData.map((data, index) => (
               <div
                 key={index}
                 className="flex flex-col items-start justify-center "
               >
-                <h1 className="text-2xl font-bold my-3 text-primary-text">
+                <h1 className="text-base md:text-xl lg:text-2xl font-bold my-1 lg:my-3 text-primary-text">
                   {data.title}
                 </h1>
                 {data.items.map((options, i) => (
                   <div key={i} className="">
                     <Link
                       to={options.path}
-                      className="text-lg font-medium text-secondary-text hover:text-primary-text"
+                      className=" text-sm lg:text-lg font-medium text-secondary-text hover:text-primary-text"
                     >
                       {" "}
                       {options.name}{" "}
@@ -692,16 +694,16 @@ const Footer = () => {
           </div>
 
           {/* bottom */}
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-y-3 md:gap-y-0 justify-between self-stretch">
+          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-y-3 sm:gap-y-0 justify-between self-stretch">
             {/* left side */}
-            <div className="flex flex-col items-start justify-center gap-y-3">
+            <div className="flex flex-col items-center sm:items-start justify-center gap-y-3">
               {/* newsletter */}
-              <div className="flex flex-col xl:flex-row items-start xl:items-center justify-center gap-y-3 xl:gap-y-0 gap-x-3">
+              <div className="flex flex-col xl:flex-row items-center sm:items-start xl:items-center justify-center gap-y-3 xl:gap-y-0 gap-x-3">
                 <div className="flex flex-col items-start justify-center">
-                  <h1 className="text-[1.35rem] font-bold">
+                  <h1 className="text-[1.2rem] lg:text-[1.35rem] font-bold text-center sm:text-left">
                     Subscribe to a world of colour and creativity:
                   </h1>
-                  <p className="text-[0.9rem]">
+                  <p className="text-[0.9rem] text-center sm:text-left">
                     Get updates on product launches, competitions, live sessions
                     and more.
                   </p>
@@ -709,7 +711,7 @@ const Footer = () => {
 
                 <div>
                   <form
-                    className="flex items-center justify-center gap-x-2"
+                    className="flex items-start justify-center gap-x-2"
                     onSubmit={handleSubmit}
                   >
                     <input
@@ -727,7 +729,7 @@ const Footer = () => {
               </div>
 
               {/* social media */}
-              <div className="flex items-center justify-center text-xl font-bold gap-x-3">
+              <div className="flex items-center justify-center text-[0.85rem] md:text-[1.2rem] lg:text-[1.35rem] font-bold gap-x-3">
                 <h1>Follow us on social media platforms:</h1>
                 <div className="flex items-center justify-center gap-x-3">
                   {socialHandles.map((social, i) => (
@@ -744,14 +746,14 @@ const Footer = () => {
 
             {/* right side */}
             <div className="flex flex-col items-center justify-center">
-              <div className="flex items-center justify-center gap-x-2 font-bold text-accent text-lg">
+              <div className="flex items-center justify-center gap-x-2 font-bold text-accent text-base lg:text-lg">
                 <Link to="/camel">Privacy</Link>
                 <p>|</p>
                 <Link to="/camel">Disclaimer</Link>
                 <p>|</p>
                 <Link to="/camel">Sitemap</Link>
               </div>
-              <div className="text-md text-primary-text font-semibold">
+              <div className=" text-sm lg:text-base text-primary-text font-semibold">
                 <p>©2024 Kokuyo Camlin. All rights reserved.</p>
               </div>
             </div>

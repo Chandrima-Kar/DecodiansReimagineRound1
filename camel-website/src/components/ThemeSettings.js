@@ -3,17 +3,19 @@ import { IoMdSettings } from "react-icons/io";
 import "../components/Theme.css";
 
 const ThemeSettings = () => {
-  const [colorTheme, setColorTheme] = useState('theme-white');
-  const [mode, setMode] = useState('light-mode'); // new state for light/dark mode
+  const [colorTheme, setColorTheme] = useState("theme-white");
+  const [mode, setMode] = useState("light-mode"); // new state for light/dark mode
   const [showFooterButton, setShowFooterButton] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-    const currentThemeColor = localStorage.getItem('theme-color');
-    const currentMode = localStorage.getItem('theme-mode');
+    const currentThemeColor = localStorage.getItem("theme-color");
+    const currentMode = localStorage.getItem("theme-mode");
     if (currentThemeColor) {
       setColorTheme(currentThemeColor);
-      document.documentElement.className = `${currentThemeColor} ${currentMode || 'light-mode'}`;
+      document.documentElement.className = `${currentThemeColor} ${
+        currentMode || "light-mode"
+      }`;
     }
     if (currentMode) {
       setMode(currentMode);
@@ -22,14 +24,14 @@ const ThemeSettings = () => {
 
   const handleClick = (theme) => {
     setColorTheme(theme);
-    localStorage.setItem('theme-color', theme);
+    localStorage.setItem("theme-color", theme);
     document.documentElement.className = `${theme} ${mode}`;
     setIsSidebarOpen(false); // Close sidebar on theme selection
   };
 
   const handleModeClick = (newMode) => {
     setMode(newMode);
-    localStorage.setItem('theme-mode', newMode);
+    localStorage.setItem("theme-mode", newMode);
     document.documentElement.className = `${colorTheme} ${newMode}`;
     setIsSidebarOpen(false); // Close sidebar on mode selection
   };
@@ -72,35 +74,69 @@ const ThemeSettings = () => {
           <div className="flex-1" onClick={toggleSidebar}></div>
           <div className="w-1/3 bg-[#484B52] h-full shadow-lg">
             <div className="p-4 flex flex-row gap-2 justify-center">
-              <h2 className="text-2xl text-center font-semibold">Theme Settings</h2>
-              <IoMdSettings className="h-6 w-6 mt-1 "/>
+              <h2 className="text-2xl text-center font-semibold">
+                Theme Settings
+              </h2>
+              <IoMdSettings className="h-6 w-6 mt-1 " />
             </div>
 
-
             <div className="mode-options flex flex-col">
-            <div className="text-xl font-semibold">Theme Options</div>
+              <div className="text-xl font-semibold">Theme Options</div>
               <div
-                className={`mode-option ${mode === 'light-mode' ? 'active' : ''}`}
-                onClick={() => handleModeClick('light-mode')}
+                className={`mode-option ${
+                  mode === "light-mode" ? "active" : ""
+                }`}
+                onClick={() => handleModeClick("light-mode")}
               >
                 <h1 className="text-lg">Light</h1>
               </div>
               <div
-                className={`mode-option ${mode === 'dark-mode' ? 'active' : ''}`}
-                onClick={() => handleModeClick('dark-mode')}
+                className={`mode-option ${
+                  mode === "dark-mode" ? "active" : ""
+                }`}
+                onClick={() => handleModeClick("dark-mode")}
               >
                 Dark
               </div>
             </div>
 
-            <div className="colour-options">Theme Colors
-              <div id='theme-white' className="bg-[#eee]" onClick={() => handleClick('theme-white')}></div>
-              <div id='theme-pink' className="bg-[#FF5C8E]" onClick={() => handleClick('theme-pink')}></div>
-              <div id='theme-blue' className="bg-[#1A97F5]" onClick={() => handleClick('theme-blue')}></div>
-              <div id='theme-orange' className="bg-[#FB9678]" onClick={() => handleClick('theme-orange')}></div>
-              <div id='theme-purple' className="bg-[#7352FF]" onClick={() => handleClick('theme-purple')}></div>
-              <div id='theme-green' className="bg-[#03C9D7]" onClick={() => handleClick('theme-green')}></div>
-              <div id='theme-indigo' className="bg-[#1E4DB7]" onClick={() => handleClick('theme-indigo')}></div>
+            <div className="colour-options">
+              Theme Colors
+              <div
+                id="theme-red"
+                className="bg-[#e1251a]"
+                onClick={() => handleClick("theme-red")}
+              ></div>
+              <div
+                id="theme-pink"
+                className="bg-[#FF5C8E]"
+                onClick={() => handleClick("theme-pink")}
+              ></div>
+              <div
+                id="theme-blue"
+                className="bg-[#1A97F5]"
+                onClick={() => handleClick("theme-blue")}
+              ></div>
+              <div
+                id="theme-orange"
+                className="bg-[#FB9678]"
+                onClick={() => handleClick("theme-orange")}
+              ></div>
+              <div
+                id="theme-purple"
+                className="bg-[#7352FF]"
+                onClick={() => handleClick("theme-purple")}
+              ></div>
+              <div
+                id="theme-green"
+                className="bg-[#03C9D7]"
+                onClick={() => handleClick("theme-green")}
+              ></div>
+              <div
+                id="theme-indigo"
+                className="bg-[#1E4DB7]"
+                onClick={() => handleClick("theme-indigo")}
+              ></div>
             </div>
           </div>
         </div>

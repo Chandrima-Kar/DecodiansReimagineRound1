@@ -38,18 +38,18 @@ const TransparentPhotoColors = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem]  md:translate-y-[5.25rem]"
       customPaddings
       id="transparentPhotoColors"
     >
-      <section className="relative z-2 w-full pt-20  my-auto   flex items-center justify-center">
+      <section className="relative z-2 w-full pt-0 md:pt-20  my-auto   flex items-center justify-center">
         <div
           className="md:max-w-[1400px] md:h-[680px] h-[400px]  sm:h-[500px] 
           
           
           w-full  
           border-2 border-accent rounded-xl bg-[#ede4d3]
-          pb-24 xl:pb-8  relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
+          pb-0  relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
         >
           {/* image */}
           <div

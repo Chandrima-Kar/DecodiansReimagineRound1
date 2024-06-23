@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import img1 from "../assets/06/brush1.png";
 import "./wonderland.css";
 
 const WonderlandTitle = () => {
+  const wonderlandRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate");
+        }
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    );
+
+    if (wonderlandRef.current) {
+      observer.observe(wonderlandRef.current);
+    }
+
+    return () => {
+      if (wonderlandRef.current) {
+        observer.unobserve(wonderlandRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="relative container mx-auto flex flex-col items-center justify-center h-[5rem]">
-      <div className="absolute  w-full h-full overflow-hidden">
-        <img
-          src={img1}
-          alt="..."
-          className="animation22 absolute h-[60px] w-[80px] z-0"
-        />
-      </div>
-      <div
-        id="wonderland-title"
-        className="flex flex-col items-center justify-center mb-5"
-      >
-        <h1 className="relative flex justify-center items-center font-bold text-8xl tracking-wide space-x-7 font-LexendZetta-Light">
+    <div
+      ref={wonderlandRef}
+      className="relative container mx-auto flex flex-col items-center justify-center h-[5rem]"
+    >
+      <div className="flex flex-col items-center justify-center md:mb-5 px-7">
+        <h1
+          id="wonderland-title"
+          className="relative flex   justify-center items-center font-bold   font-LexendZetta-Light 
+          
+          text-[2rem] tracking-normal  space-x-1
+          md:text-[3.25rem] md:tracking-wide md:space-x-7
+          lg:text-7xl
+          xl:text-8xl"
+        >
           <span className="relative">
             W
-            <div className="absolute top-[.3rem] left-[2.6rem] transform -translate-x-2.5 text-xl bg-background text-primary-text px-[0.35rem]">
+            <div
+              className="absolute   transform -translate-x-2.5  bg-background text-primary-text 
+              
+            left-[1.2rem] px-[0.15rem] text-[0.7rem] top-[.5rem]
+            md:left-[1.63rem] md:px-[0.15rem] md:text-[1rem] md:top-[.65rem]
+            lg:left-[2rem]  lg:px-[0.35rem] lg:text-xl lg:top-[.3rem]
+            xl:left-[2.6rem] 
+            2xl:left-[2.5rem]  2xl:text-2xl"
+            >
               <span>A</span>
             </div>
           </span>
@@ -33,6 +67,21 @@ const WonderlandTitle = () => {
           <span>N</span>
           <span>D</span>
         </h1>
+        <div
+          className="absolute w-full h-full overflow-hidden 
+        
+          top-7 md:top-4 lg:top-1 2xl:top-0"
+        >
+          <img
+            src={img1}
+            alt="Brush"
+            className="brush-animation z-0
+            h-[80px] w-[50px] 
+            md:h-[100px] md:w-[60px]
+            lg:h-[115px] lg:w-[70px]
+            xl:h-[130px] xl:w-[80px] "
+          />
+        </div>
       </div>
     </div>
   );

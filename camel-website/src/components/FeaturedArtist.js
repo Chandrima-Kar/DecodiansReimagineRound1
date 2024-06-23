@@ -46,11 +46,11 @@ const FeaturedArtist = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem] md:translate-y-[5.25rem]"
       customPaddings
       id="featuredArtist"
     >
-      <section className="relative pt-20 flex items-center justify-center overflow-hidden">
+      <section className="relative pt-0 md:pt-20 flex items-center justify-center overflow-hidden">
         <div className="md:max-w-[1400px] w-full pb-8 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]">
           <div className="flex flex-col xl:flex-row items-center justify-between px-10 gap-y-10 gap-x-0">
             {/* heading */}
@@ -58,7 +58,7 @@ const FeaturedArtist = () => {
               <h1 className="font-bold font-serif text-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
                 Featured Artist
               </h1>
-              <h3 className="text-accent font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
+              <h3 className="text-secondary-text font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
                 {artistDetail.monthYear}
               </h3>
             </div>
@@ -91,7 +91,7 @@ const FeaturedArtist = () => {
                       </h1>
                     </div>
                     <div>
-                      <p className="text-xl text-accent font-semibold font-mono">
+                      <p className="text-xl text-secondary-text font-semibold font-mono">
                         {artistDetail.profile.role}
                       </p>
                     </div>

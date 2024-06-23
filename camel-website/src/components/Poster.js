@@ -47,15 +47,15 @@ const Poster = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem] md:translate-y-[5.25rem]"
       customPaddings
       id="poster"
     >
-      <section className="relative z-2 w-full pt-20  my-auto   flex items-center justify-center">
+      <section className="relative z-2 w-full pt-0 md:pt-20  my-auto   flex items-center justify-center">
         <div
           className="flex container  w-full flex-wrap items-center  flex-grow     
           sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]
-        justify-center gap-x-56 gap-y-8 xl:gap-x-0 xl:justify-between "
+        justify-evenly gap-x-5 gap-y-8 lg:gap-x-2 lg:justify-between "
         >
           {posterData.map((item, index) => (
             <div
@@ -63,8 +63,11 @@ const Poster = () => {
               className={`block relative p-1 bg-no-repeat bg-[length:100%_100%] md:max-w-[30rem] 
             
             h-[22rem] w-[17rem]
-            sm:h-[25rem] sm:w-[18rem] md:w-[15.5rem] lg:w-[18rem]
-            xl:h-[30rem] xl:w-[20rem] 2xl:w-[23rem] ${
+            sm:h-[25rem] sm:w-[18rem] 
+            md:w-[20rem] 
+            lg:w-[16rem]
+            xl:h-[30rem] xl:w-[22rem] 
+            2xl:w-[25rem] ${
               hoveredIndex !== null && hoveredIndex !== index ? "blur" : ""
             }`}
               style={{
@@ -86,7 +89,7 @@ const Poster = () => {
               xl:min-h-[30rem]  "
               >
                 {hoveredIndex === index && (
-                  <h6 className="font-extrabold text-primary-text text-3xl">
+                  <h6 className="font-extrabold text-black text-3xl">
                     {item.title}
                   </h6>
                 )}

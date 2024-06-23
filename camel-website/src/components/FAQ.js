@@ -78,7 +78,7 @@ const FAQ = () => {
     // >
     <section
       id="faq"
-      className="relative z-2 w-full py-20 my-auto flex flex-col items-center justify-center"
+      className="relative z-2 w-full py-10  my-auto flex flex-col items-center justify-center"
     >
       <div className="container mx-auto flex flex-col items-center justify-between">
         <div
@@ -86,7 +86,8 @@ const FAQ = () => {
           
           px-4
           md:px-6
-          2xl:px-28"
+          lg:px-[6.5rem]
+          xl:px-28"
         >
           <div className="flex items-center justify-center gap-x-5">
             <div className=" ">

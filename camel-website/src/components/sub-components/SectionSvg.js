@@ -4,15 +4,15 @@ const SectionSvg = ({ crossesOffset }) => {
   return (
     <>
       <PlusSvg
-        className={`hidden absolute -top-[6rem] left-[1.5625rem] text-accent ${
-          crossesOffset || ""
-        } pointer-events-none lg:block xl:left-[3.5rem]`}
+        className={` absolute -top-[6rem] md:-top-[7rem] left-[0rem] text-accent ${
+          crossesOffset && crossesOffset
+        } pointer-events-none block xl:left-[3rem]`}
       />
 
       <PlusSvg
-        className={`hidden absolute -top-[6rem] right-[1.5625rem] text-accent ${
-          crossesOffset || ""
-        } pointer-events-none lg:block xl:right-[3.5rem]`}
+        className={` absolute  -top-[6rem] md:-top-[7rem] right-[0rem] text-accent ${
+          crossesOffset && crossesOffset
+        } pointer-events-none block xl:right-[3rem]`}
       />
     </>
   );

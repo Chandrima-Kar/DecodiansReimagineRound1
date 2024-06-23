@@ -18,7 +18,7 @@ const FullSlider = () => {
     {
       url: slide2,
       bg: "bg-center",
-      top_d: "top-[45%]  md:top-[58%]",
+      top_d: "top-[54%]  md:top-[58%]",
       header: "Creating India's largest art community",
       header_color: "text-primary-text",
       p_class: "hidden",
@@ -29,7 +29,7 @@ const FullSlider = () => {
     {
       url: slide3,
       bg: "bg-center",
-      top_d: "top-[45%] md:top-[58%]",
+      top_d: "top-[50%] md:top-[58%]",
       header: "Introducing Mess-Free Creativity: ",
       header_color: "text-primary-text",
       p_class: "text-xl md:text-2xl font-semibold text-secondary-text py-1",
@@ -40,7 +40,7 @@ const FullSlider = () => {
     {
       url: slide4,
       bg: "xl:bg-center",
-      top_d: "top-[50%] md:top-[58%]",
+      top_d: "top-[60%] md:top-[66%]",
       header: "with the Camel Artist Range",
       header_color: "text-primary-text",
       p_class: "hidden",
@@ -52,7 +52,7 @@ const FullSlider = () => {
     {
       url: slide5,
       bg: "bg-center",
-      top_d: "top-[60%] md:top-[70%]",
+      top_d: "top-[70%]",
       header: "Scan the packs and save the planet!",
       header_color: "text-background",
       p_class: "hidden",
@@ -92,15 +92,15 @@ const FullSlider = () => {
     <Section
       className=""
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="translate-y-[3.25rem] md:translate-y-[5.25rem]"
       customPaddings
       id="fullSlider"
     >
-      <section className="relative pt-20   flex items-center justify-center overflow-hidden">
+      <section className="relative pt-0 md:pt-20  flex items-center justify-center overflow-hidden">
         <div
           className="md:max-w-[1400px] md:h-[680px]  h-[500px] w-full  
       
-          pb-24 xl:pb-8  relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
+          pb-8 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]"
         >
           {/* Main Contents */}
           <div
@@ -122,7 +122,7 @@ const FullSlider = () => {
               Washable Colour Markers{" "}
             </p>
           </div>
-          <div className="absolute top-[67%] md:top-[78%] left-2 md:left-10 flex gap-x-3 duration-500">
+          <div className="absolute top-[75%] md:top-[78%] left-2 md:left-10 flex gap-x-3 duration-500">
             <MyButton
               text={slides[currentIndex].button1_text}
               className={`${slides[currentIndex].button1} text-[12px] md:text-[20px] px-5 py-1`}
@@ -137,7 +137,7 @@ const FullSlider = () => {
           {/* Arrows */}
           {/* Left Arrow */}
           <div
-            className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
+            className="hidden group-hover:block absolute top-[40%] -translate-x-0  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
         
             left-2 sm:left-5"
           >
@@ -145,7 +145,7 @@ const FullSlider = () => {
           </div>
           {/* Right Arrow */}
           <div
-            className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[-45%]  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
+            className="hidden group-hover:block absolute top-[40%] -translate-x-0  text-2xl rounded-full p-2 bg-highlight text-white cursor-pointer
         
             right-2 sm:right-5"
           >
