@@ -74,7 +74,7 @@ const KidsCards = () => {
                   <br /> mini-universe
                 </h1>
                 <h1
-                  className=" text-2xl uppercase  font-semibold  tracking-wide text-secondary-text
+                  className=" text-2xl uppercase  font-semibold  tracking-wide text-secondary-text dark:text-dark-secondary-text
               "
                 >
                   Art supplies for kids

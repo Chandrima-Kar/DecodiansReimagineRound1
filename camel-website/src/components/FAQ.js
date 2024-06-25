@@ -102,7 +102,7 @@ const FAQ = () => {
               {/* <GiThink className="text-4xl sm:text-5xl text-accent" /> */}
             </div>
             <div className="flex items-center justify-center  px-2 pt-2 border-2 border-b-0 border-accent rounded-t-3xl bg-background dark:bg-darkBackground z-10">
-              <h1 className="text-5xl font-bold px-4 py-1 bg-background dark:bg-darkBackground border-2 border-b-0 border-accent rounded-t-2xl">
+              <h1 className="text-5xl font-bold px-4 py-1 text-primary-text dark:text-dark-primary-text border-2 border-b-0 border-accent rounded-t-2xl">
                 FAQs
               </h1>
             </div>

@@ -14,10 +14,10 @@ module.exports = {
         "secondary-text": "#645c5c",
         accent: "#e1251a",
         highlight: "#f43a3a77",
-        darkBackground:"#222831",
-        darkBackground2:"#31363F",
-        "dark-primary-text":"#ffffff",
-        "dark-secondary-text":"#858DFF",
+        darkBackground:"#000407",
+        darkBackground2:"#010b14",
+        "dark-primary-text":"#FFFAF4",
+        "dark-secondary-text":"#a3a09d",
 
         color: {
           1: "#AC6AFF",
