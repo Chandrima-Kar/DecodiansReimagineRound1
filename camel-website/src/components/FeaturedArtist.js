@@ -1,6 +1,8 @@
 import React from "react";
 import Section from "./sub-components/Section";
 import MyButton from "./sub-components/MyButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 // icons
 import { PiArrowSquareOutBold } from "react-icons/pi";
@@ -54,19 +56,29 @@ const FeaturedArtist = () => {
         <div className="md:max-w-[1400px] w-full pb-8 relative group container mx-4 sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]">
           <div className="flex flex-col xl:flex-row items-center justify-between px-10 gap-y-10 gap-x-0">
             {/* heading */}
-            <div className="xl:w-[20%] flex flex-col items-center xl:items-start leading-none gap-y-3">
+            <motion.div
+              variants={fadeIn("right", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="xl:w-[20%] flex flex-col items-center xl:items-start leading-none gap-y-3"
+            >
               <h1 className="font-bold font-serif text-primary-text dark:text-dark-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
                 Featured Artist
               </h1>
-              <h3 className="text-secondary-text font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
+              <h3 className="text-accent font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
                 {artistDetail.monthYear}
               </h3>
-            </div>
+            </motion.div>
 
             {/* profile */}
             <div className="flex flex-col md:flex-row gap-x-32 gap-y-10 lg:gap-x-56 xl:gap-x-24 2xl:gap-x-56">
               <div className="flex flex-col items-center justify-center">
-                <div className="flex flex-col items-center justify-center gap-y-2">
+                <motion.div
+                  variants={fadeIn("zoom", 0.2, 1)}
+                  initial="hidden"
+                  whileInView="show"
+                  className="flex flex-col items-center justify-center gap-y-2"
+                >
                   {/* image */}
                   <div className="relative">
                     <img
@@ -91,7 +103,7 @@ const FeaturedArtist = () => {
                       </h1>
                     </div>
                     <div>
-                      <p className="text-xl text-secondary-text font-semibold font-mono">
+                      <p className="text-xl text-accent font-semibold font-mono">
                         {artistDetail.profile.role}
                       </p>
                     </div>
@@ -106,11 +118,16 @@ const FeaturedArtist = () => {
                       buttonNameClassName="mr-1"
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
               {/* arts */}
-              <div className="flex flex-row items-center justify-between">
+              <motion.div
+                variants={fadeIn("left", 0.2, 1)}
+                initial="hidden"
+                whileInView="show"
+                className="flex flex-row items-center justify-between"
+              >
                 <Swiper
                   effect={"cube"}
                   grabCursor={true}
@@ -138,7 +155,7 @@ const FeaturedArtist = () => {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

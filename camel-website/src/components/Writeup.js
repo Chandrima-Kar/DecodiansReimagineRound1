@@ -1,7 +1,8 @@
 import React from "react";
 import Section from "./sub-components/Section";
 import MyButton from "./sub-components/MyButton";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 // icon
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -50,7 +51,10 @@ const Writeup = () => {
                   {/*individual cards*/}
 
                   {writeUps.map((content, index) => (
-                    <div
+                    <motion.div
+                      variants={fadeIn("right", 0.2, 1)}
+                      initial="hidden"
+                      whileInView="show"
                       key={index}
                       className={`w-[100%] my-0 mx-auto p-3 bg-background border-2 border-accent rounded-[35px] xl:h-96 lg:h-80 md:h-72 sm:h-96 shadow-red flex flex-col items-center justify-center xl:p-8 lg:p-5 md:p-3.5 sm:px-4 hover:translate-y-4 transition-all duration-300 cursor-pointer ${
                         index === 1 ? "md:mt-6" : "md:mt-0"
@@ -70,7 +74,7 @@ const Writeup = () => {
                         className="px-5 py-1 lg:text-xl md:text-sm font-bold text-background"
                         icon={<IoIosArrowForward className="my-auto" />}
                       />
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>

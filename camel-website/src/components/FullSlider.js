@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import Section from "./sub-components/Section";
 import MyButton from "./sub-components/MyButton";
 
-
 // icons
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
@@ -41,7 +40,7 @@ const FullSlider = () => {
     {
       url: slide4,
       bg: "xl:bg-center",
-      top_d: "top-[60%] md:top-[66%]",
+      top_d: "top-[60%] md:top-[62%]",
       header: "with the Camel Artist Range",
       header_color: "text-primary-text ",
       p_class: "hidden",

@@ -1,6 +1,9 @@
 import React from "react";
 import Section from "./sub-components/Section";
 import MyButton from "./sub-components/MyButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -61,7 +64,11 @@ const KidsCards = () => {
           {/* Body */}
           <div className="flex flex-col items-center justify-between md:flex-row gap-y-5 lg:gap-y-0 md:gap-x-10 lg:gap-x-40">
             <div className=" text-center md:text-left  xl:w-[35rem] flex items-center justify-start ">
-              <div>
+              <motion.div
+                variants={fadeIn("right", 0.2, 1)}
+                initial="hidden"
+                whileInView="show"
+              >
                 <h1 className="text-[40px] lg:text-[55px] xl:text-[90px] font-bold leading-none   text-primary-text dark:text-dark-primary-text">
                   A colourful
                   <br /> mini-universe
@@ -72,10 +79,14 @@ const KidsCards = () => {
                 >
                   Art supplies for kids
                 </h1>
-              </div>
+              </motion.div>
             </div>
 
-            <div>
+            <motion.div
+              variants={fadeIn("zoom", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+            >
               <Swiper
                 effect={"cards"}
                 grabCursor={true}
@@ -129,7 +140,7 @@ const KidsCards = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

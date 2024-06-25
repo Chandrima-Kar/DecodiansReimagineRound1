@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Section from "./sub-components/Section";
 import ClipPath from "./sub-components/ClipPath";
 import MyButton from "./sub-components/MyButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 // images
 import crayonImg from "../assets/02/1_0.webp";
@@ -52,7 +54,10 @@ const Poster = () => {
       id="poster"
     >
       <section className="relative z-2 w-full pt-0 md:pt-20  my-auto   flex items-center justify-center">
-        <div
+        <motion.div
+          variants={fadeIn("zoom", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
           className="flex container  w-full flex-wrap items-center  flex-grow     
           sm:mx-[6.5rem] md:mx-5 lg:mx-[6.5rem]
         justify-evenly gap-x-5 gap-y-8 lg:gap-x-2 lg:justify-between "
@@ -89,9 +94,14 @@ const Poster = () => {
               xl:min-h-[30rem]  "
               >
                 {hoveredIndex === index && (
-                  <h6 className="font-extrabold text-black text-3xl">
+                  <motion.h6
+                    variants={fadeIn("up", 0.1, 1)}
+                    initial="hidden"
+                    whileInView="show"
+                    className="font-extrabold text-black text-3xl"
+                  >
                     {item.title}
-                  </h6>
+                  </motion.h6>
                 )}
                 <div className="flex items-center justify-end mt-auto text-xl sm:text-2xl md:text-xl xl:text-2xl">
                   <MyButton
@@ -123,7 +133,7 @@ const Poster = () => {
               <ClipPath />
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
     </Section>
   );
