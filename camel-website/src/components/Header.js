@@ -25,7 +25,7 @@ const Header = () => {
           2xl:px-28"
         >
           <div className="flex flex-col items-center justify-center w-full ">
-            <div className="flex flex-row justify-center items-center w-full gap-x-14 md:gap-x-8 lg:gap-x-28 xl:gap-x-52 2xl:gap-x-64 mx-auto">
+            <div className="flex flex-row justify-center items-center w-full gap-x-10 min-[350px]:gap-x-24 md:gap-x-8 lg:gap-x-28 xl:gap-x-52 2xl:gap-x-64 mx-auto">
               {/* left */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-x-1 text-[1rem] sm:text-3xl md:text-2xl font-bold">
                 <Link
@@ -42,7 +42,9 @@ const Header = () => {
                 <div className="w-1 h-6 mx-1 hidden sm:flex bg-custom-gradient"></div>
                 <div className="w-16 h-[2px] mx-1 sm:hidden bg-custom-gradient"></div>
                 <Link to="/camlin" className="cursor-pointer">
-                  <h1 className=" text-primary-text dark:text-dark-primary-text">Camlin</h1>
+                  <h1 className=" text-primary-text dark:text-dark-primary-text">
+                    Camlin
+                  </h1>
                 </Link>
               </div>
 

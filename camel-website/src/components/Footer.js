@@ -582,7 +582,7 @@ const Footer = () => {
   return (
     <section id="footer" className="flex items-center">
       <div
-        className="bg-background dark:bg-darkBackground border-t-0 border-accent w-full py-5 z-2
+        className="bg-background2 dark:bg-darkBackground border-t-0 border-accent w-full py-5 z-2
           px-4
           md:px-6 
           2xl:px-28"
@@ -730,7 +730,9 @@ const Footer = () => {
 
               {/* social media */}
               <div className="flex items-center justify-center text-[0.85rem] md:text-[1.2rem] lg:text-[1.35rem] font-bold gap-x-3">
-                <h1 className="text-primary-text dark:text-dark-primary-text" >Follow us on social media platforms:</h1>
+                <h1 className="text-primary-text dark:text-dark-primary-text">
+                  Follow us on social media platforms:
+                </h1>
                 <div className="flex items-center justify-center gap-x-3">
                   {socialHandles.map((social, i) => (
                     <Link

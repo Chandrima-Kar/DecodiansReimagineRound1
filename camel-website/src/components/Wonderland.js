@@ -2,6 +2,8 @@ import React from "react";
 import Section from "./sub-components/Section";
 import ClipPath from "./sub-components/ClipPath";
 import MyButton from "./sub-components/MyButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 // images
 import img1 from "../assets/06/01.jpeg";
@@ -46,18 +48,33 @@ const WonderLand = () => {
           <WonderlandTitle />
           <div className="flex flex-col w-full items-center justify-evenly gap-y-0 lg:gap-y-2">
             <div className="flex flex-col justify-end text-left">
-              <span className="font-semibold block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl text-primary-text dark:text-dark-primary-text">
+              <motion.span
+                variants={fadeIn("right", 0.2, 1)}
+                initial="hidden"
+                whileInView="show"
+                className="font-semibold block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl text-primary-text dark:text-dark-primary-text"
+              >
                 where creativity thrives
-              </span>
+              </motion.span>
             </div>
             <div className="flex flex-col justify-end text-right items-center ">
-              <span className="text-secondary-text font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl ">
+              <motion.span
+                variants={fadeIn("left", 0.2, 1)}
+                initial="hidden"
+                whileInView="show"
+                className="text-secondary-text font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl "
+              >
                 Art supplies for hobbyists
-              </span>
+              </motion.span>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row container w-full items-center sm:mx-[6.5rem] md:mx-5 lg:mx-0 justify-center gap-x-10  xl:gap-x-12 gap-y-5 md:gap-y-0 xl:justify-center">
+          <motion.div
+            variants={fadeIn("zoom", 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="flex flex-col md:flex-row container w-full items-center sm:mx-[6.5rem] md:mx-5 lg:mx-0 justify-center gap-x-10  xl:gap-x-12 gap-y-5 md:gap-y-0 xl:justify-center"
+          >
             {posterData.map((item, index) => (
               <div
                 key={index}
@@ -107,7 +124,7 @@ const WonderLand = () => {
                 <ClipPath />
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </Section>
