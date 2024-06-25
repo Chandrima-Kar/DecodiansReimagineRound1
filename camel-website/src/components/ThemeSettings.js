@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoMdSettings } from "react-icons/io";
+import { IoIosColorPalette } from "react-icons/io";
+
 import "../components/Theme.css";
 
 const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
@@ -81,9 +83,11 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
               <div className="flex flex-row justify-center">
                 <div
                   id="theme-red"
-                  className="bg-[#e1251a] w-9 h-9 cursor-pointer opacity-1 mx-3 my-4 rounded-full"
+                  className="cursor-pointer opacity-1 flex items-center justify-center"
                   onClick={() => handleThemeClick("theme-red")}
-                ></div>
+                >
+                  <IoIosColorPalette className="text-5xl text-[#e1251a] border-2 border-[#e1251a] p-1  rounded-full  " />
+                </div>
                 <div
                   id="theme-pink"
                   className="bg-[#FF5C8E] w-9 h-9 cursor-pointer opacity-1 mx-3 my-4 rounded-full"
