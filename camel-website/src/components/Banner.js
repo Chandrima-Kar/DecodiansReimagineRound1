@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../components/Theme.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 // images
 import camel_img from "../assets/00/camel.png";
@@ -50,7 +52,7 @@ export const dropDownContent = [
   { title: "Art Contests", path: "/art-contests" },
 ];
 
-const Banner = () => {
+const Banner = ({ isInitialLoad }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleCommunityClick = (e) => {
@@ -62,7 +64,13 @@ const Banner = () => {
     <section className="relative z-2 w-full my-auto pt-16 md:pt-28 flex items-center justify-center">
       <div className="container mx-auto sm:mx-[6.5rem] flex flex-col lg:flex-row items-center justify-center relative lg:gap-x-36 xl:gap-x-48 md:gap-y-20 lg:gap-y-0">
         {/* circular icons */}
-        <div className="flex flex-row text-center ">
+        <motion.div
+          key={isInitialLoad ? "initial" : "scroll"}
+          variants={fadeIn("zoom", 0.1, isInitialLoad ? 1.5 : 1)}
+          initial="hidden"
+          whileInView="show"
+          className="flex flex-row text-center "
+        >
           <div
             className="relative left-1/2 flex aspect-square border-[3px] border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100 
           
@@ -107,8 +115,13 @@ const Banner = () => {
                     <div
                       onClick={handleCommunityClick}
                       className="relative cursor-pointer flex flex-row items-center justify-center"
+                      style={{ transform: `rotate(-${index * 36}deg)` }}
                     >
-                      <div
+                      <motion.div
+                        key={isInitialLoad ? "initial" : "scroll"}
+                        variants={fadeIn("down", 0.2, isInitialLoad ? 1.5 : 1)}
+                        initial="hidden"
+                        whileInView="show"
                         className={`relative gap-x-1 -top-[1.6rem] flex items-center justify-center font-semibold border-2 border-accent rounded-xl  hover:text-background pl-2 transition-all duration-500
                         w-[8rem]  md:w-[10rem] 
                         h-[1.8rem] md:h-[2.2rem]
@@ -117,28 +130,37 @@ const Banner = () => {
                             ? "rounded-b-none bg-accent text-background"
                             : "bg-background dark:bg-darkBackground text-accent hover-accent2 dark-hover-accent2"
                         }`}
-                        style={{ transform: `rotate(-${index * 36}deg)` }}
                       >
-                        <div>{app.title}</div>
-                        <div>{app.icon}</div>
-                        <div className="text-xl ml-1 transition-transform duration-500">
-                          {showDropdown ? (
-                            <IoIosArrowDropup />
-                          ) : (
-                            <IoIosArrowDropdown />
+                        <motion.div
+                          key={isInitialLoad ? "initial" : "scroll"}
+                          variants={fadeIn(
+                            "down",
+                            0.3,
+                            isInitialLoad ? 1.5 : 1
                           )}
-                        </div>
-                      </div>
+                          initial="hidden"
+                          whileInView="show"
+                          className="flex items-center justify-center gap-x-1"
+                        >
+                          <div>{app.title}</div>
+                          <div>{app.icon}</div>
+                          <div className="text-xl ml-1 transition-transform duration-500">
+                            {showDropdown ? (
+                              <IoIosArrowDropup />
+                            ) : (
+                              <IoIosArrowDropdown />
+                            )}
+                          </div>
+                        </motion.div>
+                      </motion.div>
 
                       <div
                         className={`absolute  bg-background2 dark:bg-darkBackground2 border border-accent  text-center   duration-500 transform 
-                        w-[8rem] md:w-[10rem]
-                        -top-[0.5rem] right-[2.05rem] md:-top-[0.3rem] md:right-[2.4755rem] ${
+                        w-[8rem] md:w-[10rem] top-0 right-0 md:top-[0.4rem] md:right-0 ${
                           showDropdown
                             ? "opacity-100 scale-100"
                             : "opacity-0 scale-0"
                         }`}
-                        style={{ transform: `rotate(-${index * 36}deg)` }}
                       >
                         {dropDownContent.map((content, index) => (
                           <Link
@@ -163,16 +185,36 @@ const Banner = () => {
                           to={app.path}
                           className="flex flex-row items-center justify-center"
                         >
-                          <div
+                          <motion.div
+                            key={isInitialLoad ? "initial" : "scroll"}
+                            variants={fadeIn(
+                              "down",
+                              0.2,
+                              isInitialLoad ? 1.5 : 1
+                            )}
+                            initial="hidden"
+                            whileInView="show"
                             className="gap-x-1 flex items-center justify-center font-semibold bg-background dark:bg-darkBackground2 border-2 border-accent rounded-xl text-accent  transition-all duration-500 hover-accent2 dark-hover-accent2
                           
                           w-[8rem]  md:w-[10rem] 
                             h-[1.5rem] min-[340px]:h-[1.8rem] md:h-[2.2rem]
                             text-[12px]    md:text-[1rem]"
                           >
-                            <div>{app.title}</div>
-                            <div>{app.icon}</div>
-                          </div>
+                            <motion.div
+                              key={isInitialLoad ? "initial" : "scroll"}
+                              variants={fadeIn(
+                                "down",
+                                0.3,
+                                isInitialLoad ? 1.5 : 1
+                              )}
+                              initial="hidden"
+                              whileInView="show"
+                              className="flex items-center justify-center gap-x-1"
+                            >
+                              <div>{app.title}</div>
+                              <div>{app.icon}</div>
+                            </motion.div>
+                          </motion.div>
                         </Link>
                       </div>
                     </div>
@@ -181,7 +223,7 @@ const Banner = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

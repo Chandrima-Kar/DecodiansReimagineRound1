@@ -34,10 +34,10 @@ const GoToTop = () => {
   }, []);
 
   return (
-    <div className="sticky bottom-5 ml-5 z-50 flex justify-start items-center ">
+    <div className="sticky bottom-12 lg:bottom-5 z-40 mr-64 ml-5 flex justify-start items-center ">
       {isVisible && (
         <div
-          className={`text-xl w-12 h-12 text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer  
+          className={`text-xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer  w-9 h-9  lg:w-12 lg:h-12
           
           ${showFooterButton ? "absolute -top-5 left-0" : ""}`}
           onClick={goToBtn}

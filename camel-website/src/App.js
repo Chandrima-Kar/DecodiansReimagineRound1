@@ -16,11 +16,20 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import GoToTop from "./components/GoToTop";
 import ThemeSettings from "./components/ThemeSettings";
+import Preloader from "./components/Preloader";
 import "./App.css";
 
 function App() {
   const [colorTheme, setColorTheme] = useState("theme-white");
   const [mode, setMode] = useState("light");
+  const [loading, setLoading] = useState(true);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  useEffect(() => {
+    if (!loading) {
+      setIsInitialLoad(false);
+    }
+  }, [loading]);
 
   useEffect(() => {
     const currentThemeColor = localStorage.getItem("theme-color");
@@ -64,12 +73,16 @@ function App() {
     }
   };
 
+  if (loading) {
+    return <Preloader setLoading={setLoading} />; // Show preloader while loading is true
+  }
+
   return (
     <div className="bg-[#FFFAF4] dark:bg-darkBackground">
       <Particle colorTheme={colorTheme} />
       <Nav />
       <Header />
-      <Banner />
+      <Banner isInitialLoad={isInitialLoad} />
       <FullSlider />
       <Poster />
       <FeaturedArtist />
