@@ -56,7 +56,7 @@ const Writeup = () => {
                       initial="hidden"
                       whileInView="show"
                       key={index}
-                      className={`w-[100%] my-0 mx-auto p-3 bg-background border-2 border-accent rounded-[35px] xl:h-96 lg:h-80 md:h-72 sm:h-96 shadow-red flex flex-col items-center justify-center xl:p-8 lg:p-5 md:p-3.5 sm:px-4 hover:translate-y-4 transition-all duration-300 cursor-pointer ${
+                      className={`w-[100%] my-0 mx-auto p-3 bg-background dark:bg-darkBackground border-2 border-accent rounded-[35px] xl:h-96 lg:h-80 md:h-72 sm:h-96 shadow-red flex flex-col items-center justify-center xl:p-8 lg:p-5 md:p-3.5 sm:px-4 hover:translate-y-4 transition-all duration-300 cursor-pointer ${
                         index === 1 ? "md:mt-6" : "md:mt-0"
                       } gap-y-10`}
                     >
@@ -65,7 +65,7 @@ const Writeup = () => {
                           {content.hashTag}
                         </div>
 
-                        <h3 className="xl:text-4xl lg:text-2xl md:text-[1.25rem] sm:text-xl text-2xl font-extrabold text-primary-text text-center ">
+                        <h3 className="xl:text-4xl lg:text-2xl md:text-[1.25rem] sm:text-xl text-2xl font-extrabold text-primary-text dark:text-dark-primary-text text-center ">
                           {content.sentence}
                         </h3>
                       </div>

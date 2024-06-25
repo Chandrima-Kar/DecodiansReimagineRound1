@@ -78,13 +78,13 @@ const Banner = ({ isInitialLoad }) => {
           >
             <div className="flex aspect-square m-auto border-[3px] border-accent rounded-full w-[13rem] sm:w-[20rem] lg:max-xl:w-[15rem]">
               {/* Center of the circle */}
-              <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer  bg-conic-gradient-default">
+              <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer ">
                 <Link
                   to="/global-search"
                   className="flex items-center justify-center w-full h-full bg-background dark:bg-darkBackground rounded-full"
                 >
-                  <div className="relative flex items-center justify-center text-[3rem] md:text-7xl bg-accent2">
-                    <CiSearch />
+                  <div className="relative flex items-center justify-center text-[3rem] md:text-8xl bg-accent2">
+                    <CiSearch className="text-accent" />
                     <img
                       src={camel_img}
                       alt="camel_image"
@@ -128,7 +128,7 @@ const Banner = ({ isInitialLoad }) => {
                         text-[12px]    md:text-[1rem] ${
                           showDropdown
                             ? "rounded-b-none bg-accent text-background"
-                            : "bg-background dark:bg-darkBackground text-accent hover-accent2 dark-hover-accent2"
+                            : "bg-background2 dark:bg-darkBackground2 text-accent hover-accent2 dark-hover-accent2"
                         }`}
                       >
                         <motion.div

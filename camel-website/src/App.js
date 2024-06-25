@@ -20,7 +20,7 @@ import Preloader from "./components/Preloader";
 import "./App.css";
 
 function App() {
-  const [colorTheme, setColorTheme] = useState("theme-white");
+  const [colorTheme, setColorTheme] = useState("theme-red");
   const [mode, setMode] = useState("light");
   const [loading, setLoading] = useState(true);
   const [isInitialLoad, setIsInitialLoad] = useState(true);

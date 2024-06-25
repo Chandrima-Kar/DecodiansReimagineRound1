@@ -50,31 +50,6 @@ body {
 }
 
 
-.colour-options {
-  text-align:center ;
-  padding: 20px 0;
-
-  /* div {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    /* Use border-radius to create circles */
-    /* margin: 2px 10px;
-    border: 1px solid #FFFAF4;
-    display: inline-block;
-    opacity: 1; */ 
-
-    /* &:hover {
-      opacity: 1;
-    }
-
-    &.active {
-      opacity: 1;
-    } */
-  }
-
-
 .mode-options {
   max-width: 200px;
   margin: 20px auto;
@@ -113,8 +88,8 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.hover-accent:hover { /* Background color on hover */
-  color: var(--accent-color); /* Text color on hover */
+.hover-accent:hover { 
+  color: var(--accent-color); 
 }
 
 .dark-hover-accent:hover{
@@ -134,8 +109,8 @@ body {
 }
 
 .hover-accent3:hover {
-  background-color: var(--accent-color);
-  color:#fff;
+  background-color: var(--background-color);
+  color:var(--accent-color);
 }
 
 

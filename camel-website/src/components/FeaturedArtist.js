@@ -113,7 +113,7 @@ const FeaturedArtist = () => {
                   <div>
                     <MyButton
                       text="View Profile"
-                      className="text-[1.2rem] px-5 py-1"
+                      className="text-[1.2rem] px-5 py-1 hover-accent3"
                       icon={<PiArrowSquareOutBold />}
                       buttonNameClassName="mr-1"
                     />
