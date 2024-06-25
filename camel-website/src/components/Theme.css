@@ -49,13 +49,36 @@ body {
   padding: 0;
 }
 
-
-.mode-options {
-  max-width: 200px;
-  margin: 20px auto;
-  text-align: center;
+@media (min-width:320px) and (max-width:639px){
+.cross{
+  margin-left: 9rem;
 }
-
+}
+@media (min-width:375px) and (max-width:639px){
+  .cross{
+    margin-left: 10rem;
+  }
+  }
+  @media (min-width:425px) and (max-width:639px){
+    .cross{
+      margin-left: 11.5rem;
+    }
+    }
+@media (min-width:500px) and (max-width:639px){
+  .cross{
+    margin-left: 14rem;
+  }
+  }
+@media (min-width:570px) and (max-width:639px){
+  .cross{
+    margin-left: 16rem;
+  }
+  }
+  @media (min-width:600px) and (max-width:639px){
+    .cross{
+      margin-left: 17rem;
+    }
+    }
 /* Utility classes for specific elements */
 
 
@@ -66,10 +89,6 @@ body {
 
 .bg-highlight {
   background-color: var(--highlight-color);
-}
-
-.bg-conic-gradient {
-  color: var(--conic-gradient);
 }
 
 .border-accent {
@@ -85,7 +104,7 @@ body {
 }
 
 .hover-accent {
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 500ms, color 500ms;
 }
 
 .hover-accent:hover { 
@@ -97,7 +116,7 @@ body {
 }
 
 .hover-accent2 {
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 500ms, color 500ms;
 }
 
 .hover-accent2:hover {
@@ -105,7 +124,7 @@ body {
 }
 
 .hover-accent3{
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 500ms, color 500ms;
 }
 
 .hover-accent3:hover {
@@ -116,4 +135,9 @@ body {
 
 .dark-hover-accent2:hover{
   color:#fff;
+}
+
+.dark-hover-accent3:hover{
+  color:var(--accent-color);;
+  background-color: #000;
 }

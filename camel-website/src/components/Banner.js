@@ -92,8 +92,8 @@ const Banner = ({ isInitialLoad }) => {
                       w-[17px] h-[17px] 
                       md:w-[25px] md:h-[25px] 
                       
-                      top-[0.7rem] left-[0.75rem] 
-                      md:top-[1.20rem] md:left-[1.20rem]"
+                      top-[1.5rem] left-[1.5rem] 
+                      md:top-[1.8rem] md:left-[1.9rem]"
                     />
                   </div>
                 </Link>
@@ -128,7 +128,7 @@ const Banner = ({ isInitialLoad }) => {
                         text-[12px]    md:text-[1rem] ${
                           showDropdown
                             ? "rounded-b-none bg-accent text-background"
-                            : "bg-background2 dark:bg-darkBackground2 text-accent hover-accent2 dark-hover-accent2"
+                            : "bg-background dark:bg-darkBackground2 text-accent hover-accent2 dark-hover-accent2"
                         }`}
                       >
                         <motion.div

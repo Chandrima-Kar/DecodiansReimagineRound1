@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { IoMdSettings } from "react-icons/io";
+import { ImCross } from "react-icons/im";
 import { IoIosColorPalette } from "react-icons/io";
-
 import "../components/Theme.css";
 
 const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
   const [showFooterButton, setShowFooterButton] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [selectedTheme, setSelectedTheme] = useState(colorTheme);
 
   const handleThemeClick = (theme) => {
     onThemeChange(theme);
-    setIsSidebarOpen(false); // Close sidebar on theme selection
+    setSelectedTheme(theme);
+    setIsSidebarOpen(false);
   };
 
   const listenToScroll = () => {
@@ -28,6 +30,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
   const handleModeSwitch = () => {
     const newMode = mode === "dark" ? "light" : "dark";
     onModeSwitch(newMode);
+    setIsSidebarOpen(false);
   };
 
   useEffect(() => {
@@ -35,11 +38,21 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
     return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
 
+  const colorOptions = [
+    { id: "theme-red", color: "#e1251a" },
+    { id: "theme-pink", color: "#FF5C8E" },
+    { id: "theme-blue", color: "#1A97F5" },
+    { id: "theme-orange", color: "#FB9678" },
+    { id: "theme-purple", color: "#7352FF" },
+    { id: "theme-green", color: "#03C9D7" },
+    { id: "theme-indigo", color: "#1E4DB7" },
+  ];
+
   return (
     <>
-      <div className="sticky bottom-12 lg:bottom-5 ml-64 mr-[1.1rem] z-40  flex justify-end items-center">
+      <div className="sticky bottom-5 ml-40 mr-5 z-50 flex justify-end items-center">
         <div
-          className={`text-3xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer   w-9 h-9  lg:w-12 lg:h-12 
+          className={`text-3xl w-12 h-12 text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer  
             ${showFooterButton ? "absolute -top-5 " : ""}`}
           onClick={toggleSidebar}
         >
@@ -51,74 +64,76 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
         <div className="fixed inset-0 z-50 bg-opacity-75 flex">
           <div className="flex-1" onClick={toggleSidebar}></div>
 
-          <div className="w-1/3 bg-[#484B52] h-full shadow-lg">
-            {/* Theme settings heading */}
-            <div className="p-4 flex flex-row gap-2 justify-center ">
-              <h2 className="text-3xl text-center font-semibold text-[#FFFAF4] mt-10">
-                Theme Settings
-              </h2>
-              <IoMdSettings className="h-8 w-8 mt-10 text-white" />
+          <div className="sm:w-2/5 md:w-1/3 w-1/2 bg-[#484B52] h-full shadow-lg">
+            <div className="sm:p-4 p-3 flex flex-col gap-2 justify-center">
+              <div>
+                <ImCross
+                  className="cross md:h-3 md:w-3 sm:h-2 sm:w-2 h-2 w-2 sm:mt-1 mt-0 ml-[10.6rem] xl:ml-[27rem] lg:ml-[19rem] md:ml-[14rem] sm:ml-[11.5rem] text-white cursor-pointer"
+                  onClick={toggleSidebar}
+                />
+              </div>
+
+              <div className="flex flex-row justify-center">
+                <h2 className="text-center font-semibold text-[#FFFAF4] mt-10 mr-3 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md">
+                  Theme Settings
+                </h2>
+              </div>
             </div>
 
-            {/* Mode Options */}
             <div className="mode-options flex flex-col ">
-              <div className="text-2xl font-semibold text-white mb-5 mt-8">
+              <div className=" text-white text-center mb-5 mt-8 text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
                 Mode Options:
               </div>
               <button
-                className="bg-yellow-500 px-6 py-2 rounded-lg text-lg font-semibold"
+                className=" bg-yellow-300 rounded-xl
+                mx-14 text-sm px-2 py-1
+                xl:px-4 xl:text-lg 
+                lg:mx-28 lg:px-2 lg:text-md lg:py-2
+                md:py-2 md:px-1 md:text-sm md:mx-12
+                sm:mx-10 sm:text-sm sm:py-1 sm:px-1"
                 onClick={handleModeSwitch}
               >
                 {mode === "dark" ? "Light Mode" : "Dark Mode"}
               </button>
             </div>
 
-            {/* Theme Colors */}
-            <div className="colour-options max-w-2xl mx-0 mt-8 align-center px-5 py-0">
+            <div className="colour-options max-w-2xl mx-0 mt-16 text-center px-5 py-0">
               <div>
-                <span className="mb-2 text-2xl font-semibold text-white">
+                <div className="mb-6 text-white text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
                   Theme Colors:
-                </span>
-              </div>
-              <div className="flex flex-row justify-center">
-                <div
-                  id="theme-red"
-                  className="cursor-pointer opacity-1 flex items-center justify-center"
-                  onClick={() => handleThemeClick("theme-red")}
-                >
-                  <IoIosColorPalette className="text-5xl text-[#e1251a] border-2 border-[#e1251a] p-1  rounded-full  " />
                 </div>
-                <div
-                  id="theme-pink"
-                  className="bg-[#FF5C8E] w-9 h-9 cursor-pointer opacity-1 mx-3 my-4 rounded-full"
-                  onClick={() => handleThemeClick("theme-pink")}
-                ></div>
-                <div
-                  id="theme-blue"
-                  className="bg-[#1A97F5] w-9 h-9  cursor-pointer opacity-1 mx-3 my-4 rounded-full"
-                  onClick={() => handleThemeClick("theme-blue")}
-                ></div>
-                <div
-                  id="theme-orange"
-                  className="bg-[#FB9678] w-9 h-9  cursor-pointer opacity-1 mx-3 my-4 rounded-full"
-                  onClick={() => handleThemeClick("theme-orange")}
-                ></div>
-                <div
-                  id="theme-purple"
-                  className="bg-[#7352FF] w-9 h-9 cursor-pointer opacity-1 mx-3 my-4 rounded-full"
-                  onClick={() => handleThemeClick("theme-purple")}
-                ></div>
-                <div
-                  id="theme-green"
-                  className="bg-[#03C9D7] w-9 h-9  cursor-pointer opacity-1 mx-3 my-4 rounded-full"
-                  onClick={() => handleThemeClick("theme-green")}
-                ></div>
-                <div
-                  id="theme-indigo"
-                  className="bg-[#1E4DB7] w-9 h-9  cursor-pointer opacity-1 mx-3 my-4 rounded-full"
-                  onClick={() => handleThemeClick("theme-indigo")}
-                ></div>
               </div>
+              <div className="  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 justify-center items-center lg:grid-cols-4 mt-5
+              xl:mx-12 xl:gap-8
+              lg:mx-6 lg:gap-4
+              md:mx-2 md:gap-3
+              sm:mx-3 sm:gap-2
+              mx-3 gap-2">
+                {colorOptions.map((option) => (
+                  <div
+                    key={option.id}
+                    id={option.id}
+                    className="cursor-pointer opacity-1 flex items-center justify-center"
+                    onClick={() => handleThemeClick(option.id)}
+                  >
+                    <IoIosColorPalette
+                      className=" p-1 rounded-full
+                      xl:text-5xl
+                      md:text-4xl
+                      sm:text-3xl
+                      text-3xl
+                      "
+                      style={{
+                        color: option.color,
+                        borderColor: selectedTheme === option.id ? 'white' : option.color,
+                        borderWidth: '3px',
+                        borderStyle: 'solid'
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+
             </div>
           </div>
         </div>
