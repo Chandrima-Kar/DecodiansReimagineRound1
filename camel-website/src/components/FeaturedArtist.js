@@ -55,7 +55,7 @@ const FeaturedArtist = () => {
           <div className="flex flex-col xl:flex-row items-center justify-between px-10 gap-y-10 gap-x-0">
             {/* heading */}
             <div className="xl:w-[20%] flex flex-col items-center xl:items-start leading-none gap-y-3">
-              <h1 className="font-bold font-serif text-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
+              <h1 className="font-bold font-serif text-primary-text dark:text-dark-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
                 Featured Artist
               </h1>
               <h3 className="text-secondary-text font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
@@ -86,7 +86,7 @@ const FeaturedArtist = () => {
                   {/* details */}
                   <div className="flex flex-col items-center justify-center gap-y-1">
                     <div>
-                      <h1 className="text-3xl font-sans font-extrabold text-primary-text">
+                      <h1 className="text-3xl font-sans font-extrabold text-primary-text dark:text-dark-primary-text">
                         {artistDetail.profile.name}
                       </h1>
                     </div>

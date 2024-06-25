@@ -21,7 +21,7 @@ const Third = () => {
         <section id="main-box" className='relative bg-white border-radius-2 xl:p-[1.5rem] lg:p-[1rem] lg:mt-[5rem] md:mt-[2rem] z-1 xl:ml-[2rem] xl:mr-[2rem] md:ml-[1rem] md:mr-[1rem]'>
 
                 <div id="heading2" className='flex flex-col justify-center lg:gap-[0.85rem] md:gap-[0.5rem] lg:pb-[.5rem] md:pb-[.25rem]'>
-                    <h1 className='title lg:text-[5rem] md:text-[3.5rem] font-black tracking-wider text-primary-text '>Featured Artist</h1>
+                    <h1 className='title lg:text-[5rem] md:text-[3.5rem] font-black tracking-wider text-primary-text dark:text-dark-primary-text '>Featured Artist</h1>
                     <h3 id="date"
                     className=' text-secondary-text font-bold'>
                         May 2024
@@ -49,7 +49,7 @@ const Third = () => {
 
                     <div id="details">
                             <div className='mt-0'>
-                                <h3 id="name" className='text-primary-text font-bold xl:text-[2rem] 
+                                <h3 id="name" className='text-primary-text dark:text-dark-primary-text font-bold xl:text-[2rem] 
                                 lg:text-[1.25rem]
                                 md:text-[1rem]
                                 '>Barsha Barik</h3>

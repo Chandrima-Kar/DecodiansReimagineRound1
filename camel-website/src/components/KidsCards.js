@@ -62,7 +62,7 @@ const KidsCards = () => {
           <div className="flex flex-col items-center justify-between md:flex-row gap-y-5 lg:gap-y-0 md:gap-x-10 lg:gap-x-40">
             <div className=" text-center md:text-left  xl:w-[35rem] flex items-center justify-start ">
               <div>
-                <h1 className="text-[40px] lg:text-[55px] xl:text-[90px] font-bold leading-none   text-primary-text">
+                <h1 className="text-[40px] lg:text-[55px] xl:text-[90px] font-bold leading-none   text-primary-text dark:text-dark-primary-text">
                   A colourful
                   <br /> mini-universe
                 </h1>

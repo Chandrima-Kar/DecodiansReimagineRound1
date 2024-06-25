@@ -41,12 +41,15 @@ const WonderlandTitle = () => {
           text-[2rem] tracking-normal  space-x-1
           md:text-[3.25rem] md:tracking-wide md:space-x-7
           lg:text-7xl
-          xl:text-8xl"
+          xl:text-8xl
+          text-primary-text
+          dark:text-dark-primary-text
+          "
         >
           <span className="relative">
             W
             <div
-              className="absolute   transform -translate-x-2.5  bg-background text-primary-text 
+              className="absolute   transform -translate-x-2.5  bg-background dark:bg-darkBackground text-primary-text dark:text-dark-primary-text
               
             left-[1.2rem] px-[0.15rem] text-[0.7rem] top-[.5rem]
             md:left-[1.63rem] md:px-[0.15rem] md:text-[1rem] md:top-[.65rem]

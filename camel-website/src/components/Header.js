@@ -18,7 +18,7 @@ const Header = () => {
     <div>
       <section id="home" className="flex items-center">
         <div
-          className="bg-background2 border-b-[1px]  border-accent w-full fixed pt-6 mt-8 z-50 
+          className="bg-background2 dark:bg-darkBackground2 border-b-[1px]  border-accent w-full fixed pt-6 mt-8 z-50 
           
           pb-0 sm:pb-2 
           px-1 sm:px-3 md:px-6
@@ -42,13 +42,13 @@ const Header = () => {
                 <div className="w-1 h-6 mx-1 hidden sm:flex bg-custom-gradient"></div>
                 <div className="w-16 h-[2px] mx-1 sm:hidden bg-custom-gradient"></div>
                 <Link to="/camlin" className="cursor-pointer">
-                  <h1 className=" text-primary-text">Camlin</h1>
+                  <h1 className=" text-primary-text dark:text-dark-primary-text">Camlin</h1>
                 </Link>
               </div>
 
               {/* middle */}
               <div className="hidden md:flex  items-center justify-center  text-sm lg:text-base">
-                <p>
+                <p className="text-primary-text dark:text-dark-primary-text">
                   Every artist is invited!{" "}
                   <span>
                     {" "}
@@ -66,7 +66,7 @@ const Header = () => {
                   className="relative group cursor-pointer py-1"
                 >
                   <div
-                    className=" font-semibold   transition-transform duration-500 group-hover:scale-110 text-primary-text 
+                    className=" font-semibold   transition-transform duration-500 group-hover:scale-110 text-primary-text dark:text-dark-primary-text
                   
                   text-[11px] sm:text-[14px] xl:text-lg leading-none"
                   >
@@ -78,7 +78,7 @@ const Header = () => {
                   <Button
                     text={"Log in"}
                     className={
-                      "bg-background text-accent border-accent hover-accent2 hover:text-background px-2 lg:px-5 py-1 text-[12px] sm:text-[14px] xl:text-[16px]"
+                      "bg-background dark:bg-darkBackground text-accent border-accent hover-accent2 hover:text-background px-2 lg:px-5 py-1 text-[12px] sm:text-[14px] xl:text-[16px]"
                     }
                   />
                 </Link>

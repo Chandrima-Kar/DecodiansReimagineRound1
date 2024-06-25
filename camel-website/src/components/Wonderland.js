@@ -46,7 +46,7 @@ const WonderLand = () => {
           <WonderlandTitle />
           <div className="flex flex-col w-full items-center justify-evenly gap-y-0 lg:gap-y-2">
             <div className="flex flex-col justify-end text-left">
-              <span className="font-semibold block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl ">
+              <span className="font-semibold block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl text-primary-text dark:text-dark-primary-text">
                 where creativity thrives
               </span>
             </div>

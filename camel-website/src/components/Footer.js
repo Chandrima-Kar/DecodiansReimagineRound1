@@ -582,7 +582,7 @@ const Footer = () => {
   return (
     <section id="footer" className="flex items-center">
       <div
-        className="bg-[#fff3e4] border-t-0 border-accent w-full py-5 z-2
+        className="bg-background dark:bg-darkBackground border-t-0 border-accent w-full py-5 z-2
           px-4
           md:px-6 
           2xl:px-28"
@@ -615,14 +615,14 @@ const Footer = () => {
                       xl:mx-4 "
                     >
                       <div
-                        className={`flex items-center justify-between font-semibold hover-accent2 border-2 border-accent rounded-lg gap-x-1 hover:text-background px-1 transition-all duration-300
+                        className={`flex items-center justify-between font-semibold hover-accent2 dark-hover-accent2 border-2 border-accent rounded-lg gap-x-1 hover:text-background px-1 transition-all duration-300
                         w-[7.5rem] md:w-[8.8rem] lg:w-[10rem] xl:w-[13rem]
                         h-[1.8rem] lg:h-[2rem] xl:h-[2.2rem]
                         text-[12px] lg:text-[14px] xl:text-[1rem]
                       ${
                         activeDropdown[contentIndex] === index
-                          ? "rounded-t-none bg-accent text-background"
-                          : "bg-background text-accent"
+                          ? "rounded-t-none bg-accent text-background dark:text-darkBackground"
+                          : "bg-background dark:bg-darkBackground text-accent"
                       }`}
                       >
                         <div className="leading-none">{dropdown.title}</div>
@@ -655,7 +655,7 @@ const Footer = () => {
                               to={item.path}
                               className="w-full h-full text-[12px] leading-normal md:text-[1rem]"
                             >
-                              <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 hover-accent2 text-primary-text hover:text-background">
+                              <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 dark:bg-darkBackground2 hover-accent2 dark-hover-accent2 text-primary-text dark:text-dark-primary-text hover:text-background">
                                 {item.name}
                               </div>
                             </Link>
@@ -675,14 +675,14 @@ const Footer = () => {
                 key={index}
                 className="flex flex-col items-start justify-center "
               >
-                <h1 className="text-base md:text-xl lg:text-2xl font-bold my-1 lg:my-3 text-primary-text">
+                <h1 className="text-base md:text-xl lg:text-2xl font-bold my-1 lg:my-3 text-primary-text dark:text-dark-primary-text">
                   {data.title}
                 </h1>
                 {data.items.map((options, i) => (
                   <div key={i} className="">
                     <Link
                       to={options.path}
-                      className=" text-sm lg:text-lg font-medium text-secondary-text hover:text-primary-text"
+                      className=" text-sm lg:text-lg font-medium text-secondary-text hover:text-primary-text dark:text-dark-primary-text"
                     >
                       {" "}
                       {options.name}{" "}
@@ -700,10 +700,10 @@ const Footer = () => {
               {/* newsletter */}
               <div className="flex flex-col xl:flex-row items-center sm:items-start xl:items-center justify-center gap-y-3 xl:gap-y-0 gap-x-3">
                 <div className="flex flex-col items-start justify-center">
-                  <h1 className="text-[1.2rem] lg:text-[1.35rem] font-bold text-center sm:text-left">
+                  <h1 className="text-[1.2rem] lg:text-[1.35rem] font-bold text-center sm:text-left text-primary-text dark:text-dark-primary-text">
                     Subscribe to a world of colour and creativity:
                   </h1>
-                  <p className="text-[0.9rem] text-center sm:text-left">
+                  <p className="text-[0.9rem] text-center sm:text-left text-primary-text dark:text-dark-primary-text">
                     Get updates on product launches, competitions, live sessions
                     and more.
                   </p>
@@ -730,12 +730,12 @@ const Footer = () => {
 
               {/* social media */}
               <div className="flex items-center justify-center text-[0.85rem] md:text-[1.2rem] lg:text-[1.35rem] font-bold gap-x-3">
-                <h1>Follow us on social media platforms:</h1>
+                <h1 className="text-primary-text dark:text-dark-primary-text" >Follow us on social media platforms:</h1>
                 <div className="flex items-center justify-center gap-x-3">
                   {socialHandles.map((social, i) => (
                     <Link
                       to={social.path}
-                      className="p-1 rounded-full bg-accent text-background"
+                      className="p-1 rounded-full bg-accent text-background dark:text-darkBackground"
                     >
                       {social.icon}
                     </Link>
@@ -753,7 +753,7 @@ const Footer = () => {
                 <p>|</p>
                 <Link to="/camel">Sitemap</Link>
               </div>
-              <div className=" text-sm lg:text-base text-primary-text font-semibold">
+              <div className=" text-sm lg:text-base text-primary-text dark:text-dark-primary-text font-semibold">
                 <p>©2024 Kokuyo Camlin. All rights reserved.</p>
               </div>
             </div>

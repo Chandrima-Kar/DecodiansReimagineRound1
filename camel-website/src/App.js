@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-// import { Outlet } from "react-router-dom";
-
-import ParticlesComponent from "./components/ParticlesComponent";
+import React, { useEffect, useState } from "react";
+import Particle from "./components/ParticlesComponent";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -21,16 +19,54 @@ import ThemeSettings from "./components/ThemeSettings";
 import "./App.css";
 
 function App() {
+  const [colorTheme, setColorTheme] = useState("theme-white");
+  const [mode, setMode] = useState("light");
+
   useEffect(() => {
     const currentThemeColor = localStorage.getItem("theme-color");
     if (currentThemeColor) {
-      document.documentElement.className = currentThemeColor; // Apply the theme class to the html element
+      setColorTheme(currentThemeColor);
+      document.documentElement.classList.add(currentThemeColor);
+    }
+
+    const currentMode = localStorage.getItem("theme-mode");
+    if (currentMode) {
+      setMode(currentMode);
+      if (currentMode === "dark") {
+        document.documentElement.classList.add("dark");
+      }
     }
   }, []);
 
+  useEffect(() => {
+    if (mode === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [mode]);
+
+  const handleModeSwitch = () => {
+    const newMode = mode === "dark" ? "light" : "dark";
+    setMode(newMode);
+    localStorage.setItem("theme-mode", newMode);
+  };
+
+  const handleThemeChange = (theme) => {
+    document.documentElement.classList.remove(colorTheme); // Remove the old theme class
+    setColorTheme(theme);
+    localStorage.setItem("theme-color", theme);
+    document.documentElement.classList.add(theme); // Add the new theme class
+
+    // Ensure dark mode class is preserved
+    if (mode === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  };
+
   return (
-    <div className="bg-[#FFFAF4]">
-      <ParticlesComponent />
+    <div className="bg-[#FFFAF4] dark:bg-darkBackground">
+      <Particle colorTheme={colorTheme} />
       <Nav />
       <Header />
       <Banner />
@@ -45,9 +81,13 @@ function App() {
       <Quotation />
       <FAQ />
       <GoToTop />
-      <ThemeSettings />
+      <ThemeSettings
+        colorTheme={colorTheme}
+        onThemeChange={handleThemeChange}
+        mode={mode}
+        onModeSwitch={handleModeSwitch}
+      />
       <Footer />
-      {/* <Outlet /> */}
     </div>
   );
 }

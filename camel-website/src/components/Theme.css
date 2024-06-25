@@ -1,53 +1,96 @@
-:root {
+/* Theme-specific classes */
+.theme-red {
   --accent-color: #e1251a;
-  /* Default accent color */
   --highlight-color: #f43a3a77;
-  /* Default highlight color */
-  --bg-color: #FFFAF4;
-  /* Default background color */
-  --text-color: #000;
-  /* Default text color */
-  --background2: #fff3e4;
-  /* Light background for sidebar */
-
-  /* Hover colors */
-  --hover-accent: #f43a3a;
-  /* Accent color for hover */
-
-  /* Conic gradients */
   --conic-gradient: conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77, #e1251a, #121212);
 }
 
-.light-mode {
-  --bg-color: #FFFAF4;
-  --text-color: #000;
-  --background2: #fff3e4;
-  /* Light background for sidebar */
+.theme-pink {
+  --accent-color: #FF5C8E;
+  --highlight-color: #f8c6d3;
+  --conic-gradient: conic-gradient(from 225deg, #FF5C8E, #f8c6d3, #121212, #f8c6d3, #FF5C8E, #121212);
 }
 
-.dark-mode {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --background2: #0ff;
-  /* Dark background for sidebar */
+.theme-blue {
+  --accent-color: #1A97F5;
+  --highlight-color: #d6eaf7;
+  --conic-gradient: conic-gradient(from 225deg, #1A97F5, #d6eaf7, #121212, #d6eaf7, #1A97F5, #121212);
 }
+
+.theme-orange {
+  --accent-color: #FB9678;
+  --highlight-color: #fcd3c0;
+  --conic-gradient: conic-gradient(from 225deg, #FB9678, #fcd3c0, #121212, #fcd3c0, #FB9678, #121212);
+}
+
+.theme-purple {
+  --accent-color: #7352FF;
+  --highlight-color: #d3caf6;
+  --conic-gradient: conic-gradient(from 225deg, #7352FF, #d3caf6, #121212, #d3caf6, #7352FF, #121212);
+}
+
+.theme-green {
+  --accent-color: #03C9D7;
+  --highlight-color: #abedf1;
+  --conic-gradient: conic-gradient(from 225deg, #03C9D7, #abedf1, #121212, #abedf1, #03C9D7, #121212);
+}
+
+.theme-indigo {
+  --accent-color: #1E4DB7;
+  --highlight-color: #d1dcf0;
+  --conic-gradient: conic-gradient(from 225deg, #1E4DB7, #d1dcf0, #121212, #d1dcf0, #1E4DB7, #121212);
+}
+
+/* General styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+.colour-options {
+  text-align:center ;
+  padding: 20px 0;
+
+  /* div {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /* Use border-radius to create circles */
+    /* margin: 2px 10px;
+    border: 1px solid #FFFAF4;
+    display: inline-block;
+    opacity: 1; */ 
+
+    /* &:hover {
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+    } */
+  }
+
+
+.mode-options {
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Utility classes for specific elements */
+
 
 .bg-accent {
   background-color: var(--accent-color);
-  color: #FFFAF4;
-  /* Text color */
-}
-
-
-/*for inner circle of banner*/
-.bg-accent2 {
-  color: var(--accent-color);
-  /* Text color */
+  color: #FFFAF4; /* Text color */
 }
 
 .bg-highlight {
   background-color: var(--highlight-color);
-
 }
 
 .bg-conic-gradient {
@@ -70,11 +113,12 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.hover-accent:hover {
-  background-color: #fff3e4;
-  /* Background color on hover */
+.hover-accent:hover { /* Background color on hover */
+  color: var(--accent-color); /* Text color on hover */
+}
+
+.dark-hover-accent:hover{
   color: var(--accent-color);
-  /* Text color on hover */
 }
 
 .hover-accent2 {
@@ -83,119 +127,18 @@
 
 .hover-accent2:hover {
   background-color: var(--accent-color);
-  color: var(--bg-color);
+}
+
+.hover-accent3{
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hover-accent3:hover {
+  background-color: var(--accent-color);
+  color:#fff;
 }
 
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.colour-options {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: right;
-  padding: 20px 0;
-
-  div {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    /* Use border-radius to create circles */
-    margin: 2px 10px;
-    border: 1px solid #FFFAF4;
-    display: inline-block;
-    opacity: 1;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &.active {
-      opacity: 1;
-    }
-  }
-}
-
-.mode-options {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px 0;
-
-  .mode-option {
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 4px;
-    display: inline-block;
-    opacity: 0.5;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &.active {
-      opacity: 1;
-    }
-  }
-}
-
-/* Theme classes */
-.theme-red {
-  --accent-color: #e1251a;
-  --highlight-color: #f43a3a77;
-
-  /* Conic gradient for theme-white */
-  --conic-gradient: conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77, #e1251a, #121212);
-}
-
-.theme-pink {
-  --accent-color: #FF5C8E;
-  --highlight-color: #f8c6d3;
-
-  /* Conic gradient for theme-pink */
-  --conic-gradient: conic-gradient(from 225deg, #FF5C8E, #f8c6d3, #121212, #f8c6d3, #FF5C8E, #121212);
-}
-
-.theme-blue {
-  --accent-color: #1A97F5;
-  --highlight-color: #d6eaf7;
-
-  /* Conic gradient for theme-blue */
-  --conic-gradient: conic-gradient(from 225deg, #1A97F5, #d6eaf7, #121212, #d6eaf7, #1A97F5, #121212);
-}
-
-.theme-orange {
-  --accent-color: #FB9678;
-  --highlight-color: #fcd3c0;
-
-  /* Conic gradient for theme-orange */
-  --conic-gradient: conic-gradient(from 225deg, #FB9678, #fcd3c0, #121212, #fcd3c0, #FB9678, #121212);
-}
-
-.theme-purple {
-  --accent-color: #7352FF;
-  --highlight-color: #d3caf6;
-
-  /* Conic gradient for theme-purple */
-  --conic-gradient: conic-gradient(from 225deg, #7352FF, #d3caf6, #121212, #d3caf6, #7352FF, #121212);
-}
-
-.theme-green {
-  --accent-color: #03C9D7;
-  --highlight-color: #abedf1;
-
-  /* Conic gradient for theme-green */
-  --conic-gradient: conic-gradient(from 225deg, #03C9D7, #abedf1, #121212, #abedf1, #03C9D7, #121212);
-}
-
-.theme-indigo {
-  --accent-color: #1E4DB7;
-  --highlight-color: #d1dcf0;
-
-  /* Conic gradient for theme-indigo */
-  --conic-gradient: conic-gradient(from 225deg, #1E4DB7, #d1dcf0, #121212, #d1dcf0, #1E4DB7, #121212);
+.dark-hover-accent2:hover{
+  color:#fff;
 }

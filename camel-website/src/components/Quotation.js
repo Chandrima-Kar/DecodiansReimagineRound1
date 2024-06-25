@@ -199,18 +199,18 @@ const Quotation = () => {
           xl:px-28"
           >
             {/* quote */}
-            <div className="w-full px-3  bg-background z-10">
-              <div className="relative flex items-center justify-center py-2  border-2 border-x-0 border-accent bg-background z-10">
+            <div className="w-full px-3  bg-background dark:bg-darkBackground z-10">
+              <div className="relative flex items-center justify-center py-2  border-2 border-x-0 border-accent bg-background dark:bg-darkBackground z-10">
                 <div className="absolute -top-7 left-7 p-4 border rounded-full bg-accent">
                   <FaQuoteLeft className="text-sm sm:text-xl text-background" />
                 </div>
                 <div className="text-center mx-0 my-1 sm:mx-16">
                   {quoteOfTheDay.map((content, i) => (
-                    <h1 className=" bg-background gap-x-1">
-                      <span className="sm:text-2xl text-lg font-bold">
+                    <h1 className=" bg-background dark:bg-darkBackground gap-x-1">
+                      <span className="sm:text-2xl text-lg font-bold text-primary-text dark:text-dark-primary-text">
                         {content.quote}
                       </span>
-                      <span className="sm:text-xl text-sm font-medium ">
+                      <span className="sm:text-xl text-sm font-medium text-primary-text dark:text-dark-primary-text">
                         {content.author}
                       </span>
                     </h1>
@@ -219,13 +219,13 @@ const Quotation = () => {
               </div>
             </div>
 
-            <div className="w-full  p-5 border-2 border-accent rounded-3xl bg-background z-10">
+            <div className="w-full  p-5 border-2 border-accent rounded-3xl bg-background dark:bg-darkBackground z-10">
               {extraQueries.map((faq, index) => (
                 <div key={index} className="py-3">
-                  <h1 className="text-2xl text-primary-text font-semibold">
+                  <h1 className="text-2xl text-primary-text dark:text-dark-primary-text font-semibold">
                     {faq.question}
                   </h1>
-                  <p className="text-[1.15rem] text-primary-text">
+                  <p className="text-[1.15rem] text-primary-text dark:text-dark-primary-text">
                     {faq.answer}
                   </p>
                 </div>

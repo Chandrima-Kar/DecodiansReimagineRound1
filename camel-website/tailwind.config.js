@@ -4,6 +4,7 @@ import plugin from "tailwindcss/plugin";
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -13,6 +14,10 @@ module.exports = {
         "secondary-text": "#645c5c",
         accent: "#e1251a",
         highlight: "#f43a3a77",
+        darkBackground:"#222831",
+        darkBackground2:"#31363F",
+        "dark-primary-text":"#ffffff",
+        "dark-secondary-text":"#858DFF",
 
         color: {
           1: "#AC6AFF",

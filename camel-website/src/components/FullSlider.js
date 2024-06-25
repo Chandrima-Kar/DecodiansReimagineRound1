@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Section from "./sub-components/Section";
 import MyButton from "./sub-components/MyButton";
 
+
 // icons
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
@@ -20,18 +21,18 @@ const FullSlider = () => {
       bg: "bg-center",
       top_d: "top-[54%]  md:top-[58%]",
       header: "Creating India's largest art community",
-      header_color: "text-primary-text",
+      header_color: "text-primary-text ",
       p_class: "hidden",
       button1: "",
       button1_text: "Join our Community",
-      button2: "bg-background text-primary-text",
+      button2: "bg-background text-primary-text ",
     },
     {
       url: slide3,
       bg: "bg-center",
       top_d: "top-[50%] md:top-[58%]",
       header: "Introducing Mess-Free Creativity: ",
-      header_color: "text-primary-text",
+      header_color: "text-primary-text ",
       p_class: "text-xl md:text-2xl font-semibold text-secondary-text py-1",
       button1: "",
       button1_text: "Shop Now",
@@ -42,7 +43,7 @@ const FullSlider = () => {
       bg: "xl:bg-center",
       top_d: "top-[60%] md:top-[66%]",
       header: "with the Camel Artist Range",
-      header_color: "text-primary-text",
+      header_color: "text-primary-text ",
       p_class: "hidden",
       button1: "",
       button1_text: "Explore Now",
@@ -161,7 +162,7 @@ const FullSlider = () => {
                 className={`text-2xl cursor-pointer ${
                   currentIndex === slideIndex
                     ? "text-accent"
-                    : "text-primary-text"
+                    : "text-primary-text dark:text-dark-primary-text"
                 }`}
               >
                 <RxDotFilled />

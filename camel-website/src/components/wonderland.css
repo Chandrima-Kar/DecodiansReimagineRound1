@@ -157,7 +157,7 @@
   height: 5px;
   border-radius: 50px;
   /* Adjust the thickness of the underline */
-  background-color: red;
+  background-color: var(--accent-color);
   transition: width 3s linear;
 }
 

@@ -106,14 +106,16 @@ const ExploreArtistsGallery = () => {
             ))}
           </div>
           <div
-            className="relative  border-2 border-accent rounded-3xl bg-background z-10 flex flex-col items-center gap-y-5
+            className="relative  border-2 border-accent rounded-3xl bg-background dark:bg-darkBackground2 z-10 flex flex-col items-center gap-y-5
           
           p-2
           lg:p-5"
           >
             <div
               className="font-extrabold font-sans text-center
-            
+
+              text-primary-text dark:text-dark-primary-text
+
             text-3xl
             md:text-4xl
             lg:text-5xl "
@@ -121,7 +123,7 @@ const ExploreArtistsGallery = () => {
               Get inspired by
               <br /> popular artists
             </div>
-            <div className="text-center  text-black font-medium leading-5 text-base  lg:text-lg">
+            <div className="text-center  text-primary-text dark:text-dark-primary-text font-medium leading-5 text-base  lg:text-lg">
               Share your artwork and connect <br /> with other artists in our
               online community.
             </div>
@@ -130,7 +132,7 @@ const ExploreArtistsGallery = () => {
                 <p className="text-accent font-bold text-xl md:text-2xl">
                   179,785
                 </p>
-                <p className="leading-5 font-semibold">
+                <p className="leading-5 font-semibold text-primary-text dark:text-dark-primary-text">
                   professional and <br />
                   budding artists
                 </p>
@@ -140,7 +142,7 @@ const ExploreArtistsGallery = () => {
                 <p className="text-accent font-bold text-xl md:text-2xl">
                   11,446
                 </p>
-                <p className="leading-5 font-semibold">
+                <p className="leading-5 font-semibold text-primary-text dark:text-dark-primary-text">
                   artworks on <br />
                   display
                 </p>

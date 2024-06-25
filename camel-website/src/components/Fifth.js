@@ -31,7 +31,7 @@ const Fifth = () => {
                     # heritage
                   </div>
 
-                  <h3 id="main-text" className="lg:text-3xl md:text-[1.25rem] sm:text-xl font-extrabold text-primary-text text-center mt-1 lg:mb-7 md:mb-4 md:py-0 md:mt-2 sm:mb-7"> 
+                  <h3 id="main-text" className="lg:text-3xl md:text-[1.25rem] sm:text-xl font-extrabold text-primary-text dark:text-dark-primary-text text-center mt-1 lg:mb-7 md:mb-4 md:py-0 md:mt-2 sm:mb-7"> 
                     Bringing the Swadeshi spirit to art since 1931
                   </h3>
 
@@ -59,7 +59,7 @@ const Fifth = () => {
                     # community
                   </div>
 
-                  <h3 id="main-text" className="lg:text-3xl md:text-[1.25rem] sm:text-xl font-extrabold text-primary-text text-center mt-1 lg:mb-7 md:mb-4 md:py-0 md:mt-2 sm:mb-7"> 
+                  <h3 id="main-text" className="lg:text-3xl md:text-[1.25rem] sm:text-xl font-extrabold text-primary-text dark:text-dark-primary-text text-center mt-1 lg:mb-7 md:mb-4 md:py-0 md:mt-2 sm:mb-7"> 
                   A growing creative community of 5 million artists
                   </h3>
 
@@ -89,7 +89,7 @@ const Fifth = () => {
                     # manufacturing
                   </div>
 
-                  <h3 id="main-text" className="lg:text-3xl md:text-[1.25rem] sm:text-xl font-extrabold text-primary-text text-center mt-1 lg:mb-7 md:mb-4 md:py-0 md:mt-2 sm:mb-7"> 
+                  <h3 id="main-text" className="lg:text-3xl md:text-[1.25rem] sm:text-xl font-extrabold text-primary-text dark:text-dark-primary-text text-center mt-1 lg:mb-7 md:mb-4 md:py-0 md:mt-2 sm:mb-7"> 
                   Bringing the joy of art to every corner of the country
                   </h3>
 

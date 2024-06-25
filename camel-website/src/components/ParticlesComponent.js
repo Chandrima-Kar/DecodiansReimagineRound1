@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-
 import { loadFull } from "tsparticles";
-export default function Particle() {
+
+const Particle = ({ colorTheme }) => {
   const [init, setInit] = useState(false);
+
   useEffect(() => {
-    console.log("init");
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
     }).then(() => {
@@ -14,6 +14,30 @@ export default function Particle() {
   }, []);
 
   const particlesLoaded = (container) => {};
+
+  // Function to convert theme class to color
+  const getColorFromTheme = (theme) => {
+    switch (theme) {
+      case "theme-red":
+        return "#e1251a";
+      case "theme-pink":
+        return "#FF5C8E";
+      case "theme-blue":
+        return "#1A97F5";
+      case "theme-orange":
+        return "#FB9678";
+      case "theme-purple":
+        return "#7352FF";
+      case "theme-green":
+        return "#03C9D7";
+      case "theme-indigo":
+        return "#1E4DB7";
+      default:
+        return "#ffffff"; // Default color
+    }
+  };
+
+  const particleColor = getColorFromTheme(colorTheme);
 
   return (
     <>
@@ -50,10 +74,10 @@ export default function Particle() {
             },
             particles: {
               color: {
-                value: "#e1251a",
+                value: particleColor,
               },
               links: {
-                color: "#f43a3a77",
+                color: particleColor,
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
@@ -92,4 +116,6 @@ export default function Particle() {
       )}
     </>
   );
-}
+};
+
+export default Particle;

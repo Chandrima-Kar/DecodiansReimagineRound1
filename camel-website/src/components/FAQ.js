@@ -93,8 +93,8 @@ const FAQ = () => {
             <div className=" ">
               <GiThink className="text-4xl sm:text-5xl text-accent" />
             </div>
-            <div className="flex items-center justify-center  px-2 pt-2 border-2 border-b-0 border-accent rounded-t-3xl bg-background z-10">
-              <h1 className="text-5xl font-bold px-4 py-1 bg-background border-2 border-b-0 border-accent rounded-t-2xl">
+            <div className="flex items-center justify-center  px-2 pt-2 border-2 border-b-0 border-accent rounded-t-3xl bg-background dark:bg-darkBackground z-10">
+              <h1 className="text-5xl font-bold px-4 py-1 bg-background dark:bg-darkBackground border-2 border-b-0 border-accent rounded-t-2xl">
                 FAQs
               </h1>
             </div>
@@ -103,13 +103,13 @@ const FAQ = () => {
             </div>
           </div>
 
-          <div className="w-full  p-5 border-2 border-accent rounded-3xl bg-background z-10">
+          <div className="w-full  p-5 border-2 border-accent rounded-3xl bg-background dark:bg-darkBackground z-10">
             {faqData.map((faq, index) => (
               <div key={index} className="py-3">
-                <h1 className="text-2xl text-primary-text font-semibold">
+                <h1 className="text-2xl text-primary-text dark:text-dark-primary-text font-semibold">
                   {index + 1}. {faq.question}
                 </h1>
-                <p className="text-[1.15rem] text-primary-text">
+                <p className="text-[1.15rem] text-primary-text dark:text-dark-primary-text">
                   <b>Ans -</b> {faq.answer}
                 </p>
               </div>

@@ -73,7 +73,7 @@ const Banner = () => {
               <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer  bg-conic-gradient-default">
                 <Link
                   to="/global-search"
-                  className="flex items-center justify-center w-full h-full bg-background rounded-full"
+                  className="flex items-center justify-center w-full h-full bg-background dark:bg-darkBackground rounded-full"
                 >
                   <div className="relative flex items-center justify-center text-[3rem] md:text-7xl bg-accent2">
                     <CiSearch />
@@ -115,7 +115,7 @@ const Banner = () => {
                         text-[12px]    md:text-[1rem] ${
                           showDropdown
                             ? "rounded-b-none bg-accent text-background"
-                            : "bg-background text-accent hover-accent2"
+                            : "bg-background dark:bg-darkBackground text-accent hover-accent2 dark-hover-accent2"
                         }`}
                         style={{ transform: `rotate(-${index * 36}deg)` }}
                       >
@@ -131,7 +131,7 @@ const Banner = () => {
                       </div>
 
                       <div
-                        className={`absolute  bg-background2 border border-accent  text-center   duration-500 transform 
+                        className={`absolute  bg-background2 dark:bg-darkBackground2 border border-accent  text-center   duration-500 transform 
                         w-[8rem] md:w-[10rem]
                         -top-[0.5rem] right-[2.05rem] md:-top-[0.3rem] md:right-[2.4755rem] ${
                           showDropdown
@@ -146,7 +146,7 @@ const Banner = () => {
                             to={content.path}
                             className="w-full h-full text-[12px] md:text-[1rem]"
                           >
-                            <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 text-primary-text hover:text-background hover-accent2">
+                            <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 dark:bg-darkBackground2 text-primary-text dark:text-dark-primary-text hover:text-background hover-accent2 dark-hover-accent2">
                               {content.title}
                             </div>
                           </Link>
@@ -164,7 +164,7 @@ const Banner = () => {
                           className="flex flex-row items-center justify-center"
                         >
                           <div
-                            className="gap-x-1 flex items-center justify-center font-semibold bg-background border-2 border-accent rounded-xl text-accent  transition-all duration-500 hover-accent2
+                            className="gap-x-1 flex items-center justify-center font-semibold bg-background dark:bg-darkBackground2 border-2 border-accent rounded-xl text-accent  transition-all duration-500 hover-accent2 dark-hover-accent2
                           
                           w-[8rem]  md:w-[10rem] 
                             h-[1.5rem] min-[340px]:h-[1.8rem] md:h-[2.2rem]
