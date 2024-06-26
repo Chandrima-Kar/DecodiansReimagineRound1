@@ -50,7 +50,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
   return (
     <>
-      <div className="sticky bottom-12 xl:bottom-5 z-40 mr-[1.1rem] flex justify-end items-center">
+      <div className="sticky bottom-12 lg:bottom-5 ml-64 mr-5 z-40 flex justify-end items-center">
         <div
           className={`text-3xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer w-9 h-9 lg:w-12 lg:h-12 ${
             showFooterButton ? "absolute -top-5 " : ""
