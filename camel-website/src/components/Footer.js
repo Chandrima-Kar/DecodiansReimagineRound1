@@ -600,9 +600,20 @@ const Footer = () => {
                     to={`/${content.heading.toLowerCase()}`}
                     className="flex flex-row items-center justify-center cursor-pointer"
                   >
-                    <h1 className="text-accent">{content.heading}</h1>
+                    <h1
+                      className={
+                        content.heading === "Camel"
+                          ? "text-[#e1251a]"
+                          : "text-primary-text dark:text-dark-primary-text"
+                      }
+                    >
+                      {content.heading}
+                    </h1>
                   </Link>
-                  <div className="w-1 h-6 mx-1 hidden sm:flex bg-custom-gradient"></div>
+                  <div className="flex gap-x-[0.18rem]">
+                    <div className="w-[0.18rem] h-6 hidden sm:flex bg-[#e1251a]"></div>
+                    <div className="w-[0.18rem] h-6  hidden sm:flex bg-primary-text dark:bg-dark-primary-text"></div>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-evenly">
@@ -637,8 +648,8 @@ const Footer = () => {
 
                       <div
                         className={`absolute text-center duration-300 transform
-                  w-[7.5rem] md:w-[8.8rem] lg:w-[10rem] xl:w-[13rem]
-                  bottom-[1.8rem]  xl:bottom-[2.2rem] 
+                        w-[7.5rem] md:w-[8.8rem] lg:w-[10rem] xl:w-[13rem]
+                        bottom-[1.8rem]  xl:bottom-[2.2rem]  z-10
                     ${
                       activeDropdown[contentIndex] === index
                         ? "opacity-100 scale-100"

@@ -39,8 +39,10 @@ const Header = () => {
                     className="w-[16px] h-[16px] sm:w-[25px] sm:h-[25px] bg-transparent"
                   />
                 </Link>
-                <div className="w-1 h-6 mx-1 hidden sm:flex bg-custom-gradient"></div>
-                <div className="w-16 h-[2px] mx-1 sm:hidden bg-custom-gradient"></div>
+                <div className="flex gap-x-[0.18rem]">
+                  <div className="w-[0.18rem] h-6 hidden sm:flex bg-[#e1251a]"></div>
+                  <div className="w-[0.18rem] h-6  hidden sm:flex bg-primary-text dark:bg-dark-primary-text"></div>
+                </div>
                 <Link to="/camlin" className="cursor-pointer">
                   <h1 className=" text-primary-text dark:text-dark-primary-text">
                     Camlin

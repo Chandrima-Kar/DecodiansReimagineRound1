@@ -36,7 +36,7 @@
 }
 
 .swiper-pagination-bullet {
-  background: var(--swiper-pagination-bullet-inactive-color, #e1251a);
+  background: var(--swiper-pagination-bullet-inactive-color, var(--accent-color));
 }
 
 .card:hover {
