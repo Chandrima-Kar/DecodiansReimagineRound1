@@ -122,17 +122,17 @@ body {
   color: var(--accent-color);
 }
 
-.hover-accent2 {
+/* .hover-accent2 {
   transition: background-color 500ms, color 500ms;
-}
+} */
 
 .hover-accent2:hover {
   background-color: var(--accent-color);
 }
 
-.hover-accent3 {
+/* .hover-accent3 {
   transition: background-color 500ms, color 500ms;
-}
+} */
 
 .hover-accent3:hover {
   background-color: var(--background-color);

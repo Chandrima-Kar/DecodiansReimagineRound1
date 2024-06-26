@@ -170,7 +170,7 @@ const TransparentPhotoColors = () => {
             className="px-1 md:px-4 md:py-1 lg:p-4
           absolute sm:bottom-4 sm:right-4 
           bottom-[15.5rem] max-sm:left-4 
-          text-[1rem] sm:text-xl md:text-[1.5rem] xl:text-[2rem] hover-accent3 "
+          text-[1rem] sm:text-xl md:text-[1.5rem] xl:text-[2rem]  "
             buttonNameClassName="mr-1"
             icon={<RiExternalLinkLine />}
           />
