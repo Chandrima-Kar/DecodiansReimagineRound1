@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import img1 from "../../../assets/Wonderland/brush1.webp";
 import "../style/wonderland.css";
-// import "./wonderland.css";
 
 const WonderlandTitle = () => {
   const wonderlandRef = useRef(null);

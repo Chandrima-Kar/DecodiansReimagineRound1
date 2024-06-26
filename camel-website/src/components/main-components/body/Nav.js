@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-// import "../components/Theme.css";
 
 // import icons
 import { MdOutlineFormatColorFill, MdDraw } from "react-icons/md";

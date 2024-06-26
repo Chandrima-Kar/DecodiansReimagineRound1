@@ -10,8 +10,6 @@ import img8 from "../../../assets/ExploreArtistsGallery/08.webp";
 import img9 from "../../../assets/ExploreArtistsGallery/09.webp";
 import img10 from "../../../assets/ExploreArtistsGallery/deer.webp";
 
-// import "./ExploreArtistsGallery.css";
-
 import Section from "../../sub-components/body/Section";
 import MyButton from "../../sub-components/body/MyButton";
 
