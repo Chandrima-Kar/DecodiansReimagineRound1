@@ -8,7 +8,6 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
   const [showFooterButton, setShowFooterButton] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState(colorTheme);
-  
 
   const handleThemeClick = (theme) => {
     onThemeChange(theme);
@@ -87,7 +86,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
               </div>
               <button
                 className=" bg-yellow-300 rounded-xl mx-8
-                sm:mx-14 text-xs sm:text-sm md:text-md px-2 py-1"
+                sm:mx-14 xl:mx-20 text-xs sm:text-sm md:text-lg font-semibold px-2 py-1"
                 onClick={handleModeSwitch}
               >
                 {mode === "dark" ? "Light Mode" : "Dark Mode"}
