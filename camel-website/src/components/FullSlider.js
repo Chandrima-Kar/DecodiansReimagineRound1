@@ -12,6 +12,16 @@ import slide3 from "../assets/01/slidethree.webp";
 import slide4 from "../assets/01/make_your_mark_banner.webp";
 import slide5 from "../assets/01/wonderland-banner.webp";
 
+function Button(props) {
+  return (
+    <button
+      className={`cursor-pointer rounded-md border font-semibold duration-500 transition-transform hover:scale-105 flex justify-center items-center  ${props.className}`}
+    >
+      {props.text}
+    </button>
+  );
+}
+
 const FullSlider = () => {
   // contents of the slides
   const slides = [
@@ -24,7 +34,7 @@ const FullSlider = () => {
       p_class: "hidden",
       button1: "",
       button1_text: "Join our Community",
-      button2: "bg-background text-primary-text ",
+      button2: "",
     },
     {
       url: slide3,
@@ -32,7 +42,7 @@ const FullSlider = () => {
       top_d: "top-[50%] md:top-[58%]",
       header: "Introducing Mess-Free Creativity: ",
       header_color: "text-primary-text ",
-      p_class: "text-xl md:text-2xl font-semibold text-secondary-text py-1",
+      p_class: "text-xl md:text-2xl font-semibold text-secondary-text dark:text-dark-secondary-text py-1",
       button1: "",
       button1_text: "Shop Now",
       button2: "hidden",
@@ -125,12 +135,14 @@ const FullSlider = () => {
           <div className="absolute top-[75%] md:top-[78%] left-2 md:left-10 flex gap-x-3 duration-500">
             <MyButton
               text={slides[currentIndex].button1_text}
-              className={`${slides[currentIndex].button1} text-[12px] md:text-[20px] px-5 py-1`}
+              className={`${slides[currentIndex].button1} text-[12px] md:text-[20px] px-5 py-1 `}
             />
 
-            <MyButton
+            <Button
               text={"Meet Artists"}
-              className={`${slides[currentIndex].button2} text-[12px] md:text-[20px] px-5 py-1`}
+              className={`${slides[currentIndex].button2} text-[12px] md:text-[20px] px-5 py-1
+              bg-transparent 
+                text-accent border-accent hover-accent2 hover:text-background`}
             />
           </div>
 

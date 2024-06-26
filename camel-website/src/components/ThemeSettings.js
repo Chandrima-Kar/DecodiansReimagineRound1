@@ -40,9 +40,9 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
   const colorOptions = [
     { id: "theme-red", color: "#e1251a" },
-    { id: "theme-pink", color: "#FF5C8E" },
+    { id: "theme-pink", color: "#FF94CC" },
     { id: "theme-blue", color: "#1A97F5" },
-    { id: "theme-orange", color: "#FB9678" },
+    { id: "theme-orange", color: "#FFAB76" },
     { id: "theme-purple", color: "#7352FF" },
     { id: "theme-green", color: "#03C9D7" },
     { id: "theme-indigo", color: "#1E4DB7" },

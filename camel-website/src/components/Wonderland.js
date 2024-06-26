@@ -62,7 +62,7 @@ const WonderLand = () => {
                 variants={fadeIn("left", 0.2, 1)}
                 initial="hidden"
                 whileInView="show"
-                className="text-secondary-text font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl "
+                className="text-secondary-text dark:text-dark-secondary-text font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl "
               >
                 Art supplies for hobbyists
               </motion.span>

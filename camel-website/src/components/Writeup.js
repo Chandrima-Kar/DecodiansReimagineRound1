@@ -61,7 +61,7 @@ const Writeup = () => {
                       } gap-y-10`}
                     >
                       <div className="flex flex-col gap-y-10">
-                        <div className="text-secondary-text text-xl font-bold text-center  xl:text-3xl lg:text-2xl">
+                        <div className="text-secondary-text  dark:text-dark-secondary-text text-xl font-bold text-center  xl:text-3xl lg:text-2xl">
                           {content.hashTag}
                         </div>
 
@@ -71,7 +71,7 @@ const Writeup = () => {
                       </div>
                       <MyButton
                         text={content.buttonName}
-                        className="px-5 py-1 lg:text-xl md:text-sm font-bold text-background"
+                        className="px-5 py-1 lg:text-xl md:text-sm font-bold text-background hover-accent3"
                         icon={<IoIosArrowForward className="my-auto" />}
                       />
                     </motion.div>
