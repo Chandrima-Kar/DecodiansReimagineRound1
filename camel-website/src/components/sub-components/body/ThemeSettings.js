@@ -52,93 +52,84 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
     <>
       <div className="sticky bottom-12 xl:bottom-5 z-40 mr-[1.1rem] flex justify-end items-center">
         <div
-          className={`text-xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer  w-9 h-9  lg:w-12 lg:h-12 
-            ${showFooterButton ? "absolute -top-5 " : ""}`}
+          className={`text-xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer w-9 h-9 lg:w-12 lg:h-12 ${
+            showFooterButton ? "absolute -top-5 " : ""
+          }`}
           onClick={toggleSidebar}
         >
           <IoMdSettings />
         </div>
       </div>
 
-      {isSidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-opacity-75 flex">
-          <div
-            className="flex-1 transition-all duration-700"
-            onClick={toggleSidebar}
-          ></div>
+      <div
+        className={`fixed inset-0 z-50 bg-opacity-75 flex transition-all duration-300 ${
+          isSidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="flex-1 " onClick={toggleSidebar}></div>
 
-          <div className="sm:w-2/5 md:w-1/3 lg:w-1/4 w-1/2 bg-[#585a5e] h-full shadow-lg flex flex-col gap-y-5 sm:gap-y-8 ">
-            <div className="relative pt-10  flex flex-col justify-center">
-              <div>
-                <ImCross
-                  className=" absolute top-2 right-3 text-white cursor-pointer"
-                  onClick={toggleSidebar}
-                />
-              </div>
-
-              <div className="flex flex-row justify-center">
-                <h2 className="text-center font-semibold text-[#FFFAF4]  mr-0 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md">
-                  Theme Settings
-                </h2>
-              </div>
+        <div
+          className={`sm:w-2/5 md:w-1/3 lg:w-1/4 w-1/2 bg-[#585a5e] h-full shadow-lg flex flex-col gap-y-5 sm:gap-y-8 transition-transform duration-300 transform ${
+            isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="relative pt-10 flex flex-col justify-center">
+            <div>
+              <ImCross
+                className="absolute top-2 right-3 text-white cursor-pointer"
+                onClick={toggleSidebar}
+              />
             </div>
 
-            <div className="mode-options flex flex-col  gap-y-3 md:gap-y-5 lg:gap-y-3">
-              <div className=" text-white text-center text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
-                Mode Options:
-              </div>
-              <button
-                className=" bg-yellow-300 rounded-xl mx-8
-                sm:mx-14 xl:mx-20 text-xs sm:text-sm md:text-lg font-semibold px-2 py-1"
-                onClick={handleModeSwitch}
-              >
-                {mode === "dark" ? "Light Mode" : "Dark Mode"}
-              </button>
+            <div className="flex flex-row justify-center">
+              <h2 className="text-center font-semibold text-[#FFFAF4] mr-0 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md">
+                Theme Settings
+              </h2>
             </div>
+          </div>
 
-            <div className="colour-options max-w-2xl mx-0 text-center ">
-              <div>
-                <div className="mb-6 text-white text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
-                  Choose Your Canvas Color:
+          <div className="mode-options flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-3">
+            <div className="text-white text-center text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
+              Mode Options:
+            </div>
+            <button
+              className="bg-yellow-300 rounded-xl mx-8 sm:mx-14 xl:mx-20 text-xs sm:text-sm md:text-lg font-semibold px-2 py-1"
+              onClick={handleModeSwitch}
+            >
+              {mode === "dark" ? "Light Mode" : "Dark Mode"}
+            </button>
+          </div>
+
+          <div className="colour-options max-w-2xl mx-0 text-center">
+            <div>
+              <div className="mb-6 text-white text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
+                Choose Your Canvas Color:
+              </div>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 justify-center items-center lg:grid-cols-4 xl:gap-6 lg:gap-3 md:gap-3 sm:gap-2 px-6 gap-2">
+              {colorOptions.map((option) => (
+                <div
+                  key={option.id}
+                  id={option.id}
+                  className="cursor-pointer opacity-1 flex items-center justify-center"
+                  onClick={() => handleThemeClick(option.id)}
+                >
+                  <IoIosColorPalette
+                    className="p-1 rounded-full xl:text-5xl md:text-5xl sm:text-4xl text-4xl"
+                    style={{
+                      color: option.color,
+                      borderColor:
+                        selectedTheme === option.id ? "white" : option.color,
+                      borderWidth: "3px",
+                      borderStyle: "solid",
+                    }}
+                  />
                 </div>
-              </div>
-              <div
-                className="  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 justify-center items-center lg:grid-cols-4
-                  xl:gap-6
-                  lg:gap-3
-                  md:gap-3
-                  sm:gap-2
-                  px-6 gap-2"
-              >
-                {colorOptions.map((option) => (
-                  <div
-                    key={option.id}
-                    id={option.id}
-                    className="cursor-pointer opacity-1 flex items-center justify-center"
-                    onClick={() => handleThemeClick(option.id)}
-                  >
-                    <IoIosColorPalette
-                      className=" p-1 rounded-full
-                      xl:text-5xl
-                      md:text-5xl
-                      sm:text-4xl
-                      text-4xl
-                      "
-                      style={{
-                        color: option.color,
-                        borderColor:
-                          selectedTheme === option.id ? "white" : option.color,
-                        borderWidth: "3px",
-                        borderStyle: "solid",
-                      }}
-                    />
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };
