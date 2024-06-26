@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import camel_img from "../assets/00/camel.png";
-import "../components/Theme.css";
+import camel_img from "../../../assets/logo/camel.png";
+// import "../components/Theme.css";
 
 function Button(props) {
   return (

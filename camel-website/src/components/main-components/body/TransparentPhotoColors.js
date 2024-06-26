@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import Section from "./sub-components/Section";
-import MyButton from "./sub-components/MyButton";
+
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
 
 // images
-import hand_img from "../assets/04/hand.png";
+import hand_img from "../../../assets/TransparentPhotoColors/hand.png";
 
 // icons
 import { RiExternalLinkLine } from "react-icons/ri";

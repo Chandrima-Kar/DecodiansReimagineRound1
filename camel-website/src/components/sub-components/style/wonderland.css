@@ -1,0 +1,166 @@
+.container {
+  position: relative;
+}
+
+.brush-animation {
+  position: absolute;
+  top: -35%;
+  opacity: 0;
+  transition: left 3s linear, opacity 0.5s;
+}
+
+/* Default for small screens */
+.brush-animation {
+  left: 0;
+}
+
+.animate .brush-animation {
+  left: calc(100% - 35px);
+  opacity: 1;
+}
+
+
+
+/* Additional screen sizes mobiles*/
+
+@media (min-width: 360px) {
+  .brush-animation {
+    left: 2%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 40px);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 375px) {
+  .brush-animation {
+    left: 5%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 50px);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 393px) {
+  .brush-animation {
+    left: 8%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 60px);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 412px) {
+  .brush-animation {
+    left: 11%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 70px);
+    opacity: 1;
+  }
+}
+
+/* For medium screens (md) - Adjust values accordingly */
+@media (min-width: 768px) {
+  .brush-animation {
+    left: 3%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 60px);
+  }
+}
+
+@media (min-width: 800px) {
+  .brush-animation {
+    left: 5%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 73px);
+  }
+}
+
+
+/* For large screens (lg) - Adjust values accordingly */
+@media (min-width: 1024px) {
+  .brush-animation {
+    left: 1%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 50px);
+  }
+}
+
+/* For screens larger than 1280px (xl) */
+@media (min-width: 1280px) {
+  .brush-animation {
+    left: 2%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 65px);
+  }
+}
+
+@media (min-width: 1366px) {
+  .brush-animation {
+    left: 5%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 105px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .brush-animation {
+    left: 8%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 145px);
+  }
+}
+
+/* For screens larger than 1536px (2xl) */
+@media (min-width: 1536px) {
+  .brush-animation {
+    left: 11%;
+  }
+
+  .animate .brush-animation {
+    left: calc(100% - 195px);
+  }
+}
+
+#wonderland-title {
+  font-family: 'LexendZetta-Light', sans-serif;
+  position: relative;
+}
+
+#wonderland-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  /* Adjust to position the underline correctly */
+  left: 0;
+  width: 0;
+  height: 5px;
+  border-radius: 50px;
+  /* Adjust the thickness of the underline */
+  background-color: var(--accent-color);
+  transition: width 3s linear;
+}
+
+.animate #wonderland-title::after {
+  width: 100%;
+}

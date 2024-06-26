@@ -1,8 +1,10 @@
 import React from "react";
-import Section from "./sub-components/Section";
-import MyButton from "./sub-components/MyButton";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
+import { fadeIn } from "../../sub-components/body/variants.js";
+
 // icon
 import { IoIosArrowForward } from "react-icons/io";
 

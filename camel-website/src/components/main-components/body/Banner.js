@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import "../components/Theme.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+import { fadeIn } from "../../sub-components/body/variants.js";
 
 // images
-import camel_img from "../assets/00/camel.png";
+import camel_img from "../../../assets/logo/camel.png";
+
+// styles
+
+// import "../components/Theme.css";
 
 // icons
 import { MdOutlineFormatColorFill, MdDraw } from "react-icons/md";

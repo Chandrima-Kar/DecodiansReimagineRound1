@@ -1,20 +1,21 @@
 import React from "react";
-import Section from "./sub-components/Section";
-import ClipPath from "./sub-components/ClipPath";
-import MyButton from "./sub-components/MyButton";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+
+import ClipPath from "../../sub-components/body/ClipPath";
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
+import { fadeIn } from "../../sub-components/body/variants.js";
+import WonderlandTitle from "../../sub-components/body/wonderlandTitle.js";
 
 // images
-import img1 from "../assets/06/01.jpeg";
-import img2 from "../assets/06/02.jpg";
+import img1 from "../../../assets/Wonderland/01.jpeg";
+import img2 from "../../../assets/Wonderland/02.jpg";
 
-import card1 from "../assets/SecondPostersSVG/card-1.svg";
-import card2 from "../assets/SecondPostersSVG/card-2.svg";
+import card1 from "../../../assets/CardSkeleton/card-1.svg";
+import card2 from "../../../assets/CardSkeleton/card-2.svg";
 
 // icons
 import { IoIosArrowForward } from "react-icons/io";
-import WonderlandTitle from "./wonderlandTitle";
 
 const posterData = [
   {

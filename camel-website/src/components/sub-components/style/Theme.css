@@ -1,0 +1,160 @@
+/* Theme-specific classes */
+:root{
+  --accent-color: #e1251a;
+  --highlight-color: #f43a3a77;
+  --bg-color: #FFFAF4;
+}
+.theme-red {
+  --accent-color: #e1251a;
+  --highlight-color: #f43a3a77;
+}
+
+.theme-purple {
+  --accent-color: #910A67;
+  --highlight-color: #a84b8b;
+}
+
+.theme-indigo {
+  --accent-color: #1E4DB7;
+  --highlight-color: #5174c5;
+
+}
+
+.theme-deepGreen {
+  --accent-color: #005B41;
+  --highlight-color: #02664a;
+}
+
+.theme-lightBlue {
+  --accent-color: #3A98B9;
+  --highlight-color: #86c0e7;
+
+}
+
+.theme-orange {
+  --accent-color: #EF9C66;
+  --highlight-color: #f7af80;
+
+}
+
+.theme-skin {
+  --accent-color: #FCBAAD;
+  --highlight-color: #efb4a8;
+}
+
+.theme-soil {
+  --accent-color: #A0937D;
+  --highlight-color: #A0937D;
+
+}
+
+
+
+/* General styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* @media (min-width:320px) and (max-width:639px) {
+  .cross {
+    margin-left: 9rem;
+  }
+}
+
+@media (min-width:375px) and (max-width:639px) {
+  .cross {
+    margin-left: 10rem;
+  }
+}
+
+@media (min-width:425px) and (max-width:639px) {
+  .cross {
+    margin-left: 11.5rem;
+  }
+}
+
+@media (min-width:500px) and (max-width:639px) {
+  .cross {
+    margin-left: 14rem;
+  }
+}
+
+@media (min-width:570px) and (max-width:639px) {
+  .cross {
+    margin-left: 16rem;
+  }
+}
+
+@media (min-width:600px) and (max-width:639px) {
+  .cross {
+    margin-left: 17rem;
+  }
+} */
+
+/* Utility classes for specific elements */
+
+
+.bg-accent {
+  background-color: var(--accent-color);
+  color: #FFFAF4;
+  /* Text color */
+}
+
+.bg-highlight {
+  background-color: var(--highlight-color);
+}
+
+.border-accent {
+  border-color: var(--accent-color);
+}
+
+.border-l-accent {
+  border-left-color: var(--accent-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* .hover-accent {
+  transition: background-color 500ms, color 500ms;
+} */
+
+.hover-accent:hover {
+  color: var(--accent-color);
+}
+
+.dark-hover-accent:hover {
+  color: var(--accent-color);
+}
+
+/* .hover-accent2 {
+  transition: background-color 500ms, color 500ms;
+} */
+
+.hover-accent2:hover {
+  background-color: var(--accent-color);
+}
+
+/* .hover-accent3 {
+  transition: background-color 500ms, color 500ms;
+} */
+
+.hover-accent3:hover {
+  background-color: var(--background-color);
+  color: var(--accent-color);
+}
+
+
+.dark-hover-accent2:hover {
+  color: #fff;
+}
+
+.dark-hover-accent3:hover {
+  color: var(--accent-color);
+  ;
+  background-color: #000;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./sub-components/Section";
+import Section from "../../sub-components/body/Section";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Quotation = () => {

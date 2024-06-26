@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import Section from "./sub-components/Section";
-import ClipPath from "./sub-components/ClipPath";
-import MyButton from "./sub-components/MyButton";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+
+import ClipPath from "../../sub-components/body/ClipPath";
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
+import { fadeIn } from "../../sub-components/body/variants.js";
 
 // images
-import crayonImg from "../assets/02/1_0.webp";
-import artistImg from "../assets/02/3_1.webp";
-import posterColorImg from "../assets/02/2_2.webp";
-import card1 from "../assets/SecondPostersSVG/card-1.svg";
-import card2 from "../assets/SecondPostersSVG/card-2.svg";
-import card3 from "../assets/SecondPostersSVG/card-3.svg";
+import crayonImg from "../../../assets/Poster/1_0.webp";
+import artistImg from "../../../assets/Poster/3_1.webp";
+import posterColorImg from "../../../assets/Poster/2_2.webp";
+import card1 from "../../../assets/CardSkeleton/card-1.svg";
+import card2 from "../../../assets/CardSkeleton/card-2.svg";
+import card3 from "../../../assets/CardSkeleton/card-3.svg";
 
 // icons
 import { IoIosArrowForward } from "react-icons/io";

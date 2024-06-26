@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { IoMdSettings } from "react-icons/io";
 import { ImCross } from "react-icons/im";
 import { IoIosColorPalette } from "react-icons/io";
-import "../components/Theme.css";
+import "../../sub-components/style/Theme.css";
+
+// import "../components/Theme.css";
 
 const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
   const [showFooterButton, setShowFooterButton] = useState(false);

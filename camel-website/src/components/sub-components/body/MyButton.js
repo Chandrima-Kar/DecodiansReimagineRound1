@@ -1,5 +1,6 @@
 import React from "react";
-import "../../components/Theme.css";
+import "../../sub-components/style/Theme.css";
+// import "../../components/Theme.css";
 
 const MyButton = (props) => {
   return (

@@ -1,8 +1,9 @@
 import React from "react";
-import Section from "./sub-components/Section";
-import MyButton from "./sub-components/MyButton";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
+import { fadeIn } from "../../sub-components/body/variants.js";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,17 +12,17 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 
-import "./style_swiper.css";
+import "../style/style_swiper.css";
 
 // import required modules
 import { EffectCards, Pagination, Navigation, Keyboard } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 // images
-import card1_img from "../assets/07/card1.jpeg";
-import card2_img from "../assets/07/card2.jpeg";
-import card3_img from "../assets/07/card3.jpg";
-import card4_img from "../assets/07/card4.jpeg";
+import card1_img from "../../../assets/KidsCards/card1.jpeg";
+import card2_img from "../../../assets/KidsCards/card2.jpeg";
+import card3_img from "../../../assets/KidsCards/card3.jpg";
+import card4_img from "../../../assets/KidsCards/card4.jpeg";
 
 // icons
 import { RiExternalLinkLine } from "react-icons/ri";

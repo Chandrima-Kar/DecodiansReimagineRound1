@@ -1,25 +1,26 @@
 import React from "react";
-import Section from "./sub-components/Section";
-import MyButton from "./sub-components/MyButton";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
+import { fadeIn } from "../../sub-components/body/variants.js";
 
 // icons
 import { PiArrowSquareOutBold } from "react-icons/pi";
 
 // images
-import featureBadge from "../assets/03/feature-artist-badge.png";
-import artistImg from "../assets/03/artistImage.jpeg";
-import painting1 from "../assets/03/img1.jpg";
-import painting2 from "../assets/03/img2.png";
-import painting3 from "../assets/03/img3.png";
+import featureBadge from "../../../assets/FeaturedArtist/feature-artist-badge.png";
+import artistImg from "../../../assets/FeaturedArtist/artistImage.jpeg";
+import painting1 from "../../../assets/FeaturedArtist/img1.jpg";
+import painting2 from "../../../assets/FeaturedArtist/img2.png";
+import painting3 from "../../../assets/FeaturedArtist/img3.png";
 
 // swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import "./style_swiper.css";
+import "../style/style_swiper.css";
 import { EffectCube, Pagination } from "swiper/modules";
 
 // artist's data

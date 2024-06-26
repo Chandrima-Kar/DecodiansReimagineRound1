@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import camel_img from "../assets/00/camel.png";
+import camel_img from "../../../assets/logo/camel.png";
 
-import "./Preloader.css";
+import "../../sub-components/style/Preloader.css";
 
 const Preloader = ({ setLoading }) => {
   useEffect(() => {

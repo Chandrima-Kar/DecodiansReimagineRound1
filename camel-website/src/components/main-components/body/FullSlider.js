@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Section from "./sub-components/Section";
-import MyButton from "./sub-components/MyButton";
+
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
 
 // icons
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 // images
-import slide2 from "../assets/01/slidetwo.jpg";
-import slide3 from "../assets/01/slidethree.webp";
-import slide4 from "../assets/01/make_your_mark_banner.webp";
-import slide5 from "../assets/01/wonderland-banner.webp";
+import slide2 from "../../../assets/FullSlider/slidetwo.jpg";
+import slide3 from "../../../assets/FullSlider/slidethree.webp";
+import slide4 from "../../../assets/FullSlider/make_your_mark_banner.webp";
+import slide5 from "../../../assets/FullSlider/wonderland-banner.webp";
 
 function Button(props) {
   return (

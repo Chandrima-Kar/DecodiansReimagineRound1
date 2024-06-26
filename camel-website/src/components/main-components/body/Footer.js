@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MyButton from "./sub-components/MyButton";
+import MyButton from "../../sub-components/body/MyButton";
+
+// icons
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 

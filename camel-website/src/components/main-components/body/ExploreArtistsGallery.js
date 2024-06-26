@@ -1,18 +1,23 @@
 import React from "react";
-import Section from "./sub-components/Section";
-import img1 from "../assets/08/01.jpg";
-import img2 from "../assets/08/02.jpg";
-import img3 from "../assets/08/03.jpg";
-import img4 from "../assets/08/04.jpg";
-import img5 from "../assets/08/05.jpg";
-import img6 from "../assets/08/06.jpg";
-import img7 from "../assets/08/07.jpg";
-import img8 from "../assets/08/08.jpg";
-import img9 from "../assets/08/09.jpg";
-import img10 from "../assets/08/deer.webp";
+import img1 from "../../../assets/ExploreArtistsGallery/01.jpg";
+import img2 from "../../../assets/ExploreArtistsGallery/02.jpg";
+import img3 from "../../../assets/ExploreArtistsGallery/03.jpg";
+import img4 from "../../../assets/ExploreArtistsGallery/04.jpg";
+import img5 from "../../../assets/ExploreArtistsGallery/05.jpg";
+import img6 from "../../../assets/ExploreArtistsGallery/06.jpg";
+import img7 from "../../../assets/ExploreArtistsGallery/07.jpg";
+import img8 from "../../../assets/ExploreArtistsGallery/08.jpg";
+import img9 from "../../../assets/ExploreArtistsGallery/09.jpg";
+import img10 from "../../../assets/ExploreArtistsGallery/deer.webp";
 
-import "./ExploreArtistsGallery.css";
-import MyButton from "./sub-components/MyButton";
+// import "./ExploreArtistsGallery.css";
+
+import Section from "../../sub-components/body/Section";
+import MyButton from "../../sub-components/body/MyButton";
+
+import "../style/ExploreArtistsGallery.css";
+
+// icons
 import { IoIosArrowForward } from "react-icons/io";
 
 const MovingImages = [
@@ -150,7 +155,7 @@ const ExploreArtistsGallery = () => {
             </div>
             <MyButton
               text="Explore Artist Gallery"
-              className="px-2 py-1"
+              className="px-2 py-1 hover-accent3"
               icon={<IoIosArrowForward className="my-auto" />}
             />
           </div>
