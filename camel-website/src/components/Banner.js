@@ -90,10 +90,10 @@ const Banner = ({ isInitialLoad }) => {
                       alt="camel_image"
                       className="absolute 
                       w-[17px] h-[17px] 
-                      md:w-[25px] md:h-[25px] 
+                      md:w-[30px] md:h-[30px] 
                       
-                      top-[1.5rem] left-[1.5rem] 
-                      md:top-[1.8rem] md:left-[1.9rem]"
+                      top-[0.8rem] left-[0.8rem] 
+                      md:top-[1.8rem] md:left-[1.65rem]"
                     />
                   </div>
                 </Link>
@@ -122,9 +122,9 @@ const Banner = ({ isInitialLoad }) => {
                         variants={fadeIn("down", 0.2, isInitialLoad ? 1.5 : 1)}
                         initial="hidden"
                         whileInView="show"
-                        className={`relative gap-x-1 -top-[1.6rem] flex items-center justify-center font-semibold border-2 border-accent rounded-xl  hover:text-background pl-2 transition-all duration-500
+                        className={`relative gap-x-1 -top-[1.3rem] flex items-center justify-center font-semibold border-2 border-accent rounded-xl  hover:text-background pl-2 transition-all duration-500
                         w-[8rem]  md:w-[10rem] 
-                        h-[1.8rem] md:h-[2.2rem]
+                        h-[1.5rem] min-[340px]:h-[1.65rem] md:h-[2.2rem]
                         text-[12px]    md:text-[1rem] ${
                           showDropdown
                             ? "rounded-b-none bg-accent text-background"
@@ -144,7 +144,7 @@ const Banner = ({ isInitialLoad }) => {
                         >
                           <div>{app.title}</div>
                           <div>{app.icon}</div>
-                          <div className="text-xl ml-1 transition-transform duration-500">
+                          <div className=" text-lg sm:text-xl ml-1 transition-transform duration-500">
                             {showDropdown ? (
                               <IoIosArrowDropup />
                             ) : (
@@ -196,8 +196,8 @@ const Banner = ({ isInitialLoad }) => {
                             whileInView="show"
                             className="gap-x-1 flex items-center justify-center font-semibold bg-background dark:bg-darkBackground2 border-2 border-accent rounded-xl text-accent  transition-all duration-500 hover-accent2 dark-hover-accent2
                           
-                          w-[8rem]  md:w-[10rem] 
-                            h-[1.5rem] min-[340px]:h-[1.8rem] md:h-[2.2rem]
+                            w-[8rem]  md:w-[10rem] 
+                            h-[1.5rem] min-[340px]:h-[1.65rem] md:h-[2.2rem]
                             text-[12px]    md:text-[1rem]"
                           >
                             <motion.div
