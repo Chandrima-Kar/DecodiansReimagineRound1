@@ -77,14 +77,14 @@ const Banner = ({ isInitialLoad }) => {
           <div
             className="relative left-1/2 flex aspect-square border-[3px] border-accent rounded-full -translate-x-1/2 scale-75 md:scale-100 
           
-          w-[16rem] min-[340px]:w-[18rem] sm:w-[35rem] lg:max-xl:w-[25rem] "
+            w-[16rem] min-[340px]:w-[18rem] sm:w-[35rem] lg:max-xl:w-[25rem] "
           >
             <div className="flex aspect-square m-auto border-[3px] border-accent rounded-full w-[13rem] sm:w-[20rem] lg:max-xl:w-[15rem]">
               {/* Center of the circle */}
-              <div className="aspect-square z-50 m-auto p-[0.2rem] rounded-full w-[4rem] md:w-[6rem] cursor-pointer ">
+              <div className="aspect-square m-auto p-[0.1rem] rounded-full w-[4rem] md:w-[6rem] z-10 cursor-pointer ">
                 <Link
                   to="/global-search"
-                  className="flex items-center justify-center w-full h-full bg-background dark:bg-darkBackground rounded-full"
+                  className="flex items-center justify-center w-full h-full bg-background dark:bg-darkBackground rounded-full "
                 >
                   <div className="relative flex items-center justify-center text-[3rem] md:text-8xl bg-accent2">
                     <CiSearch className="text-accent" />
@@ -126,9 +126,11 @@ const Banner = ({ isInitialLoad }) => {
                         initial="hidden"
                         whileInView="show"
                         className={`relative gap-x-1 -top-[1.3rem] flex items-center justify-center font-semibold border-2 border-accent rounded-xl  hover:text-background pl-2 transition-all duration-500
+
+                          font-montserrat
                         w-[8rem]  md:w-[10rem] 
                         h-[1.5rem] min-[340px]:h-[1.65rem] md:h-[2.2rem]
-                        text-[12px]    md:text-[1rem] ${
+                        text-[11px]    md:text-[0.9rem] ${
                           showDropdown
                             ? "rounded-b-none bg-accent text-background"
                             : "bg-background dark:bg-darkBackground2 text-accent hover-accent2 dark-hover-accent2"
@@ -159,7 +161,7 @@ const Banner = ({ isInitialLoad }) => {
 
                       <div
                         className={`absolute  bg-background2 dark:bg-darkBackground2 border border-accent  text-center   duration-500 transform 
-                        w-[8rem] md:w-[10rem] top-1 right-0 md:top-[0.7rem] md:right-0 ${
+                        w-[8rem] md:w-[10rem] top-[0.2rem] right-0 md:top-[0.7rem] md:right-0 ${
                           showDropdown
                             ? "opacity-100 scale-100"
                             : "opacity-0 scale-0"
@@ -171,7 +173,7 @@ const Banner = ({ isInitialLoad }) => {
                             to={content.path}
                             className="w-full h-full text-[12px] md:text-[1rem]"
                           >
-                            <div className="flex flex-col font-semibold border border-accent py-1 bg-background2 dark:bg-darkBackground2 text-primary-text dark:text-dark-primary-text hover:text-background hover-accent2 dark-hover-accent2">
+                            <div className="flex flex-col font-semibold font-lato border border-accent py-1 bg-background2 dark:bg-darkBackground2 text-primary-text dark:text-dark-primary-text hover:text-background hover-accent2 dark-hover-accent2">
                               {content.title}
                             </div>
                           </Link>
@@ -199,9 +201,10 @@ const Banner = ({ isInitialLoad }) => {
                             whileInView="show"
                             className="gap-x-1 flex items-center justify-center font-semibold bg-background dark:bg-darkBackground2 border-2 border-accent rounded-xl text-accent  transition-all duration-500 hover-accent2 dark-hover-accent2
                           
+                            font-montserrat
                             w-[8rem]  md:w-[10rem] 
                             h-[1.5rem] min-[340px]:h-[1.65rem] md:h-[2.2rem]
-                            text-[12px]    md:text-[1rem]"
+                            text-[11px]    md:text-[0.9rem]"
                           >
                             <motion.div
                               key={isInitialLoad ? "initial" : "scroll"}

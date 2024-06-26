@@ -53,17 +53,17 @@ const WonderLand = () => {
                 variants={fadeIn("right", 0.2, 1)}
                 initial="hidden"
                 whileInView="show"
-                className="font-semibold block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl text-primary-text dark:text-dark-primary-text"
+                className="font-semibold font-lato block text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-5xl text-primary-text dark:text-dark-primary-text"
               >
                 where creativity thrives
               </motion.span>
             </div>
             <div className="flex flex-col justify-end text-right items-center ">
               <motion.span
-                variants={fadeIn("left", 0.2, 1)}
+                variants={fadeIn("left", 0.1, 1)}
                 initial="hidden"
                 whileInView="show"
-                className="text-secondary-text dark:text-dark-secondary-text font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl "
+                className="text-secondary-text dark:text-dark-secondary-text font-semibold font-open_sans text-base md:text-xl lg:text-2xl xl:text-3xl "
               >
                 Art supplies for hobbyists
               </motion.span>
@@ -81,7 +81,7 @@ const WonderLand = () => {
                 key={index}
                 className={`block relative bg-no-repeat bg-[length:100%_100%] md:max-w-[35rem] 
                   
-                  w-[18rem] 
+                  w-[17rem] 
                   sm:h-[25rem] sm:w-[21rem] 
                   md:w-[20rem] 
                   lg:w-[25rem] 
@@ -92,7 +92,7 @@ const WonderLand = () => {
                 }}
               >
                 <div className="relative z-2 flex flex-col p-[2rem] min-h-[24rem] sm:min-h-[25rem] xl:min-h-[24rem]">
-                  <h6 className="font-extrabold text-black text-3xl">
+                  <h6 className="font-extrabold font-montserrat text-black text-3xl">
                     {item.title}
                   </h6>
                   <div className="flex-grow" />

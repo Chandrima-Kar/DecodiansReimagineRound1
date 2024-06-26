@@ -19,7 +19,7 @@ const Preloader = ({ setLoading }) => {
         alt="camel_image"
         className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] bg-transparent"
       />
-      <div className="wave-container">
+      <div className="wave-container font-montserrat text-xl min-[350px]:text-[1.8rem] mt-5">
         <div className="wave">Welcome</div>
         <div className="wave" style={{ animationDelay: "0.3s" }}>
           to

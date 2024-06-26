@@ -102,7 +102,7 @@ const Nav = () => {
               >
                 <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
                   <div className="bg-accent relative flex text-background items-center p-[6px] rounded-[3px]">
-                    <div className="text-[12px] leading-none font-semibold capitalize flex-grow text-center">
+                    <div className="text-[12px] leading-none font-semibold capitalize flex-grow text-center font-lato">
                       {link.name}
                     </div>
                     <div className="border-solid border-l-accent border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
@@ -119,12 +119,12 @@ const Nav = () => {
             {showPopup && (
               <div
                 ref={popupRef}
-                className="fixed z-50  bg-background dark:bg-darkBackground2 xl:font-semibold rounded-md max-xl:rounded-br-none  shadow-lg 
+                className="fixed z-50  bg-background2 dark:bg-darkBackground2 xl:font-semibold rounded-md max-xl:rounded-br-none  shadow-lg 
               
-              w-[16rem]
+              w-[17rem]
               bottom-[4.9rem] xl:bottom-[0.9rem] right-7 md:right-[10.5rem] xl:right-[4.5rem] transition-all duration-300"
               >
-                <div className="flex  gap-2 text-[12px] ">
+                <div className="flex items-center justify-between  gap-2 text-[12px] ">
                   {/* triangle */}
                   <div className="border-solid border-t-background dark:border-t-darkBackground xl:border-b-background dark:xl:border-b-darkBackground border-t-[12px] border-l-transparent border-l-[12px] border-b-0 absolute right-0 top-[3.75rem] xl:top-[1.2rem] xl:border-l-background2 dark:xl:border-l-darkBackground2 xl:border-l-8 xl:border-y-transparent xl:border-r-0 xl:-right-2 xl:border-t-[6px] xl:border-b-[6px] xl:border-b-transparent"></div>
                   {/* links */}
@@ -133,7 +133,7 @@ const Nav = () => {
                       key={index}
                       className="p-1  hover:bg-accent font-semibold text-accent hover:text-background hover:rounded-md text-center hover-accent2"
                     >
-                      <Link to={link.path} className="block  py-2">
+                      <Link to={link.path} className="block  py-2 font-lato">
                         {link.name}
                       </Link>
                     </div>

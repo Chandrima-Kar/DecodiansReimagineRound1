@@ -63,10 +63,10 @@ const FeaturedArtist = () => {
               whileInView="show"
               className="xl:w-[20%] flex flex-col items-center xl:items-start leading-none gap-y-3"
             >
-              <h1 className="font-bold font-serif text-primary-text dark:text-dark-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
+              <h1 className="font-bold font-montserrat  text-primary-text dark:text-dark-primary-text text-[3rem] lg:text-[4rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center lg:text-left">
                 Featured Artist
               </h1>
-              <h3 className="text-accent font-bold text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
+              <h3 className="text-accent font-bold font-lato text-[1.5rem] lg:text-[2rem] xl:text-[1.7rem] 2xl:text-[2rem] text-center lg:text-left">
                 {artistDetail.monthYear}
               </h3>
             </motion.div>
@@ -99,12 +99,12 @@ const FeaturedArtist = () => {
                   {/* details */}
                   <div className="flex flex-col items-center justify-center gap-y-1">
                     <div>
-                      <h1 className="text-3xl font-sans font-extrabold text-primary-text dark:text-dark-primary-text">
+                      <h1 className="text-3xl font-montserrat font-extrabold text-primary-text dark:text-dark-primary-text">
                         {artistDetail.profile.name}
                       </h1>
                     </div>
                     <div>
-                      <p className="text-xl text-accent font-semibold font-mono">
+                      <p className="text-xl text-accent font-semibold  font-open_sans">
                         {artistDetail.profile.role}
                       </p>
                     </div>

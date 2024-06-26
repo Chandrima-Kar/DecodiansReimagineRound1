@@ -99,7 +99,7 @@ const Poster = () => {
                     variants={fadeIn("up", 0.1, 1)}
                     initial="hidden"
                     whileInView="show"
-                    className="font-extrabold text-black text-3xl"
+                    className="font-extrabold font-montserrat text-black text-3xl"
                   >
                     {item.title}
                   </motion.h6>

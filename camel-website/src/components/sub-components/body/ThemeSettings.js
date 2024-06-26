@@ -52,7 +52,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
     <>
       <div className="sticky bottom-12 xl:bottom-5 z-40 mr-[1.1rem] flex justify-end items-center">
         <div
-          className={`text-xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer w-9 h-9 lg:w-12 lg:h-12 ${
+          className={`text-3xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer w-9 h-9 lg:w-12 lg:h-12 ${
             showFooterButton ? "absolute -top-5 " : ""
           }`}
           onClick={toggleSidebar}
@@ -63,7 +63,9 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
       <div
         className={`fixed inset-0 z-50 bg-opacity-75 flex transition-all duration-300 ${
-          isSidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isSidebarOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         <div className="flex-1 " onClick={toggleSidebar}></div>
@@ -82,18 +84,18 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
             </div>
 
             <div className="flex flex-row justify-center">
-              <h2 className="text-center font-semibold text-[#FFFAF4] mr-0 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md">
+              <h2 className="text-center font-semibold text-[#FFFAF4] mr-0 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md font-montserrat">
                 Theme Settings
               </h2>
             </div>
           </div>
 
           <div className="mode-options flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-3">
-            <div className="text-white text-center text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
+            <div className="text-white text-center text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm font-lato">
               Mode Options:
             </div>
             <button
-              className="bg-yellow-300 rounded-xl mx-8 sm:mx-14 xl:mx-20 text-xs sm:text-sm md:text-lg font-semibold px-2 py-1"
+              className="bg-yellow-300 rounded-xl mx-8 sm:mx-14 xl:mx-20 text-xs sm:text-sm md:text-lg font-semibold px-2 py-1 font-ubuntu"
               onClick={handleModeSwitch}
             >
               {mode === "dark" ? "Light Mode" : "Dark Mode"}
@@ -102,7 +104,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
           <div className="colour-options max-w-2xl mx-0 text-center">
             <div>
-              <div className="mb-6 text-white text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
+              <div className="mb-6 text-white text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm font-lato">
                 Choose Your Canvas Color:
               </div>
             </div>

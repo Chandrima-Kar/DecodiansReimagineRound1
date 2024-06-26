@@ -70,12 +70,12 @@ const KidsCards = () => {
                 initial="hidden"
                 whileInView="show"
               >
-                <h1 className="text-[40px] lg:text-[55px] xl:text-[90px] font-bold leading-none   text-primary-text dark:text-dark-primary-text">
+                <h1 className="text-[40px] lg:text-[55px] xl:text-[90px] font-bold leading-none   text-primary-text dark:text-dark-primary-text font-montserrat">
                   A colourful
                   <br /> mini-universe
                 </h1>
                 <h1
-                  className=" text-2xl uppercase  font-semibold  tracking-wide text-secondary-text dark:text-dark-secondary-text
+                  className=" text-2xl uppercase  font-semibold  tracking-wide text-secondary-text font-lato dark:text-dark-secondary-text
               "
                 >
                   Art supplies for kids

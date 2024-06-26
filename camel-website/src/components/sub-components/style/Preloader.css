@@ -25,7 +25,7 @@
 
 .wave {
   color: white;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: bold;
   animation: wave 1.5s infinite;
 }

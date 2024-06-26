@@ -63,11 +63,11 @@ const Writeup = () => {
                       } gap-y-10`}
                     >
                       <div className="flex flex-col gap-y-10">
-                        <div className="text-secondary-text  dark:text-dark-secondary-text text-xl font-bold text-center  xl:text-3xl lg:text-2xl">
+                        <div className="text-secondary-text  dark:text-dark-secondary-text text-xl font-bold text-center  xl:text-3xl lg:text-2xl font-lato">
                           {content.hashTag}
                         </div>
 
-                        <h3 className="xl:text-4xl lg:text-2xl md:text-[1.25rem] sm:text-xl text-2xl font-extrabold text-primary-text dark:text-dark-primary-text text-center ">
+                        <h3 className="xl:text-4xl lg:text-2xl md:text-[1.25rem] sm:text-xl text-2xl font-extrabold text-primary-text dark:text-dark-primary-text text-center font-montserrat ">
                           {content.sentence}
                         </h3>
                       </div>
