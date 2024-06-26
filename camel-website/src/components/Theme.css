@@ -4,41 +4,46 @@
   --highlight-color: #f43a3a77;
 }
 
-.theme-pink {
-  --accent-color: #FF94CC;
-  --highlight-color: #f8c6d3;
-  
-}
-
-.theme-blue {
-  --accent-color: #1A97F5;
-  --highlight-color: #86c0e7;
-  
-}
-
-.theme-orange {
-  --accent-color: #FFAB76;
-  --highlight-color: #fcd3c0;
-  
-}
-
 .theme-purple {
-  --accent-color: #7352FF;
-  --highlight-color: #d3caf6;
-  
-}
-
-.theme-green {
-  --accent-color: #03C9D7;
-  --highlight-color: #abedf1;
-  
+  --accent-color: #910A67;
+  --highlight-color: #a84b8b;
 }
 
 .theme-indigo {
   --accent-color: #1E4DB7;
-  --highlight-color: #d1dcf0;
-  
+  --highlight-color: #5174c5;
+
 }
+
+.theme-deepGreen {
+  --accent-color: #005B41;
+  --highlight-color: #02664a;
+}
+
+.theme-lightBlue {
+  --accent-color: #3A98B9;
+  --highlight-color: #86c0e7;
+
+}
+
+.theme-orange {
+  --accent-color: #EF9C66;
+  --highlight-color: #f7af80;
+
+}
+
+.theme-skin {
+  --accent-color: #FCBAAD;
+  --highlight-color: #efb4a8;
+}
+
+.theme-soil {
+  --accent-color: #A0937D;
+  --highlight-color: #A0937D;
+
+}
+
+
 
 /* General styling */
 body {
@@ -48,7 +53,7 @@ body {
   padding: 0;
 }
 
-@media (min-width:320px) and (max-width:639px) {
+/* @media (min-width:320px) and (max-width:639px) {
   .cross {
     margin-left: 9rem;
   }
@@ -82,7 +87,7 @@ body {
   .cross {
     margin-left: 17rem;
   }
-}
+} */
 
 /* Utility classes for specific elements */
 

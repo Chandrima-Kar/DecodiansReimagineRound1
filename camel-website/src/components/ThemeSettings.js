@@ -40,17 +40,18 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
   const colorOptions = [
     { id: "theme-red", color: "#e1251a" },
-    { id: "theme-pink", color: "#FF94CC" },
-    { id: "theme-blue", color: "#1A97F5" },
-    { id: "theme-orange", color: "#FFAB76" },
-    { id: "theme-purple", color: "#7352FF" },
-    { id: "theme-green", color: "#03C9D7" },
+    { id: "theme-purple", color: "#910A67" },
     { id: "theme-indigo", color: "#1E4DB7" },
+    { id: "theme-deepGreen", color: "#005B41" },
+    { id: "theme-lightBlue", color: "#3A98B9" },
+    { id: "theme-orange", color: "#EF9C66" },
+    { id: "theme-skin", color: "#FCBAAD" },
+    { id: "theme-soil", color: "#A0937D" },
   ];
 
   return (
     <>
-      <div className="sticky bottom-12 lg:bottom-5 z-40 ml-64 mr-[1.1rem] flex justify-end items-center">
+      <div className="sticky bottom-12 xl:bottom-5 z-40 mr-[1.1rem] flex justify-end items-center">
         <div
           className={`text-xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer  w-9 h-9  lg:w-12 lg:h-12 
             ${showFooterButton ? "absolute -top-5 " : ""}`}
@@ -63,25 +64,25 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
       {isSidebarOpen && (
         <div className="fixed inset-0 z-50 bg-opacity-75 flex">
           <div className="flex-1" onClick={toggleSidebar}></div>
-
-          <div className="sm:w-2/5 md:w-1/3 w-1/2 bg-[#484B52] h-full shadow-lg">
-            <div className="sm:p-4 p-3 flex flex-col gap-2 justify-center">
+          {/* cross md:h-3 md:w-3 sm:h-2 sm:w-2 h-2 w-2 sm:mt-1 mt-0 ml-[10.6rem] xl:ml-[27rem] lg:ml-[19rem] md:ml-[14rem] sm:ml-[11.5rem] */}
+          <div className="sm:w-2/5 md:w-1/3 lg:w-1/4 w-1/2 bg-[#585a5e] h-full shadow-lg flex flex-col gap-y-5 sm:gap-y-8  ">
+            <div className="relative pt-10  flex flex-col justify-center">
               <div>
                 <ImCross
-                  className="cross md:h-3 md:w-3 sm:h-2 sm:w-2 h-2 w-2 sm:mt-1 mt-0 ml-[10.6rem] xl:ml-[27rem] lg:ml-[19rem] md:ml-[14rem] sm:ml-[11.5rem] text-white cursor-pointer"
+                  className=" absolute top-4 right-4 text-white cursor-pointer"
                   onClick={toggleSidebar}
                 />
               </div>
 
               <div className="flex flex-row justify-center">
-                <h2 className="text-center font-semibold text-[#FFFAF4] mt-10 mr-3 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md">
+                <h2 className="text-center font-semibold text-[#FFFAF4]  mr-0 xl:text-3xl lg:text-2xl md:text-xl sm:text-md text-md">
                   Theme Settings
                 </h2>
               </div>
             </div>
 
-            <div className="mode-options flex flex-col ">
-              <div className=" text-white text-center mb-5 mt-8 text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
+            <div className="mode-options flex flex-col gap-y-2">
+              <div className=" text-white text-center text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
                 Mode Options:
               </div>
               <button
@@ -97,19 +98,19 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
               </button>
             </div>
 
-            <div className="colour-options max-w-2xl mx-0 mt-16 text-center px-5 py-0">
+            <div className="colour-options max-w-2xl mx-0 text-center ">
               <div>
                 <div className="mb-6 text-white text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
-                  Theme Colors:
+                  Choose Your Canvas Color:
                 </div>
               </div>
               <div
-                className="  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 justify-center items-center lg:grid-cols-4 mt-5
-              xl:mx-12 xl:gap-8
-              lg:mx-6 lg:gap-4
-              md:mx-2 md:gap-3
-              sm:mx-3 sm:gap-2
-              mx-3 gap-2"
+                className="  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 justify-center items-center lg:grid-cols-4
+                xl:mx-12 xl:gap-8
+                lg:mx-6 lg:gap-4
+                md:mx-2 md:gap-3
+                sm:mx-3 sm:gap-2
+                mx-3 gap-2"
               >
                 {colorOptions.map((option) => (
                   <div
@@ -123,7 +124,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
                       xl:text-5xl
                       md:text-4xl
                       sm:text-3xl
-                      text-3xl
+                      text-4xl
                       "
                       style={{
                         color: option.color,

@@ -52,11 +52,14 @@ const Header = () => {
 
               {/* middle */}
               <div className="hidden md:flex  items-center justify-center  text-sm lg:text-base">
-                <p className="text-primary-text dark:text-dark-primary-text">
+                <p className="text-secondary-text dark:text-dark-secondary-text">
                   Every artist is invited!{" "}
                   <span>
                     {" "}
-                    <Link to="/camel" className="underline font-bold">
+                    <Link
+                      to="/camel"
+                      className="underline font-bold text-primary-text dark:text-dark-primary-text"
+                    >
                       Join our Community
                     </Link>{" "}
                   </span>{" "}

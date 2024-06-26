@@ -42,7 +42,8 @@ const FullSlider = () => {
       top_d: "top-[50%] md:top-[58%]",
       header: "Introducing Mess-Free Creativity: ",
       header_color: "text-primary-text ",
-      p_class: "text-xl md:text-2xl font-semibold text-secondary-text dark:text-dark-secondary-text py-1",
+      p_class:
+        "text-xl md:text-2xl font-semibold text-secondary-text dark:text-dark-secondary-text py-1",
       button1: "",
       button1_text: "Shop Now",
       button2: "hidden",
@@ -93,7 +94,7 @@ const FullSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 10000); // 10 seconds
+    }, 20000); // 20 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [nextSlide]); // Dependency array ensures interval is reset on slide change

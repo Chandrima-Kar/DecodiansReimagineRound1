@@ -20,18 +20,20 @@ const Particle = ({ colorTheme }) => {
     switch (theme) {
       case "theme-red":
         return "#e1251a";
-      case "theme-pink":
-        return "#FF5C8E";
-      case "theme-blue":
-        return "#1A97F5";
-      case "theme-orange":
-        return "#FB9678";
       case "theme-purple":
-        return "#7352FF";
-      case "theme-green":
-        return "#03C9D7";
+        return "#910A67";
       case "theme-indigo":
         return "#1E4DB7";
+      case "theme-deepGreen":
+        return "#005B41";
+      case "theme-lightBlue":
+        return "#3A98B9";
+      case "theme-orange":
+        return "#FB9678";
+      case "theme-skin":
+        return "#FCBAAD";
+      case "theme-soil":
+        return "#A0937D";
       default:
         return "#ffffff"; // Default color
     }
