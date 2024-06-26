@@ -2,43 +2,42 @@
 .theme-red {
   --accent-color: #e1251a;
   --highlight-color: #f43a3a77;
-  --conic-gradient: conic-gradient(from 225deg, #e1251a, #f43a3a77, #121212, #f43a3a77, #e1251a, #121212);
 }
 
 .theme-pink {
-  --accent-color: #FF5C8E;
+  --accent-color: #FF94CC;
   --highlight-color: #f8c6d3;
-  --conic-gradient: conic-gradient(from 225deg, #FF5C8E, #f8c6d3, #121212, #f8c6d3, #FF5C8E, #121212);
+  
 }
 
 .theme-blue {
   --accent-color: #1A97F5;
-  --highlight-color: #d6eaf7;
-  --conic-gradient: conic-gradient(from 225deg, #1A97F5, #d6eaf7, #121212, #d6eaf7, #1A97F5, #121212);
+  --highlight-color: #86c0e7;
+  
 }
 
 .theme-orange {
-  --accent-color: #FB9678;
+  --accent-color: #FFAB76;
   --highlight-color: #fcd3c0;
-  --conic-gradient: conic-gradient(from 225deg, #FB9678, #fcd3c0, #121212, #fcd3c0, #FB9678, #121212);
+  
 }
 
 .theme-purple {
   --accent-color: #7352FF;
   --highlight-color: #d3caf6;
-  --conic-gradient: conic-gradient(from 225deg, #7352FF, #d3caf6, #121212, #d3caf6, #7352FF, #121212);
+  
 }
 
 .theme-green {
   --accent-color: #03C9D7;
   --highlight-color: #abedf1;
-  --conic-gradient: conic-gradient(from 225deg, #03C9D7, #abedf1, #121212, #abedf1, #03C9D7, #121212);
+  
 }
 
 .theme-indigo {
   --accent-color: #1E4DB7;
   --highlight-color: #d1dcf0;
-  --conic-gradient: conic-gradient(from 225deg, #1E4DB7, #d1dcf0, #121212, #d1dcf0, #1E4DB7, #121212);
+  
 }
 
 /* General styling */

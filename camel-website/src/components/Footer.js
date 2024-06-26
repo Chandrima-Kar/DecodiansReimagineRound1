@@ -693,7 +693,7 @@ const Footer = () => {
                   <div key={i} className="">
                     <Link
                       to={options.path}
-                      className=" text-sm lg:text-lg font-medium text-secondary-text hover:text-primary-text dark:text-dark-primary-text"
+                      className=" text-sm lg:text-lg font-medium text-secondary-text hover:text-primary-text dark:text-dark-secondary-text"
                     >
                       {" "}
                       {options.name}{" "}

@@ -23,7 +23,7 @@ const Third = () => {
                 <div id="heading2" className='flex flex-col justify-center lg:gap-[0.85rem] md:gap-[0.5rem] lg:pb-[.5rem] md:pb-[.25rem]'>
                     <h1 className='title lg:text-[5rem] md:text-[3.5rem] font-black tracking-wider text-primary-text dark:text-dark-primary-text '>Featured Artist</h1>
                     <h3 id="date"
-                    className=' text-secondary-text font-bold'>
+                    className=' text-secondary-text dark:text-dark-secondary-text font-bold'>
                         May 2024
                     </h3>
                 </div>
@@ -56,7 +56,7 @@ const Third = () => {
                             </div>
 
                             <div >
-                                <h5 id="feature" className='text-secondary-text text-semibold xl:text-[1.25rem] 
+                                <h5 id="feature" className='text-secondary-text dark:text-dark-secondary-text text-semibold xl:text-[1.25rem] 
                                 lg:text-[.9rem]
                                 md:text-[.75rem]'>
                                     Mixed Media Artist
@@ -65,7 +65,7 @@ const Third = () => {
                     </div>
 
                     <div id="button-div">
-                        <button id="button" className='group rounded-full xl:h-10 lg:h-8 md:h-7 md:pl-2 md:pr-2 flex items-center space-x-0.5 bg-secondary-text hover:bg-red-800 hover:text-white'>
+                        <button id="button" className='group rounded-full xl:h-10 lg:h-8 md:h-7 md:pl-2 md:pr-2 flex items-center space-x-0.5 bg-secondary-text dark:bg-dark-secondary-text hover:bg-red-800 hover:text-white'>
                             <span className='xl:text-xl lg:text-[.85rem] md:text-[.7rem] font-bold text-white'>View profile</span>
                             <div className='flex items-center translate-x-1 transition-all duration-300'>
                                 <PiArrowSquareOutBold className='xl:w-5 xl:h-5 text-white' />
