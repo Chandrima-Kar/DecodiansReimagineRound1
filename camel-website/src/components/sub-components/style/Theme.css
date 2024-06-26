@@ -1,9 +1,10 @@
 /* Theme-specific classes */
-:root{
+:root {
   --accent-color: #e1251a;
   --highlight-color: #f43a3a77;
   --bg-color: #FFFAF4;
 }
+
 .theme-red {
   --accent-color: #e1251a;
   --highlight-color: #f43a3a77;

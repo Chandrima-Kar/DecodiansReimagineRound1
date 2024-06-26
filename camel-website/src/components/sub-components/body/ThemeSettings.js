@@ -4,8 +4,6 @@ import { ImCross } from "react-icons/im";
 import { IoIosColorPalette } from "react-icons/io";
 import "../../sub-components/style/Theme.css";
 
-// import "../components/Theme.css";
-
 const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
   const [showFooterButton, setShowFooterButton] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -64,9 +62,12 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
       {isSidebarOpen && (
         <div className="fixed inset-0 z-50 bg-opacity-75 flex">
-          <div className="flex-1" onClick={toggleSidebar}></div>
-          {/* cross md:h-3 md:w-3 sm:h-2 sm:w-2 h-2 w-2 sm:mt-1 mt-0 ml-[10.6rem] xl:ml-[27rem] lg:ml-[19rem] md:ml-[14rem] sm:ml-[11.5rem] */}
-          <div className="sm:w-2/5 md:w-1/3 lg:w-1/4 w-1/2 bg-[#585a5e] h-full shadow-lg flex flex-col gap-y-5 sm:gap-y-8  ">
+          <div
+            className="flex-1 transition-all duration-700"
+            onClick={toggleSidebar}
+          ></div>
+
+          <div className="sm:w-2/5 md:w-1/3 lg:w-1/4 w-1/2 bg-[#585a5e] h-full shadow-lg flex flex-col gap-y-5 sm:gap-y-8 ">
             <div className="relative pt-10  flex flex-col justify-center">
               <div>
                 <ImCross

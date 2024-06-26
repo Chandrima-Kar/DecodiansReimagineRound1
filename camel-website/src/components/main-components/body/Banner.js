@@ -159,7 +159,7 @@ const Banner = ({ isInitialLoad }) => {
 
                       <div
                         className={`absolute  bg-background2 dark:bg-darkBackground2 border border-accent  text-center   duration-500 transform 
-                        w-[8rem] md:w-[10rem] top-0 right-0 md:top-[0.4rem] md:right-0 ${
+                        w-[8rem] md:w-[10rem] top-1 right-0 md:top-[0.7rem] md:right-0 ${
                           showDropdown
                             ? "opacity-100 scale-100"
                             : "opacity-0 scale-0"
