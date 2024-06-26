@@ -10,7 +10,6 @@
   align-items: center;
   z-index: 9999;
   overflow: hidden;
-  /* Ensure the curtain reveal effect is visible */
   transition: height 1s ease-in-out;
 }
 

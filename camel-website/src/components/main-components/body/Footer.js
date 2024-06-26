@@ -584,7 +584,7 @@ const Footer = () => {
   return (
     <section id="footer" className="flex items-center">
       <div
-        className="bg-background2 dark:bg-darkBackground border-t-0 border-accent w-full py-5 z-2
+        className="bg-background2 dark:bg-darkBackground border-t-0 border-accent w-full py-5 lg:py-8 z-2
           px-4
           md:px-6 
           2xl:px-28"
@@ -768,7 +768,7 @@ const Footer = () => {
                 <p>|</p>
                 <Link to="/camel">Sitemap</Link>
               </div>
-              <div className=" text-sm lg:text-base text-primary-text dark:text-dark-primary-text font-semibold font-open_sans">
+              <div className=" text-sm lg:text-base text-primary-text dark:text-dark-primary-text font-semibold font-open_sans text-center">
                 <p>©2024 Kokuyo Camlin. All rights reserved.</p>
               </div>
             </div>

@@ -59,41 +59,6 @@ body {
   padding: 0;
 }
 
-/* @media (min-width:320px) and (max-width:639px) {
-  .cross {
-    margin-left: 9rem;
-  }
-}
-
-@media (min-width:375px) and (max-width:639px) {
-  .cross {
-    margin-left: 10rem;
-  }
-}
-
-@media (min-width:425px) and (max-width:639px) {
-  .cross {
-    margin-left: 11.5rem;
-  }
-}
-
-@media (min-width:500px) and (max-width:639px) {
-  .cross {
-    margin-left: 14rem;
-  }
-}
-
-@media (min-width:570px) and (max-width:639px) {
-  .cross {
-    margin-left: 16rem;
-  }
-}
-
-@media (min-width:600px) and (max-width:639px) {
-  .cross {
-    margin-left: 17rem;
-  }
-} */
 
 /* Utility classes for specific elements */
 

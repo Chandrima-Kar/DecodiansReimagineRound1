@@ -190,15 +190,4 @@ const FullSlider = () => {
   );
 };
 
-// function Button(props) {
-//   return (
-//     <button
-//       className={`cursor-pointer rounded-md border font-semibold duration-500 transition-transform hover:scale-105 flex justify-center items-center bg-accent text-background border-accent hover:bg-background hover:text-accent px-5 py-1
-//        ${props.className}`}
-//     >
-//       {props.text}
-//     </button>
-//   );
-// }
-
 export default FullSlider;

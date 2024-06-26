@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import Section from "./sub-components/Section";
-// import { GiThink } from "react-icons/gi";
-// import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 
@@ -73,13 +70,6 @@ const FAQ = () => {
   ];
 
   return (
-    // <Section
-    //   className=""
-    //   crosses
-    //   crossesOffset="lg:translate-y-[5.25rem]"
-    //   customPaddings
-    //   id="faq"
-    // >
     <section
       id="faq"
       className="relative z-2 w-full py-10  my-auto flex flex-col items-center justify-center"
@@ -99,7 +89,6 @@ const FAQ = () => {
                 icon={faCircleQuestion}
                 className="text-4xl sm:text-5xl text-accent"
               />{" "}
-              {/* <GiThink className="text-4xl sm:text-5xl text-accent" /> */}
             </div>
             <div className="flex items-center justify-center  px-2 pt-2 border-2 border-b-0 border-accent rounded-t-3xl bg-background dark:bg-darkBackground z-10">
               <h1 className="text-5xl font-bold px-4 py-1 text-primary-text dark:text-dark-primary-text border-2 border-b-0 border-accent rounded-t-2xl font-montserrat">
@@ -111,7 +100,6 @@ const FAQ = () => {
                 icon={faCircleQuestion}
                 className="text-4xl sm:text-5xl text-accent"
               />{" "}
-              {/* <GiThink className="text-4xl sm:text-5xl text-accent" /> */}
             </div>
           </div>
 
@@ -129,9 +117,7 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </section>
-    // </Section>
   );
 };
 

@@ -52,7 +52,7 @@
 }
 
 
-/* big */
+/* big images*/
 @keyframes move2 {
   0% {
     top: 0%;
@@ -80,7 +80,6 @@
   }
 }
 
-/* big */
 @keyframes move8 {
   0% {
     top: 78%;
@@ -108,6 +107,7 @@
   }
 }
 
+/* small images */
 @keyframes move1 {
   0% {
     top: 0%;
@@ -598,8 +598,6 @@
     }
   }
 }
-
-/* media queries */
 
 @media (min-width:1024px) {
 

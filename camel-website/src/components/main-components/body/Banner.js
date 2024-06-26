@@ -6,10 +6,6 @@ import { fadeIn } from "../../sub-components/body/variants.js";
 // images
 import camel_img from "../../../assets/logo/camel.webp";
 
-// styles
-
-// import "../components/Theme.css";
-
 // icons
 import { MdOutlineFormatColorFill, MdDraw } from "react-icons/md";
 import { BiLogoMediumOld, BiCool } from "react-icons/bi";
@@ -69,7 +65,7 @@ const Banner = ({ isInitialLoad }) => {
         {/* circular icons */}
         <motion.div
           key={isInitialLoad ? "initial" : "scroll"}
-          variants={fadeIn("zoom", 0.1, isInitialLoad ? 1.5 : 1)}
+          variants={fadeIn("zoom", 0.1, isInitialLoad ? 1 : 0.5)}
           initial="hidden"
           whileInView="show"
           className="flex flex-row text-center "

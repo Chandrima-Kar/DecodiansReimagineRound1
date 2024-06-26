@@ -14,7 +14,6 @@ import "swiper/css/pagination";
 
 import "../style/style_swiper.css";
 
-// import required modules
 import { EffectCards, Pagination, Navigation, Keyboard } from "swiper/modules";
 import { Link } from "react-router-dom";
 
