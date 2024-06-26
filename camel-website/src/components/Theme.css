@@ -49,42 +49,49 @@ body {
   padding: 0;
 }
 
-@media (min-width:320px) and (max-width:639px){
-.cross{
-  margin-left: 9rem;
+@media (min-width:320px) and (max-width:639px) {
+  .cross {
+    margin-left: 9rem;
+  }
 }
-}
-@media (min-width:375px) and (max-width:639px){
-  .cross{
+
+@media (min-width:375px) and (max-width:639px) {
+  .cross {
     margin-left: 10rem;
   }
+}
+
+@media (min-width:425px) and (max-width:639px) {
+  .cross {
+    margin-left: 11.5rem;
   }
-  @media (min-width:425px) and (max-width:639px){
-    .cross{
-      margin-left: 11.5rem;
-    }
-    }
-@media (min-width:500px) and (max-width:639px){
-  .cross{
+}
+
+@media (min-width:500px) and (max-width:639px) {
+  .cross {
     margin-left: 14rem;
   }
-  }
-@media (min-width:570px) and (max-width:639px){
-  .cross{
+}
+
+@media (min-width:570px) and (max-width:639px) {
+  .cross {
     margin-left: 16rem;
   }
+}
+
+@media (min-width:600px) and (max-width:639px) {
+  .cross {
+    margin-left: 17rem;
   }
-  @media (min-width:600px) and (max-width:639px){
-    .cross{
-      margin-left: 17rem;
-    }
-    }
+}
+
 /* Utility classes for specific elements */
 
 
 .bg-accent {
   background-color: var(--accent-color);
-  color: #FFFAF4; /* Text color */
+  color: #FFFAF4;
+  /* Text color */
 }
 
 .bg-highlight {
@@ -103,15 +110,15 @@ body {
   color: var(--accent-color);
 }
 
-.hover-accent {
+/* .hover-accent {
   transition: background-color 500ms, color 500ms;
+} */
+
+.hover-accent:hover {
+  color: var(--accent-color);
 }
 
-.hover-accent:hover { 
-  color: var(--accent-color); 
-}
-
-.dark-hover-accent:hover{
+.dark-hover-accent:hover {
   color: var(--accent-color);
 }
 
@@ -123,21 +130,22 @@ body {
   background-color: var(--accent-color);
 }
 
-.hover-accent3{
+.hover-accent3 {
   transition: background-color 500ms, color 500ms;
 }
 
 .hover-accent3:hover {
   background-color: var(--background-color);
-  color:var(--accent-color);
+  color: var(--accent-color);
 }
 
 
-.dark-hover-accent2:hover{
-  color:#fff;
+.dark-hover-accent2:hover {
+  color: #fff;
 }
 
-.dark-hover-accent3:hover{
-  color:var(--accent-color);;
+.dark-hover-accent3:hover {
+  color: var(--accent-color);
+  ;
   background-color: #000;
 }
