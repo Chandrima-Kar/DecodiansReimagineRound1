@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import img1 from "../../../assets/Wonderland/brush1.png";
+import img1 from "../../../assets/Wonderland/brush1.webp";
 import "../style/wonderland.css";
 // import "./wonderland.css";
 

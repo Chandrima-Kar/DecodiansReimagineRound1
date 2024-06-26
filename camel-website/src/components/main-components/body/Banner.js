@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../sub-components/body/variants.js";
 
 // images
-import camel_img from "../../../assets/logo/camel.png";
+import camel_img from "../../../assets/logo/camel.webp";
 
 // styles
 

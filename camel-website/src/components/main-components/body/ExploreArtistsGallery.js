@@ -1,13 +1,13 @@
 import React from "react";
-import img1 from "../../../assets/ExploreArtistsGallery/01.jpg";
-import img2 from "../../../assets/ExploreArtistsGallery/02.jpg";
-import img3 from "../../../assets/ExploreArtistsGallery/03.jpg";
-import img4 from "../../../assets/ExploreArtistsGallery/04.jpg";
-import img5 from "../../../assets/ExploreArtistsGallery/05.jpg";
-import img6 from "../../../assets/ExploreArtistsGallery/06.jpg";
-import img7 from "../../../assets/ExploreArtistsGallery/07.jpg";
-import img8 from "../../../assets/ExploreArtistsGallery/08.jpg";
-import img9 from "../../../assets/ExploreArtistsGallery/09.jpg";
+import img1 from "../../../assets/ExploreArtistsGallery/01.webp";
+import img3 from "../../../assets/ExploreArtistsGallery/03.webp";
+import img2 from "../../../assets/ExploreArtistsGallery/02.webp";
+import img4 from "../../../assets/ExploreArtistsGallery/04.webp";
+import img5 from "../../../assets/ExploreArtistsGallery/05.webp";
+import img6 from "../../../assets/ExploreArtistsGallery/06.webp";
+import img7 from "../../../assets/ExploreArtistsGallery/07.webp";
+import img8 from "../../../assets/ExploreArtistsGallery/08.webp";
+import img9 from "../../../assets/ExploreArtistsGallery/09.webp";
 import img10 from "../../../assets/ExploreArtistsGallery/deer.webp";
 
 // import "./ExploreArtistsGallery.css";

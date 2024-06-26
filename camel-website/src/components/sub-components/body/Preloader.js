@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import camel_img from "../../../assets/logo/camel.png";
+import camel_img from "../../../assets/logo/camel.webp";
 
 import "../../sub-components/style/Preloader.css";
 
