@@ -47,9 +47,14 @@ module.exports = {
         // },
       },
       fontFamily: {
-        sans: ["var(--font-sora)", ...fontFamily.sans],
-        code: "var(--font-code)",
-        grotesk: "var(--font-grotesk)",
+        // sans: ["var(--font-sora)", ...fontFamily.sans],
+        // code: "var(--font-code)",
+        // grotesk: "var(--font-grotesk)",
+        open_sans: ["Open Sans", "sans-serif"], // normal text
+        roboto: ["Roboto", "sans-serif"],
+        lato: ["Lato", "sans-serif"], // secondary heading
+        montserrat: ["Montserrat", "sans-serif"], // primary heading
+        ubuntu: ["Ubuntu", "sans-serif"], // buttons
       },
       letterSpacing: {
         tagline: ".15em",

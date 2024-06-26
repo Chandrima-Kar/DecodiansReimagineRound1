@@ -117,7 +117,7 @@ const ExploreArtistsGallery = () => {
           lg:p-5"
           >
             <div
-              className="font-extrabold font-sans text-center
+              className="font-extrabold font-montserrat text-center
 
               text-primary-text dark:text-dark-primary-text
 
@@ -128,11 +128,11 @@ const ExploreArtistsGallery = () => {
               Get inspired by
               <br /> popular artists
             </div>
-            <div className="text-center  text-primary-text dark:text-dark-primary-text font-medium leading-5 text-base  lg:text-lg">
+            <div className="text-center  text-primary-text dark:text-dark-primary-text font-medium font-lato leading-5 text-base  lg:text-lg">
               Share your artwork and connect <br /> with other artists in our
               online community.
             </div>
-            <div className="flex items-center justify-center gap-x-5">
+            <div className="flex items-center font-open_sans justify-center gap-x-5">
               <div>
                 <p className="text-accent font-bold text-xl md:text-2xl">
                   179,785

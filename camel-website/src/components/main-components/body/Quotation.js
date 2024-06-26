@@ -207,10 +207,10 @@ const Quotation = () => {
                 <div className="text-center mx-0 my-1 sm:mx-16">
                   {quoteOfTheDay.map((content, i) => (
                     <h1 className=" bg-background dark:bg-darkBackground gap-x-1">
-                      <span className="sm:text-2xl text-lg font-bold text-primary-text dark:text-dark-primary-text">
+                      <span className="sm:text-2xl text-lg font-bold text-primary-text dark:text-dark-primary-text font-montserrat">
                         {content.quote}
                       </span>
-                      <span className="sm:text-xl text-sm font-medium text-primary-text dark:text-dark-primary-text">
+                      <span className="sm:text-xl text-sm font-medium text-primary-text dark:text-dark-primary-text font-lato">
                         {content.author}
                       </span>
                     </h1>
@@ -222,10 +222,10 @@ const Quotation = () => {
             <div className="w-full  p-5 border-2 border-accent rounded-3xl bg-background dark:bg-darkBackground z-10">
               {extraQueries.map((faq, index) => (
                 <div key={index} className="py-3">
-                  <h1 className="text-2xl text-primary-text dark:text-dark-primary-text font-semibold">
+                  <h1 className="text-2xl text-primary-text dark:text-dark-primary-text font-semibold font-montserrat">
                     {faq.question}
                   </h1>
-                  <p className="text-[1.15rem] text-primary-text dark:text-dark-primary-text">
+                  <p className="text-[1.15rem] text-primary-text dark:text-dark-primary-text font-open_sans">
                     {faq.answer}
                   </p>
                 </div>

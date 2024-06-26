@@ -70,7 +70,7 @@ const TransparentPhotoColors = () => {
 
           {/* header */}
           <div className="absolute left-4 top-4">
-            <h1 className="text-xl sm:text-3xl md:text-5xl xl:text-6xl font-bold">
+            <h1 className="text-xl sm:text-3xl md:text-5xl xl:text-6xl font-bold font-montserrat">
               Transparent <br /> Photo Colours
             </h1>
           </div>
@@ -141,7 +141,7 @@ const TransparentPhotoColors = () => {
             className="absolute left-4 
           bottom-[17.5rem] sm:bottom-[24rem] md:bottom-[33.5rem]   lg:bottom-4"
           >
-            <p className="text-[0.9rem] md:text-[1rem] lg:text-xl font-semibold lg:w-[60%]">
+            <p className="text-[0.9rem] md:text-[1rem] lg:text-xl font-semibold font-lato lg:w-[60%]">
               A range of dye-based colours for a variety of applied art
               creations.
             </p>
@@ -150,7 +150,7 @@ const TransparentPhotoColors = () => {
           {/* box */}
 
           <div
-            className="flex items-center justify-center cursor-pointer  border font-semibold 
+            className="flex items-center justify-center cursor-pointer  border font-semibold font-open_sans
               
               absolute top-0 right-0
               

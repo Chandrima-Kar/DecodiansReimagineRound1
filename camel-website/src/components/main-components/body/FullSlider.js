@@ -126,11 +126,13 @@ const FullSlider = () => {
             ]} left-2 md:left-10 `}
           >
             <h1
-              className={`${slides[currentIndex].header_color} duration-500  font-extrabold text-3xl md:text-5xl`}
+              className={`${slides[currentIndex].header_color} duration-500 font-montserrat font-bold text-2xl md:text-4xl`}
             >
               {slides[currentIndex].header}
             </h1>
-            <p className={`${slides[currentIndex].p_class} duration-500`}>
+            <p
+              className={`${slides[currentIndex].p_class} duration-500 font-lato`}
+            >
               Washable Colour Markers{" "}
             </p>
           </div>
@@ -143,7 +145,7 @@ const FullSlider = () => {
             <Button
               text={"Meet Artists"}
               className={`${slides[currentIndex].button2} text-[12px] md:text-[20px] px-5 py-1
-              bg-transparent 
+              bg-transparent font-ubuntu
                 text-accent border-accent hover-accent2 hover:text-background`}
             />
           </div>
