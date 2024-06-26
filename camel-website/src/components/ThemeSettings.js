@@ -8,11 +8,11 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
   const [showFooterButton, setShowFooterButton] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState(colorTheme);
+  
 
   const handleThemeClick = (theme) => {
     onThemeChange(theme);
     setSelectedTheme(theme);
-    setIsSidebarOpen(false);
   };
 
   const listenToScroll = () => {
@@ -69,7 +69,7 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
             <div className="relative pt-10  flex flex-col justify-center">
               <div>
                 <ImCross
-                  className=" absolute top-4 right-4 text-white cursor-pointer"
+                  className=" absolute top-2 right-3 text-white cursor-pointer"
                   onClick={toggleSidebar}
                 />
               </div>
@@ -81,17 +81,13 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
               </div>
             </div>
 
-            <div className="mode-options flex flex-col gap-y-2">
-              <div className=" text-white text-center text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
+            <div className="mode-options flex flex-col  gap-y-3 md:gap-y-5 lg:gap-y-3">
+              <div className=" text-white text-center text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
                 Mode Options:
               </div>
               <button
-                className=" bg-yellow-300 rounded-xl
-                mx-14 text-sm px-2 py-1
-                xl:px-4 xl:text-lg 
-                lg:mx-28 lg:px-2 lg:text-md lg:py-2
-                md:py-2 md:px-1 md:text-sm md:mx-12
-                sm:mx-10 sm:text-sm sm:py-1 sm:px-1"
+                className=" bg-yellow-300 rounded-xl mx-8
+                sm:mx-14 text-xs sm:text-sm md:text-md px-2 py-1"
                 onClick={handleModeSwitch}
               >
                 {mode === "dark" ? "Light Mode" : "Dark Mode"}
@@ -100,17 +96,17 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
 
             <div className="colour-options max-w-2xl mx-0 text-center ">
               <div>
-                <div className="mb-6 text-white text-sm xl:text-2xl lg:text-xl md:text-lg sm:text-sm">
+                <div className="mb-6 text-white text-sm xl:text-xl lg:text-xl md:text-lg sm:text-sm">
                   Choose Your Canvas Color:
                 </div>
               </div>
               <div
                 className="  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 justify-center items-center lg:grid-cols-4
-                xl:mx-12 xl:gap-8
-                lg:mx-6 lg:gap-4
-                md:mx-2 md:gap-3
-                sm:mx-3 sm:gap-2
-                mx-3 gap-2"
+                  xl:gap-6
+                  lg:gap-3
+                  md:gap-3
+                  sm:gap-2
+                  px-6 gap-2"
               >
                 {colorOptions.map((option) => (
                   <div
@@ -122,8 +118,8 @@ const ThemeSettings = ({ colorTheme, onThemeChange, mode, onModeSwitch }) => {
                     <IoIosColorPalette
                       className=" p-1 rounded-full
                       xl:text-5xl
-                      md:text-4xl
-                      sm:text-3xl
+                      md:text-5xl
+                      sm:text-4xl
                       text-4xl
                       "
                       style={{
