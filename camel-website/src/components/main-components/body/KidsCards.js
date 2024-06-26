@@ -19,10 +19,10 @@ import { EffectCards, Pagination, Navigation, Keyboard } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 // images
-import card1_img from "../../../assets/KidsCards/card1.jpeg";
-import card2_img from "../../../assets/KidsCards/card2.jpeg";
-import card3_img from "../../../assets/KidsCards/card3.jpg";
-import card4_img from "../../../assets/KidsCards/card4.jpeg";
+import card1_img from "../../../assets/KidsCards/card1.webp";
+import card2_img from "../../../assets/KidsCards/card2.webp";
+import card3_img from "../../../assets/KidsCards/card3.webp";
+import card4_img from "../../../assets/KidsCards/card4.webp";
 
 // icons
 import { RiExternalLinkLine } from "react-icons/ri";

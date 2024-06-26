@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import camel_img from "../../../assets/logo/camel.png";
+import camel_img from "../../../assets/logo/camel.webp";
 // import "../components/Theme.css";
 
 function Button(props) {

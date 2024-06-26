@@ -8,7 +8,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 // images
-import slide2 from "../../../assets/FullSlider/slidetwo.jpg";
+import slide2 from "../../../assets/FullSlider/slidetwo.webp";
 import slide3 from "../../../assets/FullSlider/slidethree.webp";
 import slide4 from "../../../assets/FullSlider/make_your_mark_banner.webp";
 import slide5 from "../../../assets/FullSlider/wonderland-banner.webp";

@@ -4,7 +4,7 @@ import Section from "../../sub-components/body/Section";
 import MyButton from "../../sub-components/body/MyButton";
 
 // images
-import hand_img from "../../../assets/TransparentPhotoColors/hand.png";
+import hand_img from "../../../assets/TransparentPhotoColors/hand.webp";
 
 // icons
 import { RiExternalLinkLine } from "react-icons/ri";

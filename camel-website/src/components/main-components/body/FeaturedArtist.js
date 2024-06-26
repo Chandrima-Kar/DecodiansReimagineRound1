@@ -9,11 +9,11 @@ import { fadeIn } from "../../sub-components/body/variants.js";
 import { PiArrowSquareOutBold } from "react-icons/pi";
 
 // images
-import featureBadge from "../../../assets/FeaturedArtist/feature-artist-badge.png";
-import artistImg from "../../../assets/FeaturedArtist/artistImage.jpeg";
-import painting1 from "../../../assets/FeaturedArtist/img1.jpg";
-import painting2 from "../../../assets/FeaturedArtist/img2.png";
-import painting3 from "../../../assets/FeaturedArtist/img3.png";
+import featureBadge from "../../../assets/FeaturedArtist/feature-artist-badge.webp";
+import artistImg from "../../../assets/FeaturedArtist/artistImage.webp";
+import painting1 from "../../../assets/FeaturedArtist/img1.webp";
+import painting2 from "../../../assets/FeaturedArtist/img2.webp";
+import painting3 from "../../../assets/FeaturedArtist/img3.webp";
 
 // swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
