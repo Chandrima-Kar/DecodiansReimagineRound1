@@ -17,15 +17,21 @@ Sheryians Coding School organised a hackathon for web developers, you can check 
 
 ## Go the terminal and write -
 
-### 1. 
+### 1. To go to the main folder
 ```
 cd camel-website
 ```
-(to go to the main folder)
 
-### 2. ```npm i``` (to install the dependencies)
+### 2. To install the dependencies
+```
+npm I
+``` 
 
-### 3. ```npm start``` (to run the website)
+### 3. To run the website
+```
+npm start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
