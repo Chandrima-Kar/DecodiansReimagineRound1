@@ -10,6 +10,10 @@ Sheryians Coding School organised a hackathon for web developers, you can check 
 
 
 
+https://github.com/Chandrima-Kar/DecodiansReimagineRound1/assets/138314529/433f7782-532c-41a6-aabd-25f8acfe34af
+
+
+
 ## Getting Started with Cloning the Repo
 
 1. Download the zip file.
@@ -39,8 +43,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 In the terminal paste this ->
 
-1. ```npm install -D tailwindcss```
-2. ```npx tailwindcss init```
+ ```
+ npm install -D tailwindcss
+```
+ ```
+ npx tailwindcss init
+```
 
 Then go to the tailwind.config.js file and make the changes ->
 
