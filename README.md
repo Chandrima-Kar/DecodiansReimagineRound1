@@ -17,7 +17,8 @@ Sheryians Coding School organised a hackathon for web developers, you can check 
 
 ## Go the terminal and write -
 
-### 1. ```cd camel-website``` (to go to the main folder)
+### 1. 
+```cd camel-website``` (to go to the main folder)
 
 ### 2. ```npm i``` (to install the dependencies)
 
