@@ -17,11 +17,11 @@ Sheryians Coding School organised a hackathon for web developers, you can check 
 
 ## Go the terminal and write -
 
-### 1. `cd camel-website` (to go to the main folder)
+### 1. ```cd camel-website``` (to go to the main folder)
 
-### 2. `npm i` (to install the dependencies)
+### 2. ```npm i``` (to install the dependencies)
 
-### 3. `npm start` (to run the website)
+### 3. ```npm start``` (to run the website)
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
@@ -29,8 +29,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 In the terminal paste this ->
 
-1. `npm install -D tailwindcss`
-2. `npx tailwindcss init`
+1. ```npm install -D tailwindcss```
+2. ```npx tailwindcss init```
 
 Then go to the tailwind.config.js file and make the changes ->
 
