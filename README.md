@@ -24,7 +24,7 @@ cd camel-website
 
 ### 2. To install the dependencies
 ```
-npm I
+npm i
 ``` 
 
 ### 3. To run the website
