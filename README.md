@@ -17,7 +17,9 @@ https://github.com/Chandrima-Kar/DecodiansReimagineRound1/assets/138314529/433f7
 ## Getting Started with Cloning the Repo
 
 1. Download the zip file.
-1. Open it in your VS code. 
+2. Unzip it. You can see a folder is extracted name - `DecodiansReimagineRound1-main`
+3. Go inside the folder, there will be another folder name - `DecodiansReimagineRound1-main`
+4. Go inside it and open it in your VS code. 
 
 ## Go the terminal and write -
 
