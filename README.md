@@ -1,6 +1,6 @@
 # Re-imagine Camel Website
 
-Sheryians Coding School organised a hackathon for web developers, you can check it here -> [[🚀HACKATHON] Reimagine](https://youtu.be/wy7cROuMUzo?si=FMFVW48MKlvA68nN). So, this is our re-imagination for the first round of this hackathon. Our team members chose to redesign Camel's website, which is live. It is a single-page website with a modern makeover to the original website, re-imagining its overall look and feel. You can see the difference below -> 
+Sheryians Coding School organised a hackathon for web developers, you can check it here -> [🚀HACKATHON] Reimagine](https://youtu.be/wy7cROuMUzo?si=FMFVW48MKlvA68nN). So, this is our re-imagination for the first round of this hackathon. Our team members chose to redesign Camel's website, which is live. It is a single-page website with a modern makeover to the original website, re-imagining its overall look and feel. You can see the difference below -> 
 
 #### Camel original website -> [https://www.kokuyocamlin.com/camel/](https://www.kokuyocamlin.com/camel/) 
 
